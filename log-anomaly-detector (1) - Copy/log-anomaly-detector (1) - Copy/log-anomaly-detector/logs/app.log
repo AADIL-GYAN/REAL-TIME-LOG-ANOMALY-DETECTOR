@@ -1,0 +1,1896 @@
+2026-09-28 16:15:35,434 INFO     [auth-service] Webhook delivered to partner-464
+2026-09-28 16:15:35,434 WARN     [auth-service] Deprecated endpoint /v1/orders hit
+2026-09-28 16:15:35,435 WARN     [auth-service] Retrying upstream call (attempt 2/3)
+2026-09-28 16:15:35,435 INFO     [payment-api] User 711 logged in
+2026-09-28 16:15:35,435 INFO     [payment-api] Order #47874 created
+2026-09-28 16:15:36,428 DEBUG    [order-worker] GC pause 104ms
+2026-09-28 16:15:36,428 DEBUG    [inventory] Connection pool size=337
+2026-09-28 16:15:36,428 DEBUG    [notifier] GC pause 46ms
+2026-09-28 16:15:36,428 ERROR    [order-worker] OOMKilled: worker-763 exceeded memory limit
+2026-09-28 16:15:36,428 INFO     [auth-service] User 255 logged in
+2026-09-28 16:15:36,428 INFO     [notifier] Job 86884 dequeued
+2026-09-28 16:15:36,428 DEBUG    [inventory] GC pause 2086ms
+2026-09-28 16:15:37,451 INFO     [auth-service] User 259 logged in
+2026-09-28 16:15:37,451 INFO     [payment-api] Webhook delivered to partner-671
+2026-09-28 16:15:37,451 INFO     [notifier] User 761 logged in
+2026-09-28 16:15:37,451 INFO     [auth-service] Webhook delivered to partner-306
+2026-09-28 16:15:37,451 INFO     [gateway] Webhook delivered to partner-836
+2026-09-28 16:15:37,451 INFO     [auth-service] Request completed in 2974ms
+2026-09-28 16:15:37,451 INFO     [auth-service] User 637 logged in
+2026-09-28 16:15:38,460 INFO     [payment-api] Order #74583 created
+2026-09-28 16:15:38,460 INFO     [inventory] Cache hit for key sess:936
+2026-09-28 16:15:38,460 DEBUG    [order-worker] Serialized payload (1399 bytes)
+2026-09-28 16:15:38,460 INFO     [gateway] Health check OK
+2026-09-28 16:15:38,460 INFO     [inventory] Health check OK
+2026-09-28 16:15:39,442 DEBUG    [order-worker] GC pause 2724ms
+2026-09-28 16:15:39,442 INFO     [payment-api] User 736 logged in
+2026-09-28 16:15:39,443 INFO     [gateway] Webhook delivered to partner-456
+2026-09-28 16:15:39,443 INFO     [payment-api] Job 81202 dequeued
+2026-09-28 16:15:39,443 INFO     [order-worker] Health check OK
+2026-09-28 16:15:39,443 WARN     [auth-service] Rate limit at 85% for client 453
+2026-09-28 16:15:39,443 INFO     [gateway] Request completed in 1442ms
+2026-09-28 16:15:39,443 INFO     [payment-api] Job 53192 dequeued
+2026-09-28 16:15:40,465 INFO     [auth-service] Health check OK
+2026-09-28 16:15:40,465 INFO     [inventory] Request completed in 110ms
+2026-09-28 16:15:40,465 INFO     [inventory] Webhook delivered to partner-123
+2026-09-28 16:15:40,465 INFO     [payment-api] Job 96902 dequeued
+2026-09-28 16:15:40,465 ERROR    [inventory] TLS handshake failed with partner-758
+2026-09-28 16:15:40,465 DEBUG    [notifier] Serialized payload (2973 bytes)
+2026-09-28 16:15:40,465 INFO     [auth-service] Cache hit for key sess:638
+2026-09-28 16:15:40,465 DEBUG    [notifier] GC pause 3845ms
+2026-09-28 16:15:41,458 ERROR    [notifier] OOMKilled: worker-601 exceeded memory limit
+2026-09-28 16:15:41,458 INFO     [order-worker] Health check OK
+2026-09-28 16:15:41,458 INFO     [auth-service] Job 99783 dequeued
+2026-09-28 16:15:41,458 DEBUG    [auth-service] Serialized payload (2584 bytes)
+2026-09-28 16:15:41,458 INFO     [gateway] Health check OK
+2026-09-28 16:15:41,458 DEBUG    [notifier] GC pause 102ms
+2026-09-28 16:15:41,458 INFO     [order-worker] Cache hit for key sess:313
+2026-09-28 16:15:41,458 INFO     [gateway] Job 30837 dequeued
+2026-09-28 16:15:41,458 WARN     [auth-service] Rate limit at 85% for client 444
+2026-09-28 16:15:42,467 DEBUG    [inventory] Connection pool size=255
+2026-09-28 16:15:42,467 DEBUG    [inventory] GC pause 2484ms
+2026-09-28 16:15:42,467 INFO     [gateway] Webhook delivered to partner-834
+2026-09-28 16:15:42,467 DEBUG    [notifier] GC pause 3471ms
+2026-09-28 16:15:42,467 INFO     [order-worker] Order #29948 created
+2026-09-28 16:15:42,467 INFO     [payment-api] Cache hit for key sess:290
+2026-09-28 16:15:43,479 WARN     [auth-service] Slow query detected (2017ms)
+2026-09-28 16:15:43,479 DEBUG    [order-worker] Connection pool size=146
+2026-09-28 16:15:43,479 ERROR    [notifier] Failed to publish message to queue: broker unavailable
+2026-09-28 16:15:43,479 INFO     [notifier] Webhook delivered to partner-447
+2026-09-28 16:15:44,500 DEBUG    [inventory] Serialized payload (3914 bytes)
+2026-09-28 16:15:44,500 WARN     [notifier] Rate limit at 85% for client 256
+2026-09-28 16:15:44,500 INFO     [payment-api] Cache hit for key sess:492
+2026-09-28 16:15:44,500 INFO     [notifier] Health check OK
+2026-09-28 16:15:44,500 INFO     [gateway] User 845 logged in
+2026-09-28 16:15:44,500 DEBUG    [notifier] Serialized payload (3048 bytes)
+2026-09-28 16:15:44,500 INFO     [gateway] Job 88645 dequeued
+2026-09-28 16:15:44,500 WARN     [order-worker] Deprecated endpoint /v1/orders hit
+2026-09-28 16:15:45,525 DEBUG    [auth-service] GC pause 3667ms
+2026-09-28 16:15:45,525 INFO     [payment-api] User 281 logged in
+2026-09-28 16:15:45,526 INFO     [payment-api] Cache hit for key sess:312
+2026-09-28 16:15:45,526 DEBUG    [notifier] GC pause 1546ms
+2026-09-28 16:15:45,526 INFO     [inventory] Request completed in 3653ms
+2026-09-28 16:15:46,547 INFO     [notifier] Webhook delivered to partner-864
+2026-09-28 16:15:46,547 INFO     [gateway] User 930 logged in
+2026-09-28 16:15:46,547 DEBUG    [notifier] GC pause 2915ms
+2026-09-28 16:15:46,547 INFO     [auth-service] Request completed in 2731ms
+2026-09-28 16:15:46,547 INFO     [payment-api] User 543 logged in
+2026-09-28 16:15:46,547 DEBUG    [order-worker] Serialized payload (2086 bytes)
+2026-09-28 16:15:46,547 WARN     [auth-service] Rate limit at 85% for client 162
+2026-09-28 16:15:46,547 INFO     [notifier] Webhook delivered to partner-395
+2026-09-28 16:15:46,547 INFO     [notifier] Cache hit for key sess:427
+2026-09-28 16:15:47,551 INFO     [inventory] Request completed in 2488ms
+2026-09-28 16:15:47,551 INFO     [auth-service] Health check OK
+2026-09-28 16:15:47,551 INFO     [notifier] Job 89307 dequeued
+2026-09-28 16:15:47,551 INFO     [payment-api] Cache hit for key sess:939
+2026-09-28 16:15:48,574 DEBUG    [order-worker] Serialized payload (1712 bytes)
+2026-09-28 16:15:48,575 DEBUG    [payment-api] Connection pool size=186
+2026-09-28 16:15:48,575 INFO     [auth-service] Webhook delivered to partner-353
+2026-09-28 16:15:48,575 WARN     [payment-api] Rate limit at 85% for client 402
+2026-09-28 16:15:49,584 INFO     [order-worker] Webhook delivered to partner-427
+2026-09-28 16:15:49,584 WARN     [order-worker] Retrying upstream call (attempt 2/3)
+2026-09-28 16:15:49,584 INFO     [gateway] Webhook delivered to partner-974
+2026-09-28 16:15:49,584 INFO     [payment-api] Request completed in 1868ms
+2026-09-28 16:15:49,584 INFO     [notifier] Request completed in 2550ms
+2026-09-28 16:15:50,582 INFO     [order-worker] User 248 logged in
+2026-09-28 16:15:50,582 INFO     [auth-service] Cache hit for key sess:735
+2026-09-28 16:15:50,582 INFO     [auth-service] Job 54684 dequeued
+2026-09-28 16:15:50,582 INFO     [notifier] Order #66352 created
+2026-09-28 16:15:51,595 DEBUG    [order-worker] Serialized payload (1639 bytes)
+2026-09-28 16:15:51,595 DEBUG    [order-worker] Connection pool size=670
+2026-09-28 16:15:51,595 INFO     [inventory] Request completed in 3008ms
+2026-09-28 16:15:51,595 INFO     [notifier] User 813 logged in
+2026-09-28 16:15:51,595 DEBUG    [notifier] GC pause 1821ms
+2026-09-28 16:15:51,595 DEBUG    [payment-api] Serialized payload (3430 bytes)
+2026-09-28 16:15:52,607 INFO     [auth-service] Cache hit for key sess:345
+2026-09-28 16:15:52,607 DEBUG    [gateway] Serialized payload (255 bytes)
+2026-09-28 16:15:52,607 INFO     [inventory] User 626 logged in
+2026-09-28 16:15:52,607 INFO     [inventory] Job 37540 dequeued
+2026-09-28 16:15:52,607 INFO     [order-worker] Request completed in 1900ms
+2026-09-28 16:15:52,607 DEBUG    [gateway] Serialized payload (522 bytes)
+2026-09-28 16:15:52,607 WARN     [inventory] Slow query detected (3358ms)
+2026-09-28 16:15:53,638 INFO     [order-worker] User 949 logged in
+2026-09-28 16:15:53,638 DEBUG    [inventory] Connection pool size=174
+2026-09-28 16:15:53,638 DEBUG    [gateway] Connection pool size=233
+2026-09-28 16:15:53,638 INFO     [auth-service] Job 62896 dequeued
+2026-09-28 16:15:53,638 ERROR    [inventory] TLS handshake failed with partner-659
+2026-09-28 16:15:53,638 INFO     [order-worker] User 673 logged in
+2026-09-28 16:15:53,638 INFO     [inventory] Cache hit for key sess:473
+2026-09-28 16:15:53,638 WARN     [order-worker] Deprecated endpoint /v1/orders hit
+2026-09-28 16:15:54,657 INFO     [inventory] User 922 logged in
+2026-09-28 16:15:54,657 INFO     [gateway] Webhook delivered to partner-881
+2026-09-28 16:15:54,657 DEBUG    [gateway] GC pause 1998ms
+2026-09-28 16:15:54,657 DEBUG    [order-worker] GC pause 2222ms
+2026-09-28 16:15:54,657 INFO     [inventory] Cache hit for key sess:138
+2026-09-28 16:15:54,657 DEBUG    [order-worker] Connection pool size=439
+2026-09-28 16:15:54,657 DEBUG    [gateway] Serialized payload (2276 bytes)
+2026-09-28 16:15:54,657 INFO     [gateway] Order #31714 created
+2026-09-28 16:15:54,657 WARN     [gateway] Retrying upstream call (attempt 2/3)
+2026-09-28 16:15:55,699 INFO     [notifier] Request completed in 1587ms
+2026-09-28 16:15:55,699 INFO     [payment-api] Health check OK
+2026-09-28 16:15:55,699 INFO     [inventory] Cache hit for key sess:420
+2026-09-28 16:15:55,699 INFO     [auth-service] User 241 logged in
+2026-09-28 16:15:55,699 INFO     [notifier] Job 48714 dequeued
+2026-09-28 16:15:55,699 INFO     [gateway] Webhook delivered to partner-829
+2026-09-28 16:15:55,699 INFO     [notifier] Health check OK
+2026-09-28 16:15:55,699 INFO     [gateway] Webhook delivered to partner-116
+2026-09-28 16:15:55,699 INFO     [payment-api] Order #32339 created
+2026-09-28 16:15:56,716 INFO     [gateway] Order #11333 created
+2026-09-28 16:15:56,717 INFO     [notifier] Job 78497 dequeued
+2026-09-28 16:15:56,717 INFO     [notifier] Cache hit for key sess:992
+2026-09-28 16:15:56,717 INFO     [notifier] User 300 logged in
+2026-09-28 16:15:56,717 INFO     [notifier] User 514 logged in
+2026-09-28 16:15:56,717 INFO     [inventory] Health check OK
+2026-09-28 16:15:57,709 DEBUG    [gateway] Connection pool size=509
+2026-09-28 16:15:57,710 INFO     [notifier] Job 27328 dequeued
+2026-09-28 16:15:57,710 INFO     [payment-api] Request completed in 418ms
+2026-09-28 16:15:57,710 WARN     [notifier] Retrying upstream call (attempt 2/3)
+2026-09-28 16:15:57,710 INFO     [inventory] Health check OK
+2026-09-28 16:15:58,820 DEBUG    [inventory] GC pause 3365ms
+2026-09-28 16:15:58,820 INFO     [payment-api] Cache hit for key sess:138
+2026-09-28 16:15:58,820 DEBUG    [gateway] Serialized payload (120 bytes)
+2026-09-28 16:15:58,820 DEBUG    [order-worker] GC pause 2489ms
+2026-09-28 16:15:58,820 INFO     [inventory] Health check OK
+2026-09-28 16:15:58,820 INFO     [notifier] Webhook delivered to partner-512
+2026-09-28 16:15:59,831 INFO     [notifier] Order #78896 created
+2026-09-28 16:15:59,831 INFO     [payment-api] Request completed in 3563ms
+2026-09-28 16:15:59,831 INFO     [gateway] Job 94832 dequeued
+2026-09-28 16:15:59,831 INFO     [notifier] Job 33450 dequeued
+2026-09-28 16:15:59,831 DEBUG    [payment-api] Serialized payload (447 bytes)
+2026-09-28 16:16:00,878 INFO     [notifier] Cache hit for key sess:383
+2026-09-28 16:16:00,878 INFO     [gateway] Job 92725 dequeued
+2026-09-28 16:16:00,878 INFO     [payment-api] Cache hit for key sess:181
+2026-09-28 16:16:00,878 WARN     [payment-api] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:00,878 DEBUG    [notifier] Serialized payload (643 bytes)
+2026-09-28 16:16:00,878 INFO     [notifier] Health check OK
+2026-09-28 16:16:01,900 INFO     [gateway] Request completed in 2472ms
+2026-09-28 16:16:01,900 INFO     [inventory] Webhook delivered to partner-301
+2026-09-28 16:16:01,900 INFO     [inventory] Job 57351 dequeued
+2026-09-28 16:16:01,900 INFO     [notifier] Health check OK
+2026-09-28 16:16:02,971 INFO     [notifier] Order #54946 created
+2026-09-28 16:16:02,971 INFO     [inventory] Request completed in 1193ms
+2026-09-28 16:16:02,971 DEBUG    [inventory] GC pause 522ms
+2026-09-28 16:16:02,971 WARN     [auth-service] Deprecated endpoint /v1/orders hit
+2026-09-28 16:16:02,971 INFO     [notifier] Webhook delivered to partner-390
+2026-09-28 16:16:02,971 INFO     [notifier] User 528 logged in
+2026-09-28 16:16:02,971 INFO     [auth-service] Job 91311 dequeued
+2026-09-28 16:16:02,974 DEBUG    [order-worker] Connection pool size=519
+2026-09-28 16:16:02,974 INFO     [gateway] Webhook delivered to partner-295
+2026-09-28 16:16:03,984 INFO     [auth-service] Health check OK
+2026-09-28 16:16:03,984 ERROR    [payment-api] Database connection timeout after 3996ms
+2026-09-28 16:16:03,984 ERROR    [notifier] Database connection timeout after 3082ms
+2026-09-28 16:16:03,984 DEBUG    [order-worker] Serialized payload (289 bytes)
+2026-09-28 16:16:05,067 INFO     [inventory] Request completed in 3499ms
+2026-09-28 16:16:05,068 WARN     [auth-service] Deprecated endpoint /v1/orders hit
+2026-09-28 16:16:05,068 INFO     [auth-service] User 886 logged in
+2026-09-28 16:16:05,068 INFO     [payment-api] Webhook delivered to partner-274
+2026-09-28 16:16:05,068 INFO     [auth-service] Request completed in 2587ms
+2026-09-28 16:16:05,068 INFO     [inventory] Job 40610 dequeued
+2026-09-28 16:16:05,068 INFO     [payment-api] Webhook delivered to partner-151
+2026-09-28 16:16:05,068 DEBUG    [payment-api] GC pause 3300ms
+2026-09-28 16:16:06,162 INFO     [gateway] Webhook delivered to partner-199
+2026-09-28 16:16:06,162 WARN     [notifier] Rate limit at 85% for client 679
+2026-09-28 16:16:06,162 DEBUG    [order-worker] GC pause 1609ms
+2026-09-28 16:16:06,162 INFO     [inventory] Order #31694 created
+2026-09-28 16:16:06,162 WARN     [notifier] Slow query detected (3352ms)
+2026-09-28 16:16:07,227 INFO     [gateway] Health check OK
+2026-09-28 16:16:07,227 INFO     [payment-api] Job 90408 dequeued
+2026-09-28 16:16:07,227 INFO     [order-worker] Webhook delivered to partner-255
+2026-09-28 16:16:07,227 DEBUG    [notifier] GC pause 3706ms
+2026-09-28 16:16:08,239 INFO     [gateway] Health check OK
+2026-09-28 16:16:08,240 INFO     [order-worker] Health check OK
+2026-09-28 16:16:08,240 DEBUG    [notifier] GC pause 3743ms
+2026-09-28 16:16:08,240 WARN     [order-worker] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:08,240 INFO     [auth-service] Job 85663 dequeued
+2026-09-28 16:16:08,241 INFO     [notifier] Webhook delivered to partner-310
+2026-09-28 16:16:08,241 DEBUG    [order-worker] Serialized payload (3990 bytes)
+2026-09-28 16:16:09,297 INFO     [payment-api] Request completed in 2982ms
+2026-09-28 16:16:09,299 INFO     [order-worker] Webhook delivered to partner-553
+2026-09-28 16:16:09,299 WARN     [gateway] Rate limit at 85% for client 779
+2026-09-28 16:16:09,300 DEBUG    [auth-service] Serialized payload (517 bytes)
+2026-09-28 16:16:09,300 INFO     [order-worker] Cache hit for key sess:890
+2026-09-28 16:16:09,300 DEBUG    [gateway] Connection pool size=893
+2026-09-28 16:16:10,312 WARN     [payment-api] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:10,312 INFO     [order-worker] Order #18382 created
+2026-09-28 16:16:10,312 INFO     [gateway] User 228 logged in
+2026-09-28 16:16:10,312 INFO     [notifier] Job 21108 dequeued
+2026-09-28 16:16:11,304 INFO     [notifier] Health check OK
+2026-09-28 16:16:11,304 INFO     [order-worker] Job 49283 dequeued
+2026-09-28 16:16:11,304 DEBUG    [gateway] Serialized payload (3770 bytes)
+2026-09-28 16:16:11,304 INFO     [gateway] Webhook delivered to partner-500
+2026-09-28 16:16:11,304 INFO     [gateway] Job 96215 dequeued
+2026-09-28 16:16:11,304 DEBUG    [order-worker] GC pause 2204ms
+2026-09-28 16:16:11,304 INFO     [payment-api] Webhook delivered to partner-999
+2026-09-28 16:16:12,319 WARN     [inventory] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:12,321 INFO     [payment-api] Request completed in 3544ms
+2026-09-28 16:16:12,321 WARN     [notifier] Deprecated endpoint /v1/orders hit
+2026-09-28 16:16:12,321 DEBUG    [auth-service] Connection pool size=446
+2026-09-28 16:16:12,321 INFO     [auth-service] Request completed in 2684ms
+2026-09-28 16:16:12,321 INFO     [inventory] Cache hit for key sess:139
+2026-09-28 16:16:13,326 INFO     [payment-api] User 481 logged in
+2026-09-28 16:16:13,326 INFO     [order-worker] User 837 logged in
+2026-09-28 16:16:13,326 INFO     [order-worker] Job 13943 dequeued
+2026-09-28 16:16:13,326 INFO     [gateway] Health check OK
+2026-09-28 16:16:13,326 INFO     [inventory] Job 36899 dequeued
+2026-09-28 16:16:14,335 INFO     [inventory] Cache hit for key sess:188
+2026-09-28 16:16:14,335 INFO     [order-worker] Request completed in 956ms
+2026-09-28 16:16:14,336 DEBUG    [inventory] GC pause 691ms
+2026-09-28 16:16:14,336 DEBUG    [payment-api] GC pause 1574ms
+2026-09-28 16:16:14,336 INFO     [notifier] User 252 logged in
+2026-09-28 16:16:14,336 WARN     [inventory] Slow query detected (1387ms)
+2026-09-28 16:16:14,336 INFO     [order-worker] Order #16245 created
+2026-09-28 16:16:14,336 INFO     [payment-api] Health check OK
+2026-09-28 16:16:15,420 INFO     [gateway] Job 88851 dequeued
+2026-09-28 16:16:15,420 WARN     [order-worker] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:15,420 INFO     [inventory] Health check OK
+2026-09-28 16:16:15,420 INFO     [gateway] Job 26246 dequeued
+2026-09-28 16:16:15,421 INFO     [inventory] Health check OK
+2026-09-28 16:16:16,427 INFO     [notifier] Request completed in 2382ms
+2026-09-28 16:16:16,427 DEBUG    [payment-api] GC pause 429ms
+2026-09-28 16:16:16,427 INFO     [inventory] Webhook delivered to partner-605
+2026-09-28 16:16:16,427 DEBUG    [notifier] Serialized payload (3082 bytes)
+2026-09-28 16:16:17,454 INFO     [auth-service] User 906 logged in
+2026-09-28 16:16:17,454 DEBUG    [gateway] Serialized payload (934 bytes)
+2026-09-28 16:16:17,454 INFO     [payment-api] Webhook delivered to partner-437
+2026-09-28 16:16:17,454 INFO     [payment-api] Request completed in 1704ms
+2026-09-28 16:16:17,454 INFO     [order-worker] Order #87372 created
+2026-09-28 16:16:17,454 INFO     [notifier] Health check OK
+2026-09-28 16:16:17,454 WARN     [gateway] Slow query detected (482ms)
+2026-09-28 16:16:17,454 WARN     [notifier] Deprecated endpoint /v1/orders hit
+2026-09-28 16:16:17,454 INFO     [notifier] Cache hit for key sess:966
+2026-09-28 16:16:18,476 DEBUG    [payment-api] GC pause 3461ms
+2026-09-28 16:16:18,476 INFO     [order-worker] Webhook delivered to partner-501
+2026-09-28 16:16:18,476 INFO     [payment-api] User 549 logged in
+2026-09-28 16:16:18,476 DEBUG    [order-worker] GC pause 3966ms
+2026-09-28 16:16:18,476 INFO     [payment-api] Cache hit for key sess:117
+2026-09-28 16:16:18,476 INFO     [payment-api] User 376 logged in
+2026-09-28 16:16:19,531 WARN     [payment-api] Rate limit at 85% for client 688
+2026-09-28 16:16:19,531 INFO     [gateway] Request completed in 2198ms
+2026-09-28 16:16:19,531 INFO     [auth-service] Webhook delivered to partner-439
+2026-09-28 16:16:19,531 DEBUG    [order-worker] GC pause 204ms
+2026-09-28 16:16:19,531 INFO     [order-worker] User 480 logged in
+2026-09-28 16:16:19,531 INFO     [gateway] User 950 logged in
+2026-09-28 16:16:19,531 INFO     [payment-api] Webhook delivered to partner-936
+2026-09-28 16:16:19,531 INFO     [notifier] Cache hit for key sess:113
+2026-09-28 16:16:20,581 INFO     [gateway] Order #58206 created
+2026-09-28 16:16:20,584 WARN     [auth-service] Rate limit at 85% for client 121
+2026-09-28 16:16:20,584 INFO     [order-worker] Request completed in 2903ms
+2026-09-28 16:16:20,584 INFO     [notifier] Webhook delivered to partner-986
+2026-09-28 16:16:20,584 INFO     [gateway] User 704 logged in
+2026-09-28 16:16:20,584 INFO     [notifier] Request completed in 2764ms
+2026-09-28 16:16:21,600 ERROR    [notifier] Database connection timeout after 128ms
+2026-09-28 16:16:21,600 INFO     [payment-api] Job 71991 dequeued
+2026-09-28 16:16:21,600 INFO     [gateway] Order #75078 created
+2026-09-28 16:16:21,600 INFO     [inventory] Job 22612 dequeued
+2026-09-28 16:16:21,600 INFO     [auth-service] Job 97976 dequeued
+2026-09-28 16:16:22,612 INFO     [auth-service] Health check OK
+2026-09-28 16:16:22,612 INFO     [auth-service] Order #77788 created
+2026-09-28 16:16:22,612 INFO     [payment-api] Request completed in 2927ms
+2026-09-28 16:16:22,612 DEBUG    [notifier] Connection pool size=564
+2026-09-28 16:16:22,612 INFO     [payment-api] Request completed in 1146ms
+2026-09-28 16:16:22,612 INFO     [gateway] Request completed in 1908ms
+2026-09-28 16:16:22,612 INFO     [auth-service] Order #92665 created
+2026-09-28 16:16:22,612 DEBUG    [payment-api] GC pause 924ms
+2026-09-28 16:16:23,651 DEBUG    [auth-service] Serialized payload (1098 bytes)
+2026-09-28 16:16:23,651 INFO     [auth-service] Request completed in 3199ms
+2026-09-28 16:16:23,651 INFO     [auth-service] Health check OK
+2026-09-28 16:16:23,651 WARN     [auth-service] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:23,651 WARN     [gateway] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:23,651 WARN     [notifier] Rate limit at 85% for client 605
+2026-09-28 16:16:23,651 WARN     [inventory] Slow query detected (245ms)
+2026-09-28 16:16:23,651 INFO     [gateway] Job 77400 dequeued
+2026-09-28 16:16:23,651 INFO     [payment-api] Health check OK
+2026-09-28 16:16:24,667 INFO     [auth-service] Webhook delivered to partner-315
+2026-09-28 16:16:24,667 DEBUG    [gateway] Serialized payload (3805 bytes)
+2026-09-28 16:16:24,667 WARN     [gateway] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:24,667 WARN     [inventory] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:24,667 INFO     [gateway] Order #60365 created
+2026-09-28 16:16:25,757 INFO     [auth-service] Job 58758 dequeued
+2026-09-28 16:16:25,757 INFO     [auth-service] User 124 logged in
+2026-09-28 16:16:25,757 INFO     [inventory] User 829 logged in
+2026-09-28 16:16:25,757 INFO     [gateway] Job 95813 dequeued
+2026-09-28 16:16:25,757 INFO     [payment-api] Order #14058 created
+2026-09-28 16:16:25,757 WARN     [inventory] Slow query detected (2522ms)
+2026-09-28 16:16:25,757 INFO     [inventory] Order #25565 created
+2026-09-28 16:16:26,770 DEBUG    [inventory] Connection pool size=862
+2026-09-28 16:16:26,770 INFO     [inventory] Order #64563 created
+2026-09-28 16:16:26,770 DEBUG    [payment-api] Serialized payload (2058 bytes)
+2026-09-28 16:16:26,771 ERROR    [order-worker] Failed to publish message to queue: broker unavailable
+2026-09-28 16:16:26,771 INFO     [gateway] Cache hit for key sess:670
+2026-09-28 16:16:26,771 INFO     [inventory] User 217 logged in
+2026-09-28 16:16:27,807 INFO     [order-worker] Order #44105 created
+2026-09-28 16:16:27,807 WARN     [auth-service] Deprecated endpoint /v1/orders hit
+2026-09-28 16:16:27,807 INFO     [order-worker] User 244 logged in
+2026-09-28 16:16:27,808 WARN     [gateway] Deprecated endpoint /v1/orders hit
+2026-09-28 16:16:27,808 INFO     [inventory] User 893 logged in
+2026-09-28 16:16:27,808 DEBUG    [notifier] GC pause 2422ms
+2026-09-28 16:16:27,808 WARN     [auth-service] Deprecated endpoint /v1/orders hit
+2026-09-28 16:16:28,827 INFO     [order-worker] Request completed in 2623ms
+2026-09-28 16:16:28,827 INFO     [order-worker] Job 47269 dequeued
+2026-09-28 16:16:28,827 INFO     [payment-api] Health check OK
+2026-09-28 16:16:28,827 INFO     [payment-api] Order #90665 created
+2026-09-28 16:16:28,827 INFO     [payment-api] Health check OK
+2026-09-28 16:16:28,827 INFO     [inventory] Request completed in 3776ms
+2026-09-28 16:16:28,827 INFO     [inventory] Cache hit for key sess:206
+2026-09-28 16:16:28,827 INFO     [payment-api] Health check OK
+2026-09-28 16:16:29,847 WARN     [notifier] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:29,847 WARN     [inventory] Slow query detected (2743ms)
+2026-09-28 16:16:29,847 DEBUG    [gateway] Connection pool size=555
+2026-09-28 16:16:29,847 INFO     [order-worker] Order #47139 created
+2026-09-28 16:16:29,847 DEBUG    [inventory] Connection pool size=742
+2026-09-28 16:16:29,847 INFO     [auth-service] Job 94101 dequeued
+2026-09-28 16:16:29,848 DEBUG    [notifier] Serialized payload (1778 bytes)
+2026-09-28 16:16:29,848 INFO     [auth-service] Order #16954 created
+2026-09-28 16:16:29,848 ERROR    [payment-api] Upstream service unreachable: inventory
+2026-09-28 16:16:30,959 INFO     [payment-api] Health check OK
+2026-09-28 16:16:30,959 INFO     [notifier] Health check OK
+2026-09-28 16:16:30,959 INFO     [notifier] Cache hit for key sess:882
+2026-09-28 16:16:30,959 INFO     [order-worker] Order #50253 created
+2026-09-28 16:16:30,959 DEBUG    [inventory] Connection pool size=315
+2026-09-28 16:16:30,959 INFO     [gateway] Webhook delivered to partner-648
+2026-09-28 16:16:30,960 INFO     [gateway] Webhook delivered to partner-971
+2026-09-28 16:16:30,960 DEBUG    [notifier] GC pause 2231ms
+2026-09-28 16:16:30,960 DEBUG    [auth-service] Connection pool size=934
+2026-09-28 16:16:31,947 DEBUG    [inventory] Serialized payload (1901 bytes)
+2026-09-28 16:16:31,947 WARN     [payment-api] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:31,947 INFO     [notifier] User 888 logged in
+2026-09-28 16:16:31,947 INFO     [gateway] User 163 logged in
+2026-09-28 16:16:31,947 INFO     [gateway] Cache hit for key sess:414
+2026-09-28 16:16:31,947 INFO     [gateway] Cache hit for key sess:702
+2026-09-28 16:16:31,947 INFO     [gateway] User 718 logged in
+2026-09-28 16:16:31,947 INFO     [order-worker] Request completed in 2913ms
+2026-09-28 16:16:32,997 ERROR    [inventory] OOMKilled: worker-807 exceeded memory limit
+2026-09-28 16:16:32,997 INFO     [payment-api] Request completed in 2895ms
+2026-09-28 16:16:32,997 INFO     [auth-service] User 522 logged in
+2026-09-28 16:16:32,997 INFO     [order-worker] Job 47848 dequeued
+2026-09-28 16:16:32,997 DEBUG    [gateway] Serialized payload (898 bytes)
+2026-09-28 16:16:32,997 INFO     [notifier] Webhook delivered to partner-960
+2026-09-28 16:16:32,997 INFO     [auth-service] Health check OK
+2026-09-28 16:16:32,997 INFO     [payment-api] Job 33126 dequeued
+2026-09-28 16:16:34,076 INFO     [gateway] Job 56658 dequeued
+2026-09-28 16:16:34,079 DEBUG    [auth-service] Serialized payload (2831 bytes)
+2026-09-28 16:16:34,079 WARN     [gateway] Rate limit at 85% for client 802
+2026-09-28 16:16:34,080 INFO     [payment-api] Job 64505 dequeued
+2026-09-28 16:16:34,080 INFO     [inventory] Webhook delivered to partner-969
+2026-09-28 16:16:35,085 INFO     [order-worker] Cache hit for key sess:916
+2026-09-28 16:16:35,085 INFO     [order-worker] Job 67387 dequeued
+2026-09-28 16:16:35,085 DEBUG    [notifier] GC pause 1971ms
+2026-09-28 16:16:35,085 INFO     [gateway] Webhook delivered to partner-465
+2026-09-28 16:16:35,085 WARN     [payment-api] Deprecated endpoint /v1/orders hit
+2026-09-28 16:16:35,085 INFO     [order-worker] Health check OK
+2026-09-28 16:16:35,085 INFO     [gateway] Webhook delivered to partner-555
+2026-09-28 16:16:36,131 INFO     [auth-service] Health check OK
+2026-09-28 16:16:36,131 INFO     [order-worker] User 302 logged in
+2026-09-28 16:16:36,132 DEBUG    [inventory] GC pause 742ms
+2026-09-28 16:16:36,132 INFO     [order-worker] Order #54957 created
+2026-09-28 16:16:37,166 INFO     [order-worker] Request completed in 2597ms
+2026-09-28 16:16:37,166 ERROR    [order-worker] OOMKilled: worker-219 exceeded memory limit
+2026-09-28 16:16:37,166 DEBUG    [gateway] Connection pool size=714
+2026-09-28 16:16:37,166 WARN     [payment-api] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:37,166 INFO     [payment-api] User 212 logged in
+2026-09-28 16:16:37,166 INFO     [auth-service] Cache hit for key sess:676
+2026-09-28 16:16:37,167 INFO     [payment-api] Request completed in 1937ms
+2026-09-28 16:16:37,167 WARN     [notifier] Deprecated endpoint /v1/orders hit
+2026-09-28 16:16:38,155 INFO     [order-worker] Request completed in 2165ms
+2026-09-28 16:16:38,155 INFO     [auth-service] Request completed in 873ms
+2026-09-28 16:16:38,156 DEBUG    [auth-service] GC pause 2215ms
+2026-09-28 16:16:38,156 INFO     [notifier] Request completed in 3493ms
+2026-09-28 16:16:38,156 INFO     [notifier] Job 48382 dequeued
+2026-09-28 16:16:38,156 INFO     [order-worker] Order #43630 created
+2026-09-28 16:16:39,150 INFO     [order-worker] Cache hit for key sess:597
+2026-09-28 16:16:39,151 DEBUG    [notifier] GC pause 1495ms
+2026-09-28 16:16:39,151 INFO     [gateway] Cache hit for key sess:355
+2026-09-28 16:16:39,151 INFO     [order-worker] Webhook delivered to partner-789
+2026-09-28 16:16:39,152 INFO     [notifier] User 395 logged in
+2026-09-28 16:16:39,152 DEBUG    [notifier] Serialized payload (1647 bytes)
+2026-09-28 16:16:39,152 INFO     [auth-service] Job 69198 dequeued
+2026-09-28 16:16:40,183 WARN     [notifier] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:40,183 DEBUG    [gateway] Serialized payload (437 bytes)
+2026-09-28 16:16:40,183 INFO     [notifier] Order #11672 created
+2026-09-28 16:16:40,183 INFO     [auth-service] Request completed in 3103ms
+2026-09-28 16:16:40,183 WARN     [order-worker] Rate limit at 85% for client 594
+2026-09-28 16:16:41,227 DEBUG    [auth-service] GC pause 3087ms
+2026-09-28 16:16:41,227 ERROR    [gateway] Upstream service unreachable: inventory
+2026-09-28 16:16:41,227 ERROR    [order-worker] Payment gateway returned 502
+2026-09-28 16:16:41,227 INFO     [notifier] Health check OK
+2026-09-28 16:16:41,227 INFO     [inventory] Cache hit for key sess:170
+2026-09-28 16:16:41,227 INFO     [inventory] Job 21222 dequeued
+2026-09-28 16:16:41,227 WARN     [auth-service] Slow query detected (2145ms)
+2026-09-28 16:16:41,227 INFO     [inventory] Job 80453 dequeued
+2026-09-28 16:16:41,227 INFO     [auth-service] Request completed in 206ms
+2026-09-28 16:16:42,249 INFO     [inventory] Job 19915 dequeued
+2026-09-28 16:16:42,249 INFO     [inventory] Cache hit for key sess:339
+2026-09-28 16:16:42,249 DEBUG    [order-worker] GC pause 12ms
+2026-09-28 16:16:42,249 DEBUG    [gateway] Connection pool size=752
+2026-09-28 16:16:42,249 DEBUG    [notifier] Connection pool size=730
+2026-09-28 16:16:42,249 INFO     [inventory] Order #76843 created
+2026-09-28 16:16:42,249 INFO     [gateway] Health check OK
+2026-09-28 16:16:43,318 WARN     [auth-service] Slow query detected (1538ms)
+2026-09-28 16:16:43,318 INFO     [auth-service] Job 76371 dequeued
+2026-09-28 16:16:43,318 INFO     [order-worker] Job 86157 dequeued
+2026-09-28 16:16:43,318 ERROR    [notifier] Payment gateway returned 502
+2026-09-28 16:16:43,318 INFO     [inventory] Cache hit for key sess:365
+2026-09-28 16:16:43,318 DEBUG    [inventory] Serialized payload (3621 bytes)
+2026-09-28 16:16:43,318 INFO     [auth-service] Job 17041 dequeued
+2026-09-28 16:16:43,318 DEBUG    [gateway] GC pause 823ms
+2026-09-28 16:16:44,334 INFO     [payment-api] Request completed in 939ms
+2026-09-28 16:16:44,334 WARN     [inventory] Rate limit at 85% for client 641
+2026-09-28 16:16:44,334 INFO     [notifier] Job 43127 dequeued
+2026-09-28 16:16:44,334 INFO     [gateway] Cache hit for key sess:238
+2026-09-28 16:16:44,334 INFO     [payment-api] User 533 logged in
+2026-09-28 16:16:44,334 INFO     [gateway] Cache hit for key sess:863
+2026-09-28 16:16:45,362 INFO     [order-worker] Order #46307 created
+2026-09-28 16:16:45,362 DEBUG    [payment-api] Connection pool size=236
+2026-09-28 16:16:45,362 INFO     [notifier] Job 58499 dequeued
+2026-09-28 16:16:45,362 INFO     [order-worker] Job 94970 dequeued
+2026-09-28 16:16:45,362 WARN     [auth-service] Deprecated endpoint /v1/orders hit
+2026-09-28 16:16:45,362 DEBUG    [inventory] GC pause 3791ms
+2026-09-28 16:16:45,362 DEBUG    [notifier] Serialized payload (2936 bytes)
+2026-09-28 16:16:45,386 INFO     [order-worker] Order #14214 created
+2026-09-28 16:16:45,386 DEBUG    [gateway] GC pause 786ms
+2026-09-28 16:16:46,377 INFO     [notifier] Job 80848 dequeued
+2026-09-28 16:16:46,378 INFO     [inventory] Order #72946 created
+2026-09-28 16:16:46,378 INFO     [payment-api] Order #96975 created
+2026-09-28 16:16:46,378 WARN     [auth-service] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:46,378 DEBUG    [payment-api] Connection pool size=937
+2026-09-28 16:16:46,378 DEBUG    [notifier] Connection pool size=952
+2026-09-28 16:16:47,370 WARN     [payment-api] Slow query detected (3676ms)
+2026-09-28 16:16:47,370 INFO     [auth-service] User 506 logged in
+2026-09-28 16:16:47,370 WARN     [order-worker] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:47,370 ERROR    [inventory] NullPointerException in OrderHandler
+2026-09-28 16:16:48,445 INFO     [order-worker] Webhook delivered to partner-205
+2026-09-28 16:16:48,445 DEBUG    [order-worker] Serialized payload (3016 bytes)
+2026-09-28 16:16:48,445 ERROR    [order-worker] Database connection timeout after 1791ms
+2026-09-28 16:16:48,445 INFO     [inventory] Order #26520 created
+2026-09-28 16:16:49,463 DEBUG    [auth-service] Serialized payload (2141 bytes)
+2026-09-28 16:16:49,463 INFO     [order-worker] Webhook delivered to partner-248
+2026-09-28 16:16:49,463 WARN     [inventory] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:49,463 INFO     [order-worker] Job 79784 dequeued
+2026-09-28 16:16:49,463 DEBUG    [gateway] Connection pool size=796
+2026-09-28 16:16:50,472 INFO     [gateway] User 373 logged in
+2026-09-28 16:16:50,472 INFO     [inventory] User 830 logged in
+2026-09-28 16:16:50,472 WARN     [inventory] Retrying upstream call (attempt 2/3)
+2026-09-28 16:16:50,472 INFO     [inventory] Request completed in 2372ms
+2026-09-28 16:16:50,472 INFO     [notifier] Cache hit for key sess:135
+2026-09-28 16:16:51,488 INFO     [order-worker] User 713 logged in
+2026-09-28 16:16:51,488 DEBUG    [order-worker] GC pause 2657ms
+2026-09-28 16:16:51,489 DEBUG    [order-worker] GC pause 249ms
+2026-09-28 16:16:51,489 WARN     [order-worker] Deprecated endpoint /v1/orders hit
+2026-09-28 16:16:51,489 INFO     [notifier] Health check OK
+2026-09-28 16:16:52,526 DEBUG    [order-worker] GC pause 1657ms
+2026-09-28 16:16:52,526 ERROR    [order-worker] Upstream service unreachable: inventory
+2026-09-28 16:16:52,526 INFO     [gateway] Health check OK
+2026-09-28 16:16:52,526 DEBUG    [payment-api] Connection pool size=359
+2026-09-28 16:16:52,526 ERROR    [gateway] NullPointerException in OrderHandler
+2026-09-28 16:16:52,526 WARN     [order-worker] Rate limit at 85% for client 759
+2026-09-28 16:16:53,547 INFO     [payment-api] Request completed in 3674ms
+2026-09-28 16:16:53,547 WARN     [gateway] Rate limit at 85% for client 284
+2026-09-28 16:16:53,547 INFO     [notifier] Job 85265 dequeued
+2026-09-28 16:16:53,547 INFO     [order-worker] Webhook delivered to partner-163
+2026-09-28 16:16:54,596 INFO     [auth-service] User 358 logged in
+2026-09-28 16:16:54,596 INFO     [order-worker] Health check OK
+2026-09-28 16:16:54,596 INFO     [order-worker] Order #94757 created
+2026-09-28 16:16:54,596 INFO     [auth-service] Webhook delivered to partner-337
+2026-09-28 16:16:54,596 DEBUG    [inventory] Serialized payload (3624 bytes)
+2026-09-28 16:16:55,608 WARN     [notifier] Rate limit at 85% for client 555
+2026-09-28 16:16:55,608 INFO     [gateway] User 112 logged in
+2026-09-28 16:16:55,608 INFO     [payment-api] Webhook delivered to partner-830
+2026-09-28 16:16:55,608 INFO     [notifier] User 275 logged in
+2026-09-28 16:16:55,608 INFO     [payment-api] Health check OK
+2026-09-28 16:16:56,609 INFO     [inventory] Job 31232 dequeued
+2026-09-28 16:16:56,610 INFO     [inventory] Cache hit for key sess:242
+2026-09-28 16:16:56,610 INFO     [gateway] Cache hit for key sess:215
+2026-09-28 16:16:56,610 DEBUG    [order-worker] GC pause 346ms
+2026-09-28 16:16:56,610 WARN     [notifier] Slow query detected (2713ms)
+2026-09-28 16:16:56,610 INFO     [gateway] Cache hit for key sess:307
+2026-09-28 16:16:57,605 DEBUG    [inventory] Serialized payload (1997 bytes)
+2026-09-28 16:16:57,605 INFO     [payment-api] Health check OK
+2026-09-28 16:16:57,605 INFO     [gateway] Webhook delivered to partner-951
+2026-09-28 16:16:57,605 DEBUG    [order-worker] GC pause 1488ms
+2026-09-28 16:16:57,605 DEBUG    [order-worker] Connection pool size=561
+2026-09-28 16:16:57,605 INFO     [auth-service] Job 91642 dequeued
+2026-09-28 16:16:57,605 INFO     [gateway] Job 28282 dequeued
+2026-09-28 16:16:57,605 INFO     [notifier] Job 45255 dequeued
+2026-09-28 16:16:58,652 DEBUG    [payment-api] Connection pool size=629
+2026-09-28 16:16:58,652 INFO     [inventory] Cache hit for key sess:648
+2026-09-28 16:16:58,652 INFO     [inventory] Cache hit for key sess:333
+2026-09-28 16:16:58,652 WARN     [payment-api] Slow query detected (119ms)
+2026-09-28 16:16:58,652 INFO     [gateway] Health check OK
+2026-09-28 16:16:58,652 ERROR    [payment-api] TLS handshake failed with partner-960
+2026-09-28 16:16:58,652 INFO     [payment-api] User 457 logged in
+2026-09-28 16:16:58,652 INFO     [auth-service] User 105 logged in
+2026-09-28 16:16:58,652 INFO     [gateway] Order #98437 created
+2026-09-28 16:16:59,679 WARN     [order-worker] Rate limit at 85% for client 401
+2026-09-28 16:16:59,679 INFO     [order-worker] Job 16166 dequeued
+2026-09-28 16:16:59,679 INFO     [order-worker] User 739 logged in
+2026-09-28 16:16:59,679 INFO     [auth-service] Order #46276 created
+2026-09-28 16:17:00,760 ERROR    [payment-api] Payment gateway returned 502
+2026-09-28 16:17:00,761 DEBUG    [payment-api] Connection pool size=101
+2026-09-28 16:17:00,761 ERROR    [payment-api] NullPointerException in OrderHandler
+2026-09-28 16:17:00,761 INFO     [order-worker] User 156 logged in
+2026-09-28 16:17:00,761 INFO     [auth-service] Cache hit for key sess:519
+2026-09-28 16:17:00,761 DEBUG    [auth-service] GC pause 445ms
+2026-09-28 16:17:00,761 INFO     [notifier] Health check OK
+2026-09-28 16:17:00,761 INFO     [notifier] Health check OK
+2026-09-28 16:17:00,761 ERROR    [auth-service] NullPointerException in OrderHandler
+2026-09-28 16:17:00,761 INFO     [payment-api] User 745 logged in
+2026-09-28 16:17:00,761 INFO     [payment-api] Order #77334 created
+2026-09-28 16:17:00,761 DEBUG    [inventory] Connection pool size=124
+2026-09-28 16:17:00,761 DEBUG    [notifier] Serialized payload (1658 bytes)
+2026-09-28 16:17:01,798 INFO     [gateway] Webhook delivered to partner-563
+2026-09-28 16:17:01,798 INFO     [order-worker] User 196 logged in
+2026-09-28 16:17:01,798 DEBUG    [auth-service] Serialized payload (3419 bytes)
+2026-09-28 16:17:01,799 DEBUG    [inventory] GC pause 3204ms
+2026-09-28 16:17:01,799 INFO     [notifier] User 526 logged in
+2026-09-28 16:17:01,799 INFO     [payment-api] Order #99448 created
+2026-09-28 16:17:01,799 WARN     [auth-service] Retrying upstream call (attempt 2/3)
+2026-09-28 16:17:01,799 INFO     [payment-api] Health check OK
+2026-09-28 16:17:01,799 ERROR    [order-worker] NullPointerException in OrderHandler
+2026-09-28 16:17:01,799 INFO     [order-worker] Order #61321 created
+2026-09-28 16:17:01,799 ERROR    [order-worker] Payment gateway returned 502
+2026-09-28 16:17:02,876 INFO     [gateway] Health check OK
+2026-09-28 16:17:02,876 ERROR    [gateway] NullPointerException in OrderHandler
+2026-09-28 16:17:02,876 INFO     [order-worker] Webhook delivered to partner-395
+2026-09-28 16:17:02,876 DEBUG    [gateway] Serialized payload (3266 bytes)
+2026-09-28 16:17:02,876 INFO     [inventory] User 538 logged in
+2026-09-28 16:17:02,876 INFO     [order-worker] Cache hit for key sess:849
+2026-09-28 16:17:02,876 INFO     [auth-service] Webhook delivered to partner-890
+2026-09-28 16:17:02,876 ERROR    [order-worker] OOMKilled: worker-863 exceeded memory limit
+2026-09-28 16:17:02,876 ERROR    [notifier] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:02,876 INFO     [gateway] Request completed in 2499ms
+2026-09-28 16:17:03,895 INFO     [order-worker] Job 59337 dequeued
+2026-09-28 16:17:03,895 DEBUG    [payment-api] Serialized payload (2620 bytes)
+2026-09-28 16:17:03,895 INFO     [gateway] Cache hit for key sess:453
+2026-09-28 16:17:03,895 INFO     [inventory] Request completed in 3669ms
+2026-09-28 16:17:03,895 ERROR    [gateway] Database connection timeout after 2895ms
+2026-09-28 16:17:03,895 INFO     [notifier] Webhook delivered to partner-182
+2026-09-28 16:17:03,895 DEBUG    [notifier] Serialized payload (2681 bytes)
+2026-09-28 16:17:03,895 ERROR    [gateway] TLS handshake failed with partner-791
+2026-09-28 16:17:03,895 INFO     [order-worker] Job 78680 dequeued
+2026-09-28 16:17:03,895 INFO     [order-worker] Cache hit for key sess:125
+2026-09-28 16:17:03,897 ERROR    [gateway] TLS handshake failed with partner-132
+2026-09-28 16:17:03,897 INFO     [gateway] Health check OK
+2026-09-28 16:17:03,897 WARN     [payment-api] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:03,898 INFO     [notifier] Order #69079 created
+2026-09-28 16:17:03,898 INFO     [auth-service] User 536 logged in
+2026-09-28 16:17:03,898 DEBUG    [notifier] GC pause 450ms
+2026-09-28 16:17:04,913 INFO     [order-worker] Webhook delivered to partner-877
+2026-09-28 16:17:04,913 DEBUG    [notifier] Serialized payload (89 bytes)
+2026-09-28 16:17:04,913 INFO     [inventory] Health check OK
+2026-09-28 16:17:04,913 INFO     [order-worker] Order #45912 created
+2026-09-28 16:17:04,913 INFO     [auth-service] Request completed in 2555ms
+2026-09-28 16:17:04,916 INFO     [auth-service] Job 21936 dequeued
+2026-09-28 16:17:04,916 INFO     [order-worker] Webhook delivered to partner-518
+2026-09-28 16:17:04,917 DEBUG    [notifier] GC pause 3713ms
+2026-09-28 16:17:04,917 ERROR    [order-worker] Payment gateway returned 502
+2026-09-28 16:17:04,917 INFO     [gateway] Job 78975 dequeued
+2026-09-28 16:17:04,917 INFO     [gateway] Health check OK
+2026-09-28 16:17:04,917 ERROR    [gateway] NullPointerException in OrderHandler
+2026-09-28 16:17:04,917 INFO     [auth-service] Webhook delivered to partner-322
+2026-09-28 16:17:05,935 ERROR    [inventory] Payment gateway returned 502
+2026-09-28 16:17:05,939 INFO     [notifier] Health check OK
+2026-09-28 16:17:05,939 INFO     [inventory] User 335 logged in
+2026-09-28 16:17:05,939 INFO     [order-worker] Order #48887 created
+2026-09-28 16:17:05,939 INFO     [gateway] Request completed in 2392ms
+2026-09-28 16:17:05,939 ERROR    [auth-service] Upstream service unreachable: inventory
+2026-09-28 16:17:05,941 INFO     [auth-service] Job 77495 dequeued
+2026-09-28 16:17:05,941 WARN     [payment-api] Rate limit at 85% for client 324
+2026-09-28 16:17:05,941 INFO     [auth-service] Cache hit for key sess:569
+2026-09-28 16:17:06,956 INFO     [payment-api] Order #48769 created
+2026-09-28 16:17:06,962 INFO     [auth-service] Request completed in 3676ms
+2026-09-28 16:17:06,962 INFO     [gateway] Request completed in 1515ms
+2026-09-28 16:17:06,962 ERROR    [inventory] Database connection timeout after 1186ms
+2026-09-28 16:17:06,962 INFO     [gateway] Request completed in 1105ms
+2026-09-28 16:17:06,962 ERROR    [auth-service] OOMKilled: worker-456 exceeded memory limit
+2026-09-28 16:17:06,962 INFO     [auth-service] Health check OK
+2026-09-28 16:17:06,962 INFO     [order-worker] Webhook delivered to partner-531
+2026-09-28 16:17:06,962 ERROR    [notifier] NullPointerException in OrderHandler
+2026-09-28 16:17:06,962 INFO     [gateway] Order #23692 created
+2026-09-28 16:17:06,962 INFO     [gateway] Request completed in 472ms
+2026-09-28 16:17:06,962 ERROR    [order-worker] Upstream service unreachable: inventory
+2026-09-28 16:17:06,962 ERROR    [payment-api] Payment gateway returned 502
+2026-09-28 16:17:08,037 ERROR    [inventory] OOMKilled: worker-993 exceeded memory limit
+2026-09-28 16:17:08,038 DEBUG    [inventory] GC pause 880ms
+2026-09-28 16:17:08,038 WARN     [notifier] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:08,038 INFO     [payment-api] Health check OK
+2026-09-28 16:17:08,038 INFO     [gateway] Order #99278 created
+2026-09-28 16:17:08,038 INFO     [payment-api] Cache hit for key sess:382
+2026-09-28 16:17:08,038 INFO     [gateway] Health check OK
+2026-09-28 16:17:08,038 ERROR    [payment-api] TLS handshake failed with partner-841
+2026-09-28 16:17:08,038 ERROR    [gateway] Payment gateway returned 502
+2026-09-28 16:17:09,028 DEBUG    [gateway] GC pause 1705ms
+2026-09-28 16:17:09,028 INFO     [inventory] Request completed in 805ms
+2026-09-28 16:17:09,028 ERROR    [auth-service] OOMKilled: worker-530 exceeded memory limit
+2026-09-28 16:17:09,028 INFO     [gateway] Request completed in 2628ms
+2026-09-28 16:17:09,028 ERROR    [payment-api] Payment gateway returned 502
+2026-09-28 16:17:09,028 ERROR    [auth-service] NullPointerException in OrderHandler
+2026-09-28 16:17:09,028 INFO     [payment-api] Order #13698 created
+2026-09-28 16:17:09,028 INFO     [payment-api] Request completed in 3265ms
+2026-09-28 16:17:09,028 ERROR    [order-worker] Upstream service unreachable: inventory
+2026-09-28 16:17:09,028 INFO     [inventory] Cache hit for key sess:256
+2026-09-28 16:17:09,028 DEBUG    [auth-service] GC pause 3761ms
+2026-09-28 16:17:10,130 INFO     [notifier] Cache hit for key sess:618
+2026-09-28 16:17:10,131 ERROR    [auth-service] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:10,131 INFO     [inventory] Health check OK
+2026-09-28 16:17:10,131 INFO     [gateway] User 986 logged in
+2026-09-28 16:17:10,131 CRITICAL [notifier] Primary DB unreachable - failover initiated
+2026-09-28 16:17:10,131 ERROR    [gateway] TLS handshake failed with partner-386
+2026-09-28 16:17:10,131 INFO     [order-worker] Webhook delivered to partner-190
+2026-09-28 16:17:10,131 DEBUG    [order-worker] GC pause 3460ms
+2026-09-28 16:17:11,238 DEBUG    [order-worker] Connection pool size=639
+2026-09-28 16:17:11,238 INFO     [auth-service] Order #47677 created
+2026-09-28 16:17:11,238 DEBUG    [auth-service] GC pause 3394ms
+2026-09-28 16:17:11,238 INFO     [inventory] Job 19247 dequeued
+2026-09-28 16:17:11,238 ERROR    [inventory] Payment gateway returned 502
+2026-09-28 16:17:11,238 WARN     [auth-service] Rate limit at 85% for client 632
+2026-09-28 16:17:11,238 INFO     [gateway] User 514 logged in
+2026-09-28 16:17:11,238 INFO     [order-worker] Job 45678 dequeued
+2026-09-28 16:17:11,245 INFO     [auth-service] Job 42323 dequeued
+2026-09-28 16:17:11,245 INFO     [order-worker] Job 78365 dequeued
+2026-09-28 16:17:11,245 INFO     [notifier] Order #23083 created
+2026-09-28 16:17:11,245 INFO     [auth-service] Order #11930 created
+2026-09-28 16:17:11,245 INFO     [auth-service] Webhook delivered to partner-816
+2026-09-28 16:17:11,245 INFO     [inventory] Request completed in 2261ms
+2026-09-28 16:17:11,245 INFO     [gateway] Request completed in 811ms
+2026-09-28 16:17:11,246 DEBUG    [order-worker] GC pause 984ms
+2026-09-28 16:17:12,250 INFO     [auth-service] User 416 logged in
+2026-09-28 16:17:12,253 ERROR    [auth-service] Database connection timeout after 3684ms
+2026-09-28 16:17:12,253 DEBUG    [payment-api] Serialized payload (3932 bytes)
+2026-09-28 16:17:12,253 ERROR    [auth-service] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:12,253 INFO     [gateway] User 336 logged in
+2026-09-28 16:17:12,253 DEBUG    [inventory] Serialized payload (1915 bytes)
+2026-09-28 16:17:12,253 INFO     [notifier] User 321 logged in
+2026-09-28 16:17:12,253 INFO     [gateway] Order #66826 created
+2026-09-28 16:17:12,253 INFO     [order-worker] Request completed in 2645ms
+2026-09-28 16:17:12,253 INFO     [notifier] Order #79382 created
+2026-09-28 16:17:12,253 INFO     [gateway] User 367 logged in
+2026-09-28 16:17:13,272 INFO     [payment-api] Job 24634 dequeued
+2026-09-28 16:17:13,272 ERROR    [order-worker] OOMKilled: worker-527 exceeded memory limit
+2026-09-28 16:17:13,272 INFO     [auth-service] Job 39166 dequeued
+2026-09-28 16:17:13,272 INFO     [notifier] Health check OK
+2026-09-28 16:17:13,272 INFO     [notifier] Request completed in 329ms
+2026-09-28 16:17:13,272 ERROR    [gateway] OOMKilled: worker-106 exceeded memory limit
+2026-09-28 16:17:13,272 INFO     [inventory] Health check OK
+2026-09-28 16:17:13,272 INFO     [notifier] Webhook delivered to partner-659
+2026-09-28 16:17:13,272 INFO     [gateway] Request completed in 3893ms
+2026-09-28 16:17:14,283 INFO     [auth-service] Order #69149 created
+2026-09-28 16:17:14,283 INFO     [auth-service] Job 45248 dequeued
+2026-09-28 16:17:14,284 DEBUG    [notifier] GC pause 3900ms
+2026-09-28 16:17:14,284 INFO     [order-worker] Health check OK
+2026-09-28 16:17:14,284 ERROR    [notifier] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:14,284 INFO     [order-worker] Webhook delivered to partner-702
+2026-09-28 16:17:14,284 ERROR    [gateway] TLS handshake failed with partner-204
+2026-09-28 16:17:14,284 INFO     [inventory] Webhook delivered to partner-570
+2026-09-28 16:17:14,284 WARN     [notifier] Slow query detected (2348ms)
+2026-09-28 16:17:14,284 ERROR    [order-worker] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:14,284 WARN     [inventory] Slow query detected (2345ms)
+2026-09-28 16:17:14,284 WARN     [payment-api] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:14,284 INFO     [gateway] Request completed in 450ms
+2026-09-28 16:17:14,284 INFO     [gateway] Request completed in 1292ms
+2026-09-28 16:17:14,284 ERROR    [payment-api] NullPointerException in OrderHandler
+2026-09-28 16:17:15,324 INFO     [payment-api] Health check OK
+2026-09-28 16:17:15,329 DEBUG    [order-worker] GC pause 105ms
+2026-09-28 16:17:15,329 DEBUG    [gateway] GC pause 3601ms
+2026-09-28 16:17:15,329 DEBUG    [payment-api] Connection pool size=481
+2026-09-28 16:17:15,329 INFO     [gateway] Job 53355 dequeued
+2026-09-28 16:17:15,329 WARN     [order-worker] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:15,330 ERROR    [payment-api] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:15,335 INFO     [inventory] Order #46024 created
+2026-09-28 16:17:15,335 ERROR    [order-worker] NullPointerException in OrderHandler
+2026-09-28 16:17:15,335 DEBUG    [payment-api] Connection pool size=534
+2026-09-28 16:17:15,335 ERROR    [order-worker] TLS handshake failed with partner-890
+2026-09-28 16:17:16,377 INFO     [payment-api] Order #41347 created
+2026-09-28 16:17:16,377 ERROR    [notifier] Database connection timeout after 1388ms
+2026-09-28 16:17:16,377 ERROR    [inventory] NullPointerException in OrderHandler
+2026-09-28 16:17:16,377 INFO     [notifier] Job 23708 dequeued
+2026-09-28 16:17:16,377 INFO     [inventory] Cache hit for key sess:495
+2026-09-28 16:17:16,377 DEBUG    [payment-api] Connection pool size=698
+2026-09-28 16:17:16,377 ERROR    [inventory] Upstream service unreachable: inventory
+2026-09-28 16:17:16,377 INFO     [order-worker] Webhook delivered to partner-734
+2026-09-28 16:17:16,377 ERROR    [notifier] TLS handshake failed with partner-698
+2026-09-28 16:17:16,377 INFO     [inventory] User 526 logged in
+2026-09-28 16:17:16,377 INFO     [order-worker] Order #83436 created
+2026-09-28 16:17:16,377 INFO     [notifier] Webhook delivered to partner-745
+2026-09-28 16:17:16,377 INFO     [gateway] User 516 logged in
+2026-09-28 16:17:16,378 INFO     [payment-api] User 801 logged in
+2026-09-28 16:17:16,378 WARN     [auth-service] Slow query detected (2727ms)
+2026-09-28 16:17:17,428 INFO     [payment-api] Job 62941 dequeued
+2026-09-28 16:17:17,428 WARN     [payment-api] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:17,428 ERROR    [inventory] Database connection timeout after 454ms
+2026-09-28 16:17:17,428 ERROR    [payment-api] Payment gateway returned 502
+2026-09-28 16:17:17,429 INFO     [payment-api] Job 39228 dequeued
+2026-09-28 16:17:17,429 DEBUG    [payment-api] Connection pool size=447
+2026-09-28 16:17:17,429 ERROR    [order-worker] NullPointerException in OrderHandler
+2026-09-28 16:17:17,429 INFO     [inventory] Request completed in 2576ms
+2026-09-28 16:17:18,446 INFO     [inventory] Order #96429 created
+2026-09-28 16:17:18,446 INFO     [order-worker] Health check OK
+2026-09-28 16:17:18,446 WARN     [gateway] Slow query detected (2220ms)
+2026-09-28 16:17:18,446 INFO     [auth-service] Webhook delivered to partner-394
+2026-09-28 16:17:18,446 INFO     [gateway] Cache hit for key sess:166
+2026-09-28 16:17:18,446 DEBUG    [order-worker] Serialized payload (3928 bytes)
+2026-09-28 16:17:18,446 INFO     [auth-service] Cache hit for key sess:345
+2026-09-28 16:17:18,446 INFO     [payment-api] Health check OK
+2026-09-28 16:17:18,446 DEBUG    [inventory] Serialized payload (1677 bytes)
+2026-09-28 16:17:19,459 INFO     [notifier] Job 54003 dequeued
+2026-09-28 16:17:19,459 INFO     [auth-service] User 967 logged in
+2026-09-28 16:17:19,459 ERROR    [gateway] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:19,459 INFO     [payment-api] Health check OK
+2026-09-28 16:17:19,459 INFO     [notifier] Job 33840 dequeued
+2026-09-28 16:17:19,459 ERROR    [gateway] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:19,460 INFO     [order-worker] Webhook delivered to partner-886
+2026-09-28 16:17:19,460 ERROR    [inventory] Upstream service unreachable: inventory
+2026-09-28 16:17:19,460 ERROR    [payment-api] TLS handshake failed with partner-693
+2026-09-28 16:17:19,460 DEBUG    [gateway] Serialized payload (854 bytes)
+2026-09-28 16:17:19,460 ERROR    [inventory] Upstream service unreachable: inventory
+2026-09-28 16:17:19,460 DEBUG    [notifier] Serialized payload (37 bytes)
+2026-09-28 16:17:19,460 INFO     [payment-api] User 884 logged in
+2026-09-28 16:17:19,460 ERROR    [notifier] Payment gateway returned 502
+2026-09-28 16:17:19,460 DEBUG    [gateway] Connection pool size=654
+2026-09-28 16:17:19,460 ERROR    [payment-api] NullPointerException in OrderHandler
+2026-09-28 16:17:20,458 INFO     [order-worker] Job 24592 dequeued
+2026-09-28 16:17:20,460 DEBUG    [gateway] GC pause 397ms
+2026-09-28 16:17:20,460 INFO     [notifier] Request completed in 2943ms
+2026-09-28 16:17:20,460 WARN     [notifier] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:20,460 DEBUG    [order-worker] Serialized payload (2481 bytes)
+2026-09-28 16:17:20,460 INFO     [gateway] Health check OK
+2026-09-28 16:17:20,460 DEBUG    [order-worker] GC pause 2551ms
+2026-09-28 16:17:20,460 DEBUG    [auth-service] Serialized payload (2296 bytes)
+2026-09-28 16:17:20,460 INFO     [inventory] Health check OK
+2026-09-28 16:17:20,460 INFO     [notifier] Request completed in 2765ms
+2026-09-28 16:17:20,460 DEBUG    [notifier] Serialized payload (3582 bytes)
+2026-09-28 16:17:20,460 ERROR    [gateway] OOMKilled: worker-295 exceeded memory limit
+2026-09-28 16:17:20,460 ERROR    [auth-service] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:21,510 INFO     [notifier] User 771 logged in
+2026-09-28 16:17:21,510 WARN     [notifier] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:21,510 INFO     [payment-api] User 629 logged in
+2026-09-28 16:17:21,511 INFO     [gateway] Webhook delivered to partner-381
+2026-09-28 16:17:21,512 INFO     [payment-api] Job 11510 dequeued
+2026-09-28 16:17:21,512 INFO     [auth-service] Request completed in 2763ms
+2026-09-28 16:17:21,512 INFO     [inventory] Cache hit for key sess:588
+2026-09-28 16:17:21,519 INFO     [gateway] Health check OK
+2026-09-28 16:17:21,519 INFO     [payment-api] Health check OK
+2026-09-28 16:17:21,523 INFO     [auth-service] Order #86754 created
+2026-09-28 16:17:21,523 WARN     [gateway] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:22,528 INFO     [order-worker] Order #58301 created
+2026-09-28 16:17:22,528 INFO     [payment-api] Request completed in 3135ms
+2026-09-28 16:17:22,528 INFO     [inventory] Request completed in 2047ms
+2026-09-28 16:17:22,528 DEBUG    [gateway] GC pause 1752ms
+2026-09-28 16:17:22,529 WARN     [gateway] Rate limit at 85% for client 750
+2026-09-28 16:17:22,529 INFO     [payment-api] Request completed in 2120ms
+2026-09-28 16:17:22,529 ERROR    [order-worker] OOMKilled: worker-167 exceeded memory limit
+2026-09-28 16:17:22,529 INFO     [order-worker] Webhook delivered to partner-898
+2026-09-28 16:17:22,529 WARN     [inventory] Rate limit at 85% for client 395
+2026-09-28 16:17:22,529 INFO     [auth-service] User 794 logged in
+2026-09-28 16:17:22,529 INFO     [order-worker] Webhook delivered to partner-827
+2026-09-28 16:17:22,529 INFO     [order-worker] Webhook delivered to partner-487
+2026-09-28 16:17:22,529 INFO     [payment-api] Order #11427 created
+2026-09-28 16:17:22,529 WARN     [notifier] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:22,529 ERROR    [inventory] NullPointerException in OrderHandler
+2026-09-28 16:17:23,523 DEBUG    [order-worker] Serialized payload (3325 bytes)
+2026-09-28 16:17:23,523 INFO     [inventory] User 347 logged in
+2026-09-28 16:17:23,523 INFO     [payment-api] Health check OK
+2026-09-28 16:17:23,523 INFO     [payment-api] Health check OK
+2026-09-28 16:17:23,523 INFO     [payment-api] User 202 logged in
+2026-09-28 16:17:23,523 WARN     [notifier] Rate limit at 85% for client 642
+2026-09-28 16:17:23,523 DEBUG    [notifier] Serialized payload (2961 bytes)
+2026-09-28 16:17:23,523 INFO     [gateway] Order #34666 created
+2026-09-28 16:17:23,523 INFO     [notifier] Cache hit for key sess:318
+2026-09-28 16:17:23,523 INFO     [payment-api] Webhook delivered to partner-777
+2026-09-28 16:17:23,523 INFO     [gateway] Health check OK
+2026-09-28 16:17:23,523 INFO     [auth-service] Health check OK
+2026-09-28 16:17:23,523 INFO     [payment-api] Health check OK
+2026-09-28 16:17:24,540 INFO     [payment-api] Job 23871 dequeued
+2026-09-28 16:17:24,540 INFO     [order-worker] Health check OK
+2026-09-28 16:17:24,540 INFO     [gateway] User 684 logged in
+2026-09-28 16:17:24,540 ERROR    [notifier] NullPointerException in OrderHandler
+2026-09-28 16:17:24,540 INFO     [payment-api] Order #23916 created
+2026-09-28 16:17:24,540 INFO     [auth-service] Order #94284 created
+2026-09-28 16:17:24,540 DEBUG    [auth-service] GC pause 632ms
+2026-09-28 16:17:24,540 DEBUG    [inventory] GC pause 746ms
+2026-09-28 16:17:24,540 DEBUG    [gateway] GC pause 3321ms
+2026-09-28 16:17:24,540 INFO     [order-worker] Request completed in 3638ms
+2026-09-28 16:17:24,540 DEBUG    [notifier] Connection pool size=439
+2026-09-28 16:17:24,540 ERROR    [payment-api] Payment gateway returned 502
+2026-09-28 16:17:24,540 ERROR    [payment-api] Upstream service unreachable: inventory
+2026-09-28 16:17:24,540 ERROR    [gateway] Payment gateway returned 502
+2026-09-28 16:17:25,563 INFO     [notifier] Health check OK
+2026-09-28 16:17:25,563 INFO     [gateway] Webhook delivered to partner-655
+2026-09-28 16:17:25,563 INFO     [auth-service] Health check OK
+2026-09-28 16:17:25,563 WARN     [gateway] Slow query detected (942ms)
+2026-09-28 16:17:25,563 INFO     [notifier] Job 88374 dequeued
+2026-09-28 16:17:25,563 WARN     [inventory] Retrying upstream call (attempt 2/3)
+2026-09-28 16:17:25,563 INFO     [auth-service] Request completed in 2074ms
+2026-09-28 16:17:25,563 INFO     [payment-api] Webhook delivered to partner-383
+2026-09-28 16:17:25,563 WARN     [payment-api] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:25,563 INFO     [payment-api] User 475 logged in
+2026-09-28 16:17:25,563 INFO     [inventory] Health check OK
+2026-09-28 16:17:25,563 DEBUG    [payment-api] GC pause 588ms
+2026-09-28 16:17:25,563 INFO     [auth-service] Job 96088 dequeued
+2026-09-28 16:17:26,578 INFO     [inventory] Job 44797 dequeued
+2026-09-28 16:17:26,579 INFO     [payment-api] Job 12965 dequeued
+2026-09-28 16:17:26,579 INFO     [payment-api] Request completed in 1521ms
+2026-09-28 16:17:26,579 INFO     [payment-api] Job 22069 dequeued
+2026-09-28 16:17:26,579 WARN     [auth-service] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:26,579 ERROR    [auth-service] Upstream service unreachable: inventory
+2026-09-28 16:17:26,579 INFO     [order-worker] Request completed in 3854ms
+2026-09-28 16:17:26,579 ERROR    [notifier] Payment gateway returned 502
+2026-09-28 16:17:26,579 ERROR    [payment-api] NullPointerException in OrderHandler
+2026-09-28 16:17:26,579 WARN     [gateway] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:26,579 CRITICAL [notifier] Primary DB unreachable - failover initiated
+2026-09-28 16:17:26,581 INFO     [payment-api] Cache hit for key sess:861
+2026-09-28 16:17:26,581 INFO     [notifier] Request completed in 1711ms
+2026-09-28 16:17:26,581 ERROR    [auth-service] Payment gateway returned 502
+2026-09-28 16:17:27,682 INFO     [auth-service] User 160 logged in
+2026-09-28 16:17:27,682 INFO     [inventory] Request completed in 545ms
+2026-09-28 16:17:27,682 INFO     [auth-service] User 764 logged in
+2026-09-28 16:17:27,682 ERROR    [payment-api] TLS handshake failed with partner-779
+2026-09-28 16:17:27,682 INFO     [auth-service] Order #73456 created
+2026-09-28 16:17:27,682 ERROR    [auth-service] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:27,682 INFO     [gateway] Health check OK
+2026-09-28 16:17:27,682 INFO     [notifier] User 899 logged in
+2026-09-28 16:17:27,682 INFO     [auth-service] Cache hit for key sess:464
+2026-09-28 16:17:27,682 INFO     [inventory] Health check OK
+2026-09-28 16:17:27,683 INFO     [inventory] Webhook delivered to partner-719
+2026-09-28 16:17:27,683 INFO     [gateway] Request completed in 2177ms
+2026-09-28 16:17:27,683 INFO     [auth-service] Health check OK
+2026-09-28 16:17:28,697 DEBUG    [gateway] Connection pool size=158
+2026-09-28 16:17:28,697 ERROR    [notifier] Database connection timeout after 3508ms
+2026-09-28 16:17:28,697 INFO     [payment-api] User 972 logged in
+2026-09-28 16:17:28,697 INFO     [gateway] Request completed in 119ms
+2026-09-28 16:17:28,697 INFO     [inventory] Webhook delivered to partner-732
+2026-09-28 16:17:28,697 INFO     [auth-service] Health check OK
+2026-09-28 16:17:28,697 INFO     [inventory] Webhook delivered to partner-884
+2026-09-28 16:17:28,697 ERROR    [order-worker] Upstream service unreachable: inventory
+2026-09-28 16:17:28,697 INFO     [payment-api] Cache hit for key sess:870
+2026-09-28 16:17:29,751 INFO     [gateway] Order #77548 created
+2026-09-28 16:17:29,751 ERROR    [order-worker] Payment gateway returned 502
+2026-09-28 16:17:29,751 ERROR    [auth-service] TLS handshake failed with partner-847
+2026-09-28 16:17:29,751 DEBUG    [order-worker] Serialized payload (875 bytes)
+2026-09-28 16:17:29,753 DEBUG    [notifier] Serialized payload (1435 bytes)
+2026-09-28 16:17:29,753 INFO     [inventory] User 267 logged in
+2026-09-28 16:17:29,753 ERROR    [gateway] NullPointerException in OrderHandler
+2026-09-28 16:17:29,753 ERROR    [auth-service] TLS handshake failed with partner-319
+2026-09-28 16:17:29,753 INFO     [notifier] Cache hit for key sess:967
+2026-09-28 16:17:29,753 WARN     [inventory] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:29,753 INFO     [order-worker] Webhook delivered to partner-887
+2026-09-28 16:17:29,753 ERROR    [notifier] NullPointerException in OrderHandler
+2026-09-28 16:17:29,754 INFO     [order-worker] Health check OK
+2026-09-28 16:17:29,754 INFO     [auth-service] Job 57377 dequeued
+2026-09-28 16:17:29,754 DEBUG    [gateway] Serialized payload (1109 bytes)
+2026-09-28 16:17:30,748 INFO     [auth-service] Order #93228 created
+2026-09-28 16:17:30,750 DEBUG    [auth-service] Serialized payload (1119 bytes)
+2026-09-28 16:17:30,750 INFO     [gateway] Job 39453 dequeued
+2026-09-28 16:17:30,750 ERROR    [order-worker] Database connection timeout after 2020ms
+2026-09-28 16:17:30,750 INFO     [auth-service] Webhook delivered to partner-134
+2026-09-28 16:17:30,750 WARN     [inventory] Retrying upstream call (attempt 2/3)
+2026-09-28 16:17:30,750 CRITICAL [inventory] Primary DB unreachable - failover initiated
+2026-09-28 16:17:30,750 ERROR    [notifier] Payment gateway returned 502
+2026-09-28 16:17:30,750 WARN     [gateway] Slow query detected (1401ms)
+2026-09-28 16:17:30,753 INFO     [inventory] Job 65368 dequeued
+2026-09-28 16:17:30,753 INFO     [auth-service] Request completed in 1479ms
+2026-09-28 16:17:30,753 DEBUG    [auth-service] GC pause 993ms
+2026-09-28 16:17:30,753 INFO     [payment-api] Order #28141 created
+2026-09-28 16:17:30,754 WARN     [order-worker] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:30,754 INFO     [auth-service] Order #19262 created
+2026-09-28 16:17:31,767 INFO     [notifier] Job 86137 dequeued
+2026-09-28 16:17:31,768 ERROR    [inventory] Database connection timeout after 1014ms
+2026-09-28 16:17:31,768 ERROR    [payment-api] Payment gateway returned 502
+2026-09-28 16:17:31,768 INFO     [gateway] Webhook delivered to partner-663
+2026-09-28 16:17:31,768 INFO     [order-worker] Order #35794 created
+2026-09-28 16:17:31,768 INFO     [inventory] Cache hit for key sess:593
+2026-09-28 16:17:31,768 INFO     [gateway] Order #60475 created
+2026-09-28 16:17:31,768 INFO     [notifier] Health check OK
+2026-09-28 16:17:31,768 DEBUG    [inventory] GC pause 2337ms
+2026-09-28 16:17:31,768 INFO     [inventory] Webhook delivered to partner-255
+2026-09-28 16:17:31,768 DEBUG    [auth-service] Connection pool size=269
+2026-09-28 16:17:31,768 ERROR    [notifier] NullPointerException in OrderHandler
+2026-09-28 16:17:31,811 WARN     [gateway] Retrying upstream call (attempt 2/3)
+2026-09-28 16:17:31,811 INFO     [auth-service] User 466 logged in
+2026-09-28 16:17:32,832 DEBUG    [inventory] Connection pool size=728
+2026-09-28 16:17:32,832 CRITICAL [order-worker] Primary DB unreachable - failover initiated
+2026-09-28 16:17:32,832 INFO     [auth-service] Request completed in 3435ms
+2026-09-28 16:17:32,832 DEBUG    [gateway] Serialized payload (1200 bytes)
+2026-09-28 16:17:32,833 INFO     [auth-service] User 342 logged in
+2026-09-28 16:17:32,833 INFO     [gateway] Cache hit for key sess:722
+2026-09-28 16:17:32,833 DEBUG    [notifier] Connection pool size=388
+2026-09-28 16:17:32,833 INFO     [gateway] Job 46140 dequeued
+2026-09-28 16:17:32,833 WARN     [gateway] Rate limit at 85% for client 680
+2026-09-28 16:17:32,833 ERROR    [notifier] Database connection timeout after 2053ms
+2026-09-28 16:17:32,833 INFO     [order-worker] User 208 logged in
+2026-09-28 16:17:33,835 DEBUG    [order-worker] Serialized payload (3732 bytes)
+2026-09-28 16:17:33,835 ERROR    [auth-service] NullPointerException in OrderHandler
+2026-09-28 16:17:33,835 INFO     [payment-api] Webhook delivered to partner-738
+2026-09-28 16:17:33,835 INFO     [notifier] User 992 logged in
+2026-09-28 16:17:33,835 INFO     [gateway] Job 50438 dequeued
+2026-09-28 16:17:33,835 INFO     [notifier] Webhook delivered to partner-255
+2026-09-28 16:17:33,835 INFO     [auth-service] Order #69753 created
+2026-09-28 16:17:33,835 ERROR    [auth-service] OOMKilled: worker-650 exceeded memory limit
+2026-09-28 16:17:33,835 INFO     [auth-service] Order #16792 created
+2026-09-28 16:17:33,835 ERROR    [payment-api] OOMKilled: worker-659 exceeded memory limit
+2026-09-28 16:17:33,835 DEBUG    [payment-api] Connection pool size=850
+2026-09-28 16:17:33,835 INFO     [gateway] Order #59034 created
+2026-09-28 16:17:33,835 ERROR    [inventory] Payment gateway returned 502
+2026-09-28 16:17:34,880 DEBUG    [inventory] Serialized payload (1491 bytes)
+2026-09-28 16:17:34,880 INFO     [notifier] Job 62723 dequeued
+2026-09-28 16:17:34,880 INFO     [order-worker] User 678 logged in
+2026-09-28 16:17:34,880 INFO     [notifier] Order #80166 created
+2026-09-28 16:17:34,880 INFO     [inventory] Webhook delivered to partner-845
+2026-09-28 16:17:34,880 INFO     [notifier] Job 86618 dequeued
+2026-09-28 16:17:34,880 ERROR    [payment-api] Payment gateway returned 502
+2026-09-28 16:17:34,880 CRITICAL [auth-service] Primary DB unreachable - failover initiated
+2026-09-28 16:17:34,880 ERROR    [notifier] NullPointerException in OrderHandler
+2026-09-28 16:17:34,880 INFO     [auth-service] Webhook delivered to partner-977
+2026-09-28 16:17:35,895 WARN     [gateway] Slow query detected (3920ms)
+2026-09-28 16:17:35,895 WARN     [order-worker] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:35,895 ERROR    [notifier] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:35,895 INFO     [gateway] Job 51558 dequeued
+2026-09-28 16:17:35,895 INFO     [auth-service] User 828 logged in
+2026-09-28 16:17:35,895 INFO     [payment-api] Job 68719 dequeued
+2026-09-28 16:17:35,895 DEBUG    [auth-service] GC pause 2522ms
+2026-09-28 16:17:35,895 INFO     [gateway] Health check OK
+2026-09-28 16:17:35,895 INFO     [gateway] Order #48097 created
+2026-09-28 16:17:37,008 INFO     [auth-service] Job 20895 dequeued
+2026-09-28 16:17:37,008 ERROR    [notifier] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:37,008 ERROR    [gateway] TLS handshake failed with partner-768
+2026-09-28 16:17:37,008 INFO     [gateway] Job 84476 dequeued
+2026-09-28 16:17:37,008 ERROR    [auth-service] TLS handshake failed with partner-580
+2026-09-28 16:17:37,009 DEBUG    [auth-service] Serialized payload (3622 bytes)
+2026-09-28 16:17:37,009 INFO     [gateway] User 858 logged in
+2026-09-28 16:17:37,009 ERROR    [payment-api] Database connection timeout after 3320ms
+2026-09-28 16:17:37,009 INFO     [auth-service] Health check OK
+2026-09-28 16:17:37,998 WARN     [payment-api] Slow query detected (262ms)
+2026-09-28 16:17:37,998 DEBUG    [gateway] Serialized payload (3620 bytes)
+2026-09-28 16:17:37,998 INFO     [inventory] Job 72956 dequeued
+2026-09-28 16:17:37,998 INFO     [inventory] Webhook delivered to partner-520
+2026-09-28 16:17:37,999 INFO     [order-worker] Cache hit for key sess:569
+2026-09-28 16:17:37,999 INFO     [payment-api] Job 78199 dequeued
+2026-09-28 16:17:37,999 INFO     [notifier] Cache hit for key sess:290
+2026-09-28 16:17:37,999 INFO     [notifier] Cache hit for key sess:198
+2026-09-28 16:17:37,999 WARN     [order-worker] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:37,999 INFO     [auth-service] Webhook delivered to partner-302
+2026-09-28 16:17:37,999 DEBUG    [notifier] Serialized payload (611 bytes)
+2026-09-28 16:17:37,999 ERROR    [order-worker] Payment gateway returned 502
+2026-09-28 16:17:37,999 CRITICAL [auth-service] Disk usage at 99% on /var/data
+2026-09-28 16:17:37,999 DEBUG    [auth-service] Serialized payload (1896 bytes)
+2026-09-28 16:17:39,088 INFO     [inventory] User 752 logged in
+2026-09-28 16:17:39,088 ERROR    [inventory] Database connection timeout after 2435ms
+2026-09-28 16:17:39,088 INFO     [gateway] Cache hit for key sess:869
+2026-09-28 16:17:39,088 DEBUG    [auth-service] Serialized payload (1877 bytes)
+2026-09-28 16:17:39,088 INFO     [payment-api] Job 78351 dequeued
+2026-09-28 16:17:39,088 INFO     [gateway] Request completed in 1423ms
+2026-09-28 16:17:39,088 DEBUG    [payment-api] Serialized payload (723 bytes)
+2026-09-28 16:17:39,088 ERROR    [gateway] Database connection timeout after 2327ms
+2026-09-28 16:17:39,088 INFO     [auth-service] Request completed in 3175ms
+2026-09-28 16:17:39,088 WARN     [auth-service] Retrying upstream call (attempt 2/3)
+2026-09-28 16:17:40,136 ERROR    [payment-api] OOMKilled: worker-818 exceeded memory limit
+2026-09-28 16:17:40,136 ERROR    [notifier] Database connection timeout after 3163ms
+2026-09-28 16:17:40,136 INFO     [order-worker] User 774 logged in
+2026-09-28 16:17:40,136 INFO     [order-worker] Cache hit for key sess:408
+2026-09-28 16:17:40,136 WARN     [order-worker] Retrying upstream call (attempt 2/3)
+2026-09-28 16:17:40,136 WARN     [inventory] Rate limit at 85% for client 187
+2026-09-28 16:17:40,136 INFO     [notifier] Request completed in 126ms
+2026-09-28 16:17:40,136 INFO     [inventory] Webhook delivered to partner-886
+2026-09-28 16:17:40,136 DEBUG    [order-worker] Connection pool size=475
+2026-09-28 16:17:40,136 WARN     [payment-api] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:40,136 ERROR    [notifier] Payment gateway returned 502
+2026-09-28 16:17:40,136 INFO     [order-worker] Webhook delivered to partner-299
+2026-09-28 16:17:40,136 ERROR    [order-worker] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:41,250 INFO     [auth-service] Order #28821 created
+2026-09-28 16:17:41,250 INFO     [notifier] Job 52846 dequeued
+2026-09-28 16:17:41,250 INFO     [order-worker] Order #27548 created
+2026-09-28 16:17:41,250 DEBUG    [gateway] GC pause 139ms
+2026-09-28 16:17:41,250 DEBUG    [order-worker] Serialized payload (1533 bytes)
+2026-09-28 16:17:41,250 INFO     [notifier] Webhook delivered to partner-497
+2026-09-28 16:17:41,250 DEBUG    [auth-service] Serialized payload (37 bytes)
+2026-09-28 16:17:41,250 INFO     [payment-api] Job 32567 dequeued
+2026-09-28 16:17:41,250 ERROR    [gateway] Payment gateway returned 502
+2026-09-28 16:17:41,250 ERROR    [gateway] Payment gateway returned 502
+2026-09-28 16:17:41,250 ERROR    [auth-service] Upstream service unreachable: inventory
+2026-09-28 16:17:41,251 INFO     [inventory] Webhook delivered to partner-994
+2026-09-28 16:17:41,251 WARN     [order-worker] Retrying upstream call (attempt 2/3)
+2026-09-28 16:17:41,251 ERROR    [auth-service] Upstream service unreachable: inventory
+2026-09-28 16:17:41,251 INFO     [gateway] Health check OK
+2026-09-28 16:17:42,279 DEBUG    [order-worker] Serialized payload (3158 bytes)
+2026-09-28 16:17:42,279 ERROR    [order-worker] Upstream service unreachable: inventory
+2026-09-28 16:17:42,279 INFO     [notifier] User 102 logged in
+2026-09-28 16:17:42,279 INFO     [inventory] Job 85322 dequeued
+2026-09-28 16:17:42,279 INFO     [inventory] Request completed in 2087ms
+2026-09-28 16:17:42,279 DEBUG    [order-worker] Connection pool size=707
+2026-09-28 16:17:42,279 INFO     [inventory] User 943 logged in
+2026-09-28 16:17:42,279 INFO     [payment-api] User 173 logged in
+2026-09-28 16:17:42,279 DEBUG    [auth-service] GC pause 1693ms
+2026-09-28 16:17:42,279 DEBUG    [payment-api] GC pause 3535ms
+2026-09-28 16:17:43,333 DEBUG    [order-worker] GC pause 737ms
+2026-09-28 16:17:43,334 DEBUG    [notifier] Connection pool size=708
+2026-09-28 16:17:43,334 INFO     [notifier] Health check OK
+2026-09-28 16:17:43,334 ERROR    [inventory] Payment gateway returned 502
+2026-09-28 16:17:43,334 ERROR    [order-worker] Payment gateway returned 502
+2026-09-28 16:17:43,334 DEBUG    [auth-service] Serialized payload (2652 bytes)
+2026-09-28 16:17:43,334 ERROR    [notifier] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:43,334 INFO     [order-worker] Webhook delivered to partner-362
+2026-09-28 16:17:43,334 INFO     [auth-service] Order #94583 created
+2026-09-28 16:17:43,334 INFO     [auth-service] Order #35616 created
+2026-09-28 16:17:43,335 INFO     [gateway] Health check OK
+2026-09-28 16:17:43,335 ERROR    [payment-api] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:43,335 ERROR    [auth-service] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:43,335 INFO     [auth-service] Webhook delivered to partner-169
+2026-09-28 16:17:43,335 INFO     [inventory] Cache hit for key sess:254
+2026-09-28 16:17:44,335 INFO     [auth-service] User 865 logged in
+2026-09-28 16:17:44,335 INFO     [inventory] User 499 logged in
+2026-09-28 16:17:44,335 INFO     [order-worker] Health check OK
+2026-09-28 16:17:44,335 INFO     [order-worker] Request completed in 1398ms
+2026-09-28 16:17:44,335 INFO     [payment-api] Request completed in 3012ms
+2026-09-28 16:17:44,335 WARN     [gateway] Retrying upstream call (attempt 2/3)
+2026-09-28 16:17:44,336 DEBUG    [order-worker] GC pause 1841ms
+2026-09-28 16:17:44,336 DEBUG    [notifier] Connection pool size=373
+2026-09-28 16:17:44,336 DEBUG    [order-worker] Connection pool size=540
+2026-09-28 16:17:44,338 INFO     [gateway] Cache hit for key sess:923
+2026-09-28 16:17:44,338 INFO     [auth-service] Cache hit for key sess:859
+2026-09-28 16:17:44,338 DEBUG    [payment-api] Connection pool size=246
+2026-09-28 16:17:45,329 INFO     [inventory] Order #65181 created
+2026-09-28 16:17:45,330 ERROR    [order-worker] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:45,330 INFO     [payment-api] Request completed in 163ms
+2026-09-28 16:17:45,330 ERROR    [gateway] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:45,330 DEBUG    [inventory] Connection pool size=624
+2026-09-28 16:17:45,330 INFO     [gateway] Webhook delivered to partner-977
+2026-09-28 16:17:45,332 DEBUG    [payment-api] GC pause 770ms
+2026-09-28 16:17:45,332 INFO     [gateway] Webhook delivered to partner-794
+2026-09-28 16:17:45,332 INFO     [notifier] Health check OK
+2026-09-28 16:17:45,332 ERROR    [payment-api] Database connection timeout after 811ms
+2026-09-28 16:17:45,332 INFO     [order-worker] Request completed in 3477ms
+2026-09-28 16:17:45,333 INFO     [gateway] User 433 logged in
+2026-09-28 16:17:45,333 INFO     [gateway] Request completed in 258ms
+2026-09-28 16:17:45,333 WARN     [gateway] Slow query detected (1813ms)
+2026-09-28 16:17:46,347 INFO     [inventory] User 405 logged in
+2026-09-28 16:17:46,347 INFO     [gateway] User 632 logged in
+2026-09-28 16:17:46,347 ERROR    [inventory] TLS handshake failed with partner-521
+2026-09-28 16:17:46,347 INFO     [auth-service] Order #45241 created
+2026-09-28 16:17:46,347 ERROR    [order-worker] TLS handshake failed with partner-570
+2026-09-28 16:17:46,347 INFO     [notifier] Order #23024 created
+2026-09-28 16:17:46,347 INFO     [inventory] Order #57369 created
+2026-09-28 16:17:46,347 ERROR    [gateway] OOMKilled: worker-925 exceeded memory limit
+2026-09-28 16:17:47,368 ERROR    [order-worker] Database connection timeout after 2012ms
+2026-09-28 16:17:47,368 INFO     [inventory] Request completed in 1205ms
+2026-09-28 16:17:47,368 DEBUG    [order-worker] Connection pool size=173
+2026-09-28 16:17:47,368 INFO     [auth-service] Order #11645 created
+2026-09-28 16:17:47,368 INFO     [payment-api] Cache hit for key sess:397
+2026-09-28 16:17:47,368 INFO     [notifier] Job 46771 dequeued
+2026-09-28 16:17:47,368 INFO     [gateway] Webhook delivered to partner-913
+2026-09-28 16:17:47,368 ERROR    [auth-service] NullPointerException in OrderHandler
+2026-09-28 16:17:48,384 ERROR    [payment-api] OOMKilled: worker-364 exceeded memory limit
+2026-09-28 16:17:48,385 DEBUG    [notifier] GC pause 2938ms
+2026-09-28 16:17:48,385 INFO     [order-worker] Order #40741 created
+2026-09-28 16:17:48,385 INFO     [notifier] Cache hit for key sess:144
+2026-09-28 16:17:48,385 INFO     [gateway] User 908 logged in
+2026-09-28 16:17:48,385 INFO     [gateway] Cache hit for key sess:585
+2026-09-28 16:17:48,385 INFO     [notifier] Order #53501 created
+2026-09-28 16:17:48,385 WARN     [inventory] Slow query detected (3332ms)
+2026-09-28 16:17:48,385 ERROR    [order-worker] Database connection timeout after 833ms
+2026-09-28 16:17:49,395 ERROR    [payment-api] Database connection timeout after 370ms
+2026-09-28 16:17:49,395 INFO     [gateway] Job 56664 dequeued
+2026-09-28 16:17:49,395 ERROR    [inventory] NullPointerException in OrderHandler
+2026-09-28 16:17:49,395 ERROR    [inventory] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:49,395 INFO     [order-worker] Webhook delivered to partner-146
+2026-09-28 16:17:49,395 INFO     [notifier] Request completed in 2978ms
+2026-09-28 16:17:49,395 INFO     [notifier] User 122 logged in
+2026-09-28 16:17:49,395 INFO     [auth-service] Webhook delivered to partner-878
+2026-09-28 16:17:49,395 INFO     [notifier] Webhook delivered to partner-674
+2026-09-28 16:17:49,395 INFO     [inventory] Order #93990 created
+2026-09-28 16:17:49,395 INFO     [notifier] Job 45263 dequeued
+2026-09-28 16:17:49,395 INFO     [order-worker] Health check OK
+2026-09-28 16:17:49,395 ERROR    [gateway] Upstream service unreachable: inventory
+2026-09-28 16:17:49,395 INFO     [auth-service] Cache hit for key sess:467
+2026-09-28 16:17:50,459 ERROR    [inventory] Database connection timeout after 963ms
+2026-09-28 16:17:50,459 CRITICAL [notifier] Disk usage at 99% on /var/data
+2026-09-28 16:17:50,459 ERROR    [payment-api] Database connection timeout after 2841ms
+2026-09-28 16:17:50,461 INFO     [order-worker] Job 51658 dequeued
+2026-09-28 16:17:50,461 ERROR    [auth-service] OOMKilled: worker-844 exceeded memory limit
+2026-09-28 16:17:50,461 INFO     [inventory] Webhook delivered to partner-362
+2026-09-28 16:17:50,461 INFO     [auth-service] Job 14233 dequeued
+2026-09-28 16:17:50,461 INFO     [auth-service] User 982 logged in
+2026-09-28 16:17:50,461 INFO     [gateway] Cache hit for key sess:552
+2026-09-28 16:17:50,461 DEBUG    [order-worker] Serialized payload (1070 bytes)
+2026-09-28 16:17:50,461 INFO     [inventory] Cache hit for key sess:316
+2026-09-28 16:17:50,461 DEBUG    [gateway] Serialized payload (1583 bytes)
+2026-09-28 16:17:50,461 INFO     [inventory] Webhook delivered to partner-359
+2026-09-28 16:17:51,537 ERROR    [inventory] NullPointerException in OrderHandler
+2026-09-28 16:17:51,538 ERROR    [order-worker] Payment gateway returned 502
+2026-09-28 16:17:51,538 INFO     [auth-service] Webhook delivered to partner-368
+2026-09-28 16:17:51,538 ERROR    [gateway] Upstream service unreachable: inventory
+2026-09-28 16:17:51,538 INFO     [gateway] Order #42422 created
+2026-09-28 16:17:51,538 ERROR    [notifier] Database connection timeout after 1024ms
+2026-09-28 16:17:51,539 ERROR    [payment-api] NullPointerException in OrderHandler
+2026-09-28 16:17:51,539 ERROR    [inventory] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:51,539 INFO     [auth-service] Cache hit for key sess:880
+2026-09-28 16:17:51,539 ERROR    [notifier] Upstream service unreachable: inventory
+2026-09-28 16:17:51,539 INFO     [notifier] User 713 logged in
+2026-09-28 16:17:51,539 DEBUG    [auth-service] Serialized payload (2109 bytes)
+2026-09-28 16:17:51,539 WARN     [payment-api] Rate limit at 85% for client 682
+2026-09-28 16:17:51,539 INFO     [auth-service] Order #41706 created
+2026-09-28 16:17:51,539 INFO     [inventory] Order #79428 created
+2026-09-28 16:17:51,545 ERROR    [auth-service] Upstream service unreachable: inventory
+2026-09-28 16:17:52,546 INFO     [auth-service] Webhook delivered to partner-115
+2026-09-28 16:17:52,546 ERROR    [notifier] Payment gateway returned 502
+2026-09-28 16:17:52,546 INFO     [auth-service] Job 24960 dequeued
+2026-09-28 16:17:52,547 ERROR    [inventory] OOMKilled: worker-375 exceeded memory limit
+2026-09-28 16:17:52,547 INFO     [gateway] Order #85129 created
+2026-09-28 16:17:52,547 INFO     [inventory] Cache hit for key sess:996
+2026-09-28 16:17:52,547 DEBUG    [notifier] Serialized payload (3807 bytes)
+2026-09-28 16:17:52,547 INFO     [gateway] Webhook delivered to partner-392
+2026-09-28 16:17:52,547 ERROR    [payment-api] OOMKilled: worker-485 exceeded memory limit
+2026-09-28 16:17:52,547 INFO     [order-worker] Webhook delivered to partner-155
+2026-09-28 16:17:52,547 INFO     [gateway] Order #16020 created
+2026-09-28 16:17:52,547 INFO     [inventory] Job 35455 dequeued
+2026-09-28 16:17:52,547 INFO     [payment-api] Webhook delivered to partner-626
+2026-09-28 16:17:52,547 ERROR    [inventory] Database connection timeout after 1907ms
+2026-09-28 16:17:52,547 ERROR    [payment-api] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:53,559 INFO     [gateway] User 844 logged in
+2026-09-28 16:17:53,566 ERROR    [payment-api] NullPointerException in OrderHandler
+2026-09-28 16:17:53,566 DEBUG    [gateway] Connection pool size=425
+2026-09-28 16:17:53,566 INFO     [payment-api] Job 54144 dequeued
+2026-09-28 16:17:53,566 INFO     [order-worker] Webhook delivered to partner-580
+2026-09-28 16:17:53,567 INFO     [gateway] Webhook delivered to partner-836
+2026-09-28 16:17:53,567 INFO     [payment-api] Health check OK
+2026-09-28 16:17:53,567 INFO     [order-worker] Cache hit for key sess:145
+2026-09-28 16:17:53,567 CRITICAL [gateway] Disk usage at 99% on /var/data
+2026-09-28 16:17:53,567 ERROR    [inventory] Payment gateway returned 502
+2026-09-28 16:17:53,567 WARN     [notifier] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:53,567 ERROR    [order-worker] Database connection timeout after 3679ms
+2026-09-28 16:17:53,567 INFO     [payment-api] Cache hit for key sess:864
+2026-09-28 16:17:54,571 INFO     [gateway] Request completed in 567ms
+2026-09-28 16:17:54,571 ERROR    [order-worker] NullPointerException in OrderHandler
+2026-09-28 16:17:54,571 INFO     [notifier] Cache hit for key sess:854
+2026-09-28 16:17:54,571 WARN     [payment-api] Rate limit at 85% for client 912
+2026-09-28 16:17:54,571 WARN     [inventory] Deprecated endpoint /v1/orders hit
+2026-09-28 16:17:54,571 INFO     [auth-service] Webhook delivered to partner-198
+2026-09-28 16:17:54,571 INFO     [auth-service] Health check OK
+2026-09-28 16:17:54,571 INFO     [payment-api] Order #91402 created
+2026-09-28 16:17:54,571 ERROR    [order-worker] OOMKilled: worker-253 exceeded memory limit
+2026-09-28 16:17:55,567 INFO     [auth-service] Order #72471 created
+2026-09-28 16:17:55,567 INFO     [payment-api] Health check OK
+2026-09-28 16:17:55,567 INFO     [payment-api] Request completed in 2596ms
+2026-09-28 16:17:55,567 ERROR    [inventory] TLS handshake failed with partner-360
+2026-09-28 16:17:55,567 INFO     [auth-service] Request completed in 929ms
+2026-09-28 16:17:55,567 ERROR    [payment-api] Payment gateway returned 502
+2026-09-28 16:17:55,567 INFO     [inventory] User 248 logged in
+2026-09-28 16:17:55,567 INFO     [order-worker] Job 37158 dequeued
+2026-09-28 16:17:55,567 INFO     [notifier] Cache hit for key sess:747
+2026-09-28 16:17:55,567 INFO     [auth-service] Health check OK
+2026-09-28 16:17:56,579 INFO     [notifier] Webhook delivered to partner-508
+2026-09-28 16:17:56,579 ERROR    [notifier] Upstream service unreachable: inventory
+2026-09-28 16:17:56,579 DEBUG    [notifier] Serialized payload (1692 bytes)
+2026-09-28 16:17:56,579 INFO     [gateway] Webhook delivered to partner-779
+2026-09-28 16:17:56,579 ERROR    [payment-api] NullPointerException in OrderHandler
+2026-09-28 16:17:56,579 ERROR    [auth-service] Payment gateway returned 502
+2026-09-28 16:17:56,579 INFO     [payment-api] Job 39323 dequeued
+2026-09-28 16:17:56,579 CRITICAL [order-worker] Disk usage at 99% on /var/data
+2026-09-28 16:17:56,579 INFO     [notifier] Request completed in 2635ms
+2026-09-28 16:17:56,579 ERROR    [gateway] Payment gateway returned 502
+2026-09-28 16:17:57,581 CRITICAL [auth-service] Disk usage at 99% on /var/data
+2026-09-28 16:17:57,582 INFO     [notifier] Request completed in 1503ms
+2026-09-28 16:17:57,582 INFO     [gateway] Job 77607 dequeued
+2026-09-28 16:17:57,582 INFO     [order-worker] Job 36142 dequeued
+2026-09-28 16:17:57,582 DEBUG    [order-worker] GC pause 3341ms
+2026-09-28 16:17:57,582 INFO     [auth-service] Request completed in 870ms
+2026-09-28 16:17:57,582 WARN     [order-worker] Slow query detected (3001ms)
+2026-09-28 16:17:57,582 DEBUG    [inventory] Connection pool size=578
+2026-09-28 16:17:57,582 ERROR    [inventory] Failed to publish message to queue: broker unavailable
+2026-09-28 16:17:57,582 INFO     [notifier] Job 10482 dequeued
+2026-09-28 16:17:57,582 DEBUG    [notifier] GC pause 2544ms
+2026-09-28 16:17:57,582 DEBUG    [order-worker] Connection pool size=449
+2026-09-28 16:17:57,582 INFO     [order-worker] Job 28161 dequeued
+2026-09-28 16:17:58,589 INFO     [order-worker] Health check OK
+2026-09-28 16:17:58,589 INFO     [payment-api] Cache hit for key sess:769
+2026-09-28 16:17:58,589 INFO     [order-worker] User 519 logged in
+2026-09-28 16:17:58,589 DEBUG    [auth-service] GC pause 3052ms
+2026-09-28 16:17:58,589 INFO     [order-worker] Webhook delivered to partner-897
+2026-09-28 16:17:58,591 CRITICAL [order-worker] Primary DB unreachable - failover initiated
+2026-09-28 16:17:58,591 DEBUG    [auth-service] Serialized payload (3502 bytes)
+2026-09-28 16:17:58,591 INFO     [order-worker] Health check OK
+2026-09-28 16:17:58,591 ERROR    [auth-service] NullPointerException in OrderHandler
+2026-09-28 16:17:58,591 DEBUG    [auth-service] Connection pool size=877
+2026-09-28 16:17:59,602 DEBUG    [payment-api] Serialized payload (451 bytes)
+2026-09-28 16:17:59,660 DEBUG    [auth-service] Serialized payload (1013 bytes)
+2026-09-28 16:17:59,660 INFO     [auth-service] Order #75868 created
+2026-09-28 16:17:59,660 INFO     [inventory] User 437 logged in
+2026-09-28 16:17:59,660 INFO     [gateway] User 660 logged in
+2026-09-28 16:17:59,660 INFO     [inventory] Job 57053 dequeued
+2026-09-28 16:17:59,660 ERROR    [order-worker] Payment gateway returned 502
+2026-09-28 16:17:59,660 ERROR    [payment-api] Upstream service unreachable: inventory
+2026-09-28 16:17:59,660 DEBUG    [notifier] Serialized payload (3123 bytes)
+2026-09-28 16:17:59,660 INFO     [inventory] Cache hit for key sess:353
+2026-09-28 16:17:59,660 ERROR    [notifier] Upstream service unreachable: inventory
+2026-09-28 16:18:00,717 ERROR    [gateway] NullPointerException in OrderHandler
+2026-09-28 16:18:00,717 DEBUG    [gateway] Serialized payload (1358 bytes)
+2026-09-28 16:18:00,717 DEBUG    [order-worker] GC pause 1110ms
+2026-09-28 16:18:00,717 WARN     [payment-api] Rate limit at 85% for client 119
+2026-09-28 16:18:00,717 INFO     [inventory] Job 58705 dequeued
+2026-09-28 16:18:01,761 DEBUG    [order-worker] Connection pool size=478
+2026-09-28 16:18:01,761 WARN     [gateway] Rate limit at 85% for client 229
+2026-09-28 16:18:01,761 INFO     [inventory] User 607 logged in
+2026-09-28 16:18:01,761 INFO     [auth-service] Order #23719 created
+2026-09-28 16:18:01,761 INFO     [payment-api] Request completed in 874ms
+2026-09-28 16:18:01,761 INFO     [gateway] Job 40756 dequeued
+2026-09-28 16:18:01,761 INFO     [gateway] Job 62375 dequeued
+2026-09-28 16:18:01,761 INFO     [auth-service] Health check OK
+2026-09-28 16:18:02,818 WARN     [notifier] Deprecated endpoint /v1/orders hit
+2026-09-28 16:18:02,818 ERROR    [gateway] Database connection timeout after 3522ms
+2026-09-28 16:18:02,819 INFO     [notifier] Request completed in 3501ms
+2026-09-28 16:18:02,819 INFO     [notifier] Job 46882 dequeued
+2026-09-28 16:18:02,819 WARN     [gateway] Slow query detected (3736ms)
+2026-09-28 16:18:02,819 INFO     [gateway] Order #88780 created
+2026-09-28 16:18:02,819 DEBUG    [gateway] Connection pool size=515
+2026-09-28 16:18:03,910 INFO     [inventory] Cache hit for key sess:743
+2026-09-28 16:18:03,910 DEBUG    [payment-api] Serialized payload (477 bytes)
+2026-09-28 16:18:03,910 INFO     [gateway] Order #52547 created
+2026-09-28 16:18:03,910 DEBUG    [inventory] Connection pool size=765
+2026-09-28 16:18:03,910 INFO     [notifier] Webhook delivered to partner-474
+2026-09-28 16:18:03,910 WARN     [payment-api] Deprecated endpoint /v1/orders hit
+2026-09-28 16:18:03,910 INFO     [order-worker] Webhook delivered to partner-314
+2026-09-28 16:18:04,947 INFO     [notifier] Cache hit for key sess:727
+2026-09-28 16:18:04,948 INFO     [payment-api] Request completed in 2053ms
+2026-09-28 16:18:04,948 INFO     [order-worker] Cache hit for key sess:447
+2026-09-28 16:18:04,948 WARN     [inventory] Slow query detected (2459ms)
+2026-09-28 16:18:04,948 INFO     [gateway] User 718 logged in
+2026-09-28 16:18:04,948 INFO     [auth-service] Cache hit for key sess:174
+2026-09-28 16:18:04,948 ERROR    [auth-service] NullPointerException in OrderHandler
+2026-09-28 16:18:04,948 INFO     [gateway] Webhook delivered to partner-872
+2026-09-28 16:18:04,948 INFO     [payment-api] Health check OK
+2026-09-28 16:18:05,958 INFO     [auth-service] Health check OK
+2026-09-28 16:18:05,959 WARN     [auth-service] Slow query detected (215ms)
+2026-09-28 16:18:05,959 DEBUG    [auth-service] Connection pool size=404
+2026-09-28 16:18:05,959 INFO     [auth-service] Health check OK
+2026-09-28 16:18:05,959 INFO     [order-worker] Cache hit for key sess:455
+2026-09-28 16:18:05,959 INFO     [order-worker] Health check OK
+2026-09-28 16:18:05,959 INFO     [payment-api] Webhook delivered to partner-649
+2026-09-28 16:18:06,999 WARN     [inventory] Slow query detected (2736ms)
+2026-09-28 16:18:06,999 INFO     [gateway] User 932 logged in
+2026-09-28 16:18:06,999 INFO     [order-worker] Order #41923 created
+2026-09-28 16:18:06,999 INFO     [gateway] Webhook delivered to partner-299
+2026-09-28 16:18:06,999 INFO     [notifier] Job 18336 dequeued
+2026-09-28 16:18:06,999 ERROR    [payment-api] Database connection timeout after 7ms
+2026-09-28 16:18:08,026 INFO     [gateway] Webhook delivered to partner-466
+2026-09-28 16:18:08,026 INFO     [order-worker] Order #29037 created
+2026-09-28 16:18:08,026 INFO     [gateway] Cache hit for key sess:673
+2026-09-28 16:18:08,027 DEBUG    [gateway] GC pause 2604ms
+2026-09-28 16:18:08,027 INFO     [order-worker] Cache hit for key sess:365
+2026-09-28 16:18:08,027 INFO     [inventory] User 485 logged in
+2026-09-28 16:18:08,027 INFO     [payment-api] Health check OK
+2026-09-28 16:18:08,027 INFO     [order-worker] Health check OK
+2026-09-28 16:18:09,118 INFO     [order-worker] Health check OK
+2026-09-28 16:18:09,119 INFO     [payment-api] Health check OK
+2026-09-28 16:18:09,119 DEBUG    [gateway] Connection pool size=149
+2026-09-28 16:18:09,119 INFO     [order-worker] Request completed in 58ms
+2026-09-28 16:18:09,119 INFO     [notifier] Webhook delivered to partner-466
+2026-09-28 16:18:09,119 INFO     [notifier] Order #51915 created
+2026-09-28 16:18:09,119 INFO     [auth-service] Request completed in 1517ms
+2026-09-28 16:18:09,119 INFO     [order-worker] Health check OK
+2026-09-28 16:18:10,119 DEBUG    [notifier] Connection pool size=693
+2026-09-28 16:18:10,119 INFO     [auth-service] Request completed in 83ms
+2026-09-28 16:18:10,121 DEBUG    [payment-api] Serialized payload (1326 bytes)
+2026-09-28 16:18:10,121 DEBUG    [order-worker] Serialized payload (792 bytes)
+2026-09-28 16:18:10,121 INFO     [notifier] Request completed in 3035ms
+2026-09-28 16:18:10,121 DEBUG    [gateway] GC pause 3486ms
+2026-09-28 16:18:10,121 INFO     [inventory] User 789 logged in
+2026-09-28 16:18:10,121 DEBUG    [gateway] Serialized payload (3163 bytes)
+2026-09-28 16:18:11,230 INFO     [auth-service] Order #34672 created
+2026-09-28 16:18:11,231 WARN     [auth-service] Retrying upstream call (attempt 2/3)
+2026-09-28 16:18:11,231 DEBUG    [payment-api] GC pause 1023ms
+2026-09-28 16:18:11,231 INFO     [auth-service] Order #73783 created
+2026-09-28 16:18:11,231 INFO     [gateway] Request completed in 3747ms
+2026-09-28 16:18:11,231 INFO     [payment-api] User 616 logged in
+2026-09-28 16:18:11,231 DEBUG    [notifier] Connection pool size=493
+2026-09-28 16:18:12,295 INFO     [gateway] Cache hit for key sess:491
+2026-09-28 16:18:12,295 INFO     [auth-service] User 856 logged in
+2026-09-28 16:18:12,295 INFO     [auth-service] Job 32749 dequeued
+2026-09-28 16:18:12,296 INFO     [auth-service] Cache hit for key sess:701
+2026-09-28 16:18:12,296 INFO     [gateway] Cache hit for key sess:366
+2026-09-28 16:18:13,302 INFO     [gateway] Request completed in 1333ms
+2026-09-28 16:18:13,302 DEBUG    [notifier] GC pause 508ms
+2026-09-28 16:18:13,302 INFO     [auth-service] Cache hit for key sess:531
+2026-09-28 16:18:13,302 INFO     [notifier] Health check OK
+2026-09-28 16:18:13,302 INFO     [payment-api] Cache hit for key sess:282
+2026-09-28 16:18:13,302 INFO     [payment-api] User 974 logged in
+2026-09-28 16:18:13,302 INFO     [inventory] Order #98277 created
+2026-09-28 16:18:14,380 DEBUG    [inventory] GC pause 1884ms
+2026-09-28 16:18:14,380 INFO     [auth-service] Cache hit for key sess:420
+2026-09-28 16:18:14,381 INFO     [payment-api] User 289 logged in
+2026-09-28 16:18:14,381 INFO     [order-worker] User 600 logged in
+2026-09-28 16:18:14,381 DEBUG    [auth-service] Serialized payload (802 bytes)
+2026-09-28 16:18:14,381 INFO     [auth-service] Health check OK
+2026-09-28 16:18:14,381 INFO     [gateway] Order #97438 created
+2026-09-28 16:18:14,381 DEBUG    [notifier] Connection pool size=519
+2026-09-28 16:18:15,490 INFO     [auth-service] Order #92580 created
+2026-09-28 16:18:15,491 WARN     [auth-service] Rate limit at 85% for client 498
+2026-09-28 16:18:15,491 WARN     [notifier] Retrying upstream call (attempt 2/3)
+2026-09-28 16:18:15,491 INFO     [gateway] Cache hit for key sess:972
+2026-09-28 16:18:15,491 INFO     [inventory] Request completed in 1137ms
+2026-09-28 16:18:15,491 INFO     [payment-api] Request completed in 1642ms
+2026-09-28 16:18:15,491 ERROR    [inventory] NullPointerException in OrderHandler
+2026-09-28 16:18:15,491 INFO     [auth-service] Health check OK
+2026-09-28 16:18:15,491 INFO     [auth-service] Request completed in 3991ms
+2026-09-28 16:18:16,499 INFO     [notifier] Cache hit for key sess:742
+2026-09-28 16:18:16,499 INFO     [payment-api] Webhook delivered to partner-425
+2026-09-28 16:18:16,499 INFO     [order-worker] Health check OK
+2026-09-28 16:18:16,499 INFO     [gateway] Request completed in 1345ms
+2026-09-28 16:18:16,499 WARN     [inventory] Deprecated endpoint /v1/orders hit
+2026-09-28 16:18:16,499 INFO     [payment-api] Webhook delivered to partner-258
+2026-09-28 16:18:16,499 INFO     [auth-service] Health check OK
+2026-09-28 16:18:16,499 INFO     [inventory] Order #57909 created
+2026-09-28 16:18:16,499 DEBUG    [payment-api] Connection pool size=468
+2026-09-28 16:18:17,494 DEBUG    [gateway] GC pause 839ms
+2026-09-28 16:18:17,494 INFO     [gateway] User 856 logged in
+2026-09-28 16:18:17,494 INFO     [gateway] Order #73272 created
+2026-09-28 16:18:17,494 ERROR    [payment-api] Payment gateway returned 502
+2026-09-28 16:18:18,512 INFO     [gateway] Webhook delivered to partner-784
+2026-09-28 16:18:18,512 INFO     [gateway] Webhook delivered to partner-390
+2026-09-28 16:18:18,512 ERROR    [gateway] TLS handshake failed with partner-567
+2026-09-28 16:18:18,512 INFO     [inventory] Order #80468 created
+2026-09-28 16:18:19,489 DEBUG    [notifier] GC pause 1810ms
+2026-09-28 16:18:19,489 INFO     [payment-api] Order #53966 created
+2026-09-28 16:18:19,489 DEBUG    [gateway] GC pause 3563ms
+2026-09-28 16:18:19,489 INFO     [notifier] Request completed in 597ms
+2026-09-28 16:18:19,489 WARN     [order-worker] Rate limit at 85% for client 762
+2026-09-28 16:18:19,489 INFO     [gateway] Request completed in 3318ms
+2026-09-28 16:18:19,489 INFO     [notifier] Job 97657 dequeued
+2026-09-28 16:18:19,489 INFO     [payment-api] Health check OK
+2026-09-28 16:18:19,489 DEBUG    [payment-api] Serialized payload (339 bytes)
+2026-09-28 16:18:20,499 WARN     [notifier] Rate limit at 85% for client 579
+2026-09-28 16:18:20,499 INFO     [auth-service] Webhook delivered to partner-691
+2026-09-28 16:18:20,499 INFO     [payment-api] Job 91415 dequeued
+2026-09-28 16:18:20,499 INFO     [inventory] Job 51352 dequeued
+2026-09-28 16:18:20,499 INFO     [order-worker] Request completed in 774ms
+2026-09-28 16:18:20,499 INFO     [order-worker] Order #41399 created
+2026-09-28 16:18:20,499 DEBUG    [order-worker] Serialized payload (229 bytes)
+2026-09-28 16:18:21,510 ERROR    [notifier] NullPointerException in OrderHandler
+2026-09-28 16:18:21,510 WARN     [auth-service] Retrying upstream call (attempt 2/3)
+2026-09-28 16:18:21,510 INFO     [inventory] Webhook delivered to partner-696
+2026-09-28 16:18:21,510 WARN     [inventory] Rate limit at 85% for client 199
+2026-09-28 16:18:22,533 DEBUG    [gateway] GC pause 1638ms
+2026-09-28 16:18:22,533 WARN     [notifier] Rate limit at 85% for client 866
+2026-09-28 16:18:22,533 DEBUG    [gateway] GC pause 1783ms
+2026-09-28 16:18:22,533 DEBUG    [payment-api] Connection pool size=939
+2026-09-28 16:18:23,544 WARN     [auth-service] Deprecated endpoint /v1/orders hit
+2026-09-28 16:18:23,544 INFO     [gateway] Order #89300 created
+2026-09-28 16:18:23,544 INFO     [inventory] Order #98478 created
+2026-09-28 16:18:23,544 WARN     [notifier] Retrying upstream call (attempt 2/3)
+2026-09-28 16:18:24,564 ERROR    [order-worker] OOMKilled: worker-180 exceeded memory limit
+2026-09-28 16:18:24,565 INFO     [inventory] User 659 logged in
+2026-09-28 16:18:24,565 DEBUG    [payment-api] GC pause 1932ms
+2026-09-28 16:18:24,565 INFO     [payment-api] Cache hit for key sess:800
+2026-09-28 16:18:24,565 INFO     [payment-api] User 392 logged in
+2026-09-28 16:18:25,559 INFO     [order-worker] Request completed in 982ms
+2026-09-28 16:18:25,559 INFO     [inventory] Request completed in 810ms
+2026-09-28 16:18:25,559 INFO     [gateway] Health check OK
+2026-09-28 16:18:25,559 INFO     [gateway] User 291 logged in
+2026-09-28 16:18:26,569 DEBUG    [notifier] Serialized payload (811 bytes)
+2026-09-28 16:18:26,569 INFO     [order-worker] Request completed in 2971ms
+2026-09-28 16:18:26,569 WARN     [gateway] Rate limit at 85% for client 265
+2026-09-28 16:18:26,569 DEBUG    [payment-api] Serialized payload (2854 bytes)
+2026-09-28 16:18:26,569 INFO     [auth-service] Webhook delivered to partner-763
+2026-09-28 16:18:26,569 INFO     [inventory] Request completed in 2633ms
+2026-09-28 16:18:27,608 INFO     [notifier] Request completed in 1160ms
+2026-09-28 16:18:27,608 ERROR    [notifier] NullPointerException in OrderHandler
+2026-09-28 16:18:27,608 DEBUG    [order-worker] Serialized payload (550 bytes)
+2026-09-28 16:18:27,608 INFO     [gateway] Health check OK
+2026-09-28 16:18:27,608 INFO     [inventory] Order #21861 created
+2026-09-28 16:18:27,608 INFO     [order-worker] Cache hit for key sess:904
+2026-09-28 16:18:27,608 DEBUG    [payment-api] Connection pool size=520
+2026-09-28 16:18:27,608 INFO     [gateway] Request completed in 1194ms
+2026-09-28 16:18:28,614 INFO     [notifier] Health check OK
+2026-09-28 16:18:28,614 INFO     [inventory] Job 31611 dequeued
+2026-09-28 16:18:28,614 INFO     [order-worker] Job 76009 dequeued
+2026-09-28 16:18:28,614 DEBUG    [gateway] Connection pool size=940
+2026-09-28 16:18:28,614 INFO     [inventory] Cache hit for key sess:987
+2026-09-28 16:18:28,614 INFO     [auth-service] Cache hit for key sess:368
+2026-09-28 16:18:28,614 INFO     [auth-service] Health check OK
+2026-09-28 16:18:28,614 INFO     [auth-service] Job 23484 dequeued
+2026-09-28 16:18:29,625 INFO     [auth-service] Cache hit for key sess:806
+2026-09-28 16:18:29,625 INFO     [notifier] Webhook delivered to partner-438
+2026-09-28 16:18:29,625 INFO     [inventory] Order #51737 created
+2026-09-28 16:18:29,625 INFO     [payment-api] Job 78309 dequeued
+2026-09-28 16:18:29,625 INFO     [auth-service] Cache hit for key sess:354
+2026-09-28 16:18:29,625 INFO     [order-worker] Job 75651 dequeued
+2026-09-28 16:18:30,632 INFO     [order-worker] Request completed in 400ms
+2026-09-28 16:18:30,632 INFO     [payment-api] Job 35000 dequeued
+2026-09-28 16:18:30,632 INFO     [auth-service] Cache hit for key sess:332
+2026-09-28 16:18:30,632 INFO     [payment-api] Job 95376 dequeued
+2026-09-28 16:18:30,632 INFO     [auth-service] User 922 logged in
+2026-09-28 16:18:30,632 INFO     [inventory] Webhook delivered to partner-186
+2026-09-28 16:18:30,632 INFO     [gateway] Webhook delivered to partner-144
+2026-09-28 16:18:30,632 DEBUG    [payment-api] GC pause 3222ms
+2026-09-28 16:18:31,623 WARN     [inventory] Deprecated endpoint /v1/orders hit
+2026-09-28 16:18:31,623 INFO     [payment-api] Request completed in 628ms
+2026-09-28 16:18:31,623 DEBUG    [payment-api] GC pause 941ms
+2026-09-28 16:18:31,623 DEBUG    [auth-service] GC pause 3875ms
+2026-09-28 16:18:31,623 INFO     [order-worker] Job 12712 dequeued
+2026-09-28 16:18:31,623 INFO     [inventory] Job 15250 dequeued
+2026-09-28 16:18:31,623 INFO     [auth-service] Health check OK
+2026-09-28 16:18:32,640 INFO     [inventory] Job 79883 dequeued
+2026-09-28 16:18:32,641 INFO     [gateway] Health check OK
+2026-09-28 16:18:32,641 INFO     [notifier] Job 96938 dequeued
+2026-09-28 16:18:32,641 INFO     [notifier] Cache hit for key sess:898
+2026-09-28 16:18:33,653 WARN     [auth-service] Slow query detected (3522ms)
+2026-09-28 16:18:33,653 INFO     [auth-service] Order #15184 created
+2026-09-28 16:18:33,653 INFO     [gateway] Health check OK
+2026-09-28 16:18:33,653 WARN     [notifier] Slow query detected (1250ms)
+2026-09-28 16:18:33,653 INFO     [order-worker] Webhook delivered to partner-923
+2026-09-28 16:18:33,653 INFO     [notifier] Health check OK
+2026-09-28 16:18:33,653 DEBUG    [order-worker] Connection pool size=569
+2026-09-28 16:18:34,665 INFO     [notifier] Job 77603 dequeued
+2026-09-28 16:18:34,665 WARN     [payment-api] Retrying upstream call (attempt 2/3)
+2026-09-28 16:18:34,665 INFO     [order-worker] Order #80013 created
+2026-09-28 16:18:34,665 INFO     [auth-service] Request completed in 1198ms
+2026-09-28 16:18:34,665 DEBUG    [notifier] Serialized payload (2989 bytes)
+2026-09-28 16:18:35,678 WARN     [payment-api] Rate limit at 85% for client 527
+2026-09-28 16:18:35,679 INFO     [auth-service] Request completed in 1442ms
+2026-09-28 16:18:35,679 INFO     [gateway] Job 21392 dequeued
+2026-09-28 16:18:35,679 WARN     [notifier] Slow query detected (1381ms)
+2026-09-28 16:18:35,679 INFO     [gateway] Health check OK
+2026-09-28 16:18:35,679 ERROR    [gateway] OOMKilled: worker-833 exceeded memory limit
+2026-09-28 16:18:35,679 INFO     [order-worker] Order #78271 created
+2026-09-28 16:18:35,679 INFO     [order-worker] Request completed in 1477ms
+2026-09-28 16:18:35,679 INFO     [auth-service] Job 75227 dequeued
+2026-09-28 16:18:36,701 WARN     [payment-api] Slow query detected (3988ms)
+2026-09-28 16:18:36,701 DEBUG    [order-worker] GC pause 696ms
+2026-09-28 16:18:36,701 INFO     [notifier] Request completed in 676ms
+2026-09-28 16:18:36,701 INFO     [notifier] Order #68517 created
+2026-09-28 16:18:36,701 DEBUG    [auth-service] Serialized payload (3961 bytes)
+2026-09-28 16:18:36,701 INFO     [order-worker] Webhook delivered to partner-360
+2026-09-28 16:18:36,701 WARN     [inventory] Slow query detected (999ms)
+2026-09-28 16:18:37,711 DEBUG    [gateway] Connection pool size=198
+2026-09-28 16:18:37,711 DEBUG    [gateway] Connection pool size=126
+2026-09-28 16:18:37,711 INFO     [payment-api] Cache hit for key sess:119
+2026-09-28 16:18:37,711 INFO     [gateway] Job 52534 dequeued
+2026-09-28 16:18:37,711 INFO     [order-worker] User 250 logged in
+2026-09-28 16:18:37,711 INFO     [order-worker] Health check OK
+2026-09-28 16:18:38,736 INFO     [payment-api] Job 25271 dequeued
+2026-09-28 16:18:38,737 INFO     [auth-service] Order #67722 created
+2026-09-28 16:18:38,737 INFO     [payment-api] Order #70883 created
+2026-09-28 16:18:38,737 DEBUG    [order-worker] GC pause 745ms
+2026-09-28 16:18:38,737 INFO     [inventory] Request completed in 751ms
+2026-09-28 16:18:38,738 INFO     [gateway] Job 18541 dequeued
+2026-09-28 16:18:38,738 INFO     [auth-service] Job 38946 dequeued
+2026-09-28 16:18:38,738 ERROR    [payment-api] Database connection timeout after 2798ms
+2026-09-28 16:18:38,738 INFO     [inventory] Health check OK
+2026-09-28 16:18:39,759 INFO     [gateway] Order #22077 created
+2026-09-28 16:18:39,759 WARN     [gateway] Deprecated endpoint /v1/orders hit
+2026-09-28 16:18:39,759 DEBUG    [gateway] Serialized payload (3947 bytes)
+2026-09-28 16:18:39,759 INFO     [auth-service] Health check OK
+2026-09-28 16:18:39,759 INFO     [notifier] Cache hit for key sess:506
+2026-09-28 16:18:40,858 INFO     [payment-api] Order #77866 created
+2026-09-28 16:18:40,860 DEBUG    [order-worker] Connection pool size=917
+2026-09-28 16:18:40,860 DEBUG    [gateway] Serialized payload (251 bytes)
+2026-09-28 16:18:40,860 WARN     [auth-service] Rate limit at 85% for client 659
+2026-09-28 16:18:40,860 INFO     [gateway] User 761 logged in
+2026-09-28 16:18:41,880 WARN     [inventory] Rate limit at 85% for client 699
+2026-09-28 16:18:41,881 INFO     [gateway] Order #44275 created
+2026-09-28 16:18:41,881 INFO     [gateway] Webhook delivered to partner-838
+2026-09-28 16:18:41,881 INFO     [payment-api] Health check OK
+2026-09-28 16:18:41,881 DEBUG    [auth-service] Connection pool size=889
+2026-09-28 16:18:41,881 DEBUG    [auth-service] GC pause 600ms
+2026-09-28 16:18:41,881 INFO     [inventory] User 490 logged in
+2026-09-28 16:18:41,881 DEBUG    [payment-api] GC pause 590ms
+2026-09-28 16:18:42,886 INFO     [auth-service] User 112 logged in
+2026-09-28 16:18:42,886 INFO     [payment-api] Health check OK
+2026-09-28 16:18:42,886 WARN     [order-worker] Slow query detected (1022ms)
+2026-09-28 16:18:42,886 INFO     [order-worker] Job 76499 dequeued
+2026-09-28 16:18:43,879 DEBUG    [order-worker] Connection pool size=718
+2026-09-28 16:18:43,879 INFO     [gateway] Order #17295 created
+2026-09-28 16:18:43,879 INFO     [payment-api] Health check OK
+2026-09-28 16:18:43,879 INFO     [notifier] Health check OK
+2026-09-28 16:18:43,879 INFO     [payment-api] Webhook delivered to partner-876
+2026-09-28 16:18:43,879 WARN     [payment-api] Deprecated endpoint /v1/orders hit
+2026-09-28 16:18:44,887 INFO     [gateway] Order #10368 created
+2026-09-28 16:18:44,887 DEBUG    [gateway] GC pause 3983ms
+2026-09-28 16:18:44,887 DEBUG    [inventory] GC pause 2381ms
+2026-09-28 16:18:44,887 INFO     [notifier] Job 88133 dequeued
+2026-09-28 16:18:44,887 INFO     [payment-api] Cache hit for key sess:995
+2026-09-28 16:18:44,887 INFO     [gateway] Job 73024 dequeued
+2026-09-28 16:18:44,887 INFO     [notifier] Cache hit for key sess:321
+2026-09-28 16:18:44,887 INFO     [inventory] User 341 logged in
+2026-09-28 16:18:44,887 WARN     [notifier] Retrying upstream call (attempt 2/3)
+2026-09-28 16:18:45,910 WARN     [inventory] Rate limit at 85% for client 908
+2026-09-28 16:18:45,911 INFO     [notifier] Cache hit for key sess:568
+2026-09-28 16:18:45,911 INFO     [payment-api] Cache hit for key sess:652
+2026-09-28 16:18:45,911 INFO     [gateway] Request completed in 552ms
+2026-09-28 16:18:45,911 INFO     [order-worker] Order #23791 created
+2026-09-28 16:18:45,911 WARN     [payment-api] Retrying upstream call (attempt 2/3)
+2026-09-28 16:18:46,940 INFO     [order-worker] User 475 logged in
+2026-09-28 16:18:46,940 INFO     [gateway] Webhook delivered to partner-803
+2026-09-28 16:18:46,941 INFO     [order-worker] Cache hit for key sess:980
+2026-09-28 16:18:46,941 DEBUG    [auth-service] GC pause 3431ms
+2026-09-28 16:18:47,961 INFO     [payment-api] Order #33216 created
+2026-09-28 16:18:47,961 INFO     [order-worker] Health check OK
+2026-09-28 16:18:47,961 DEBUG    [gateway] Serialized payload (3947 bytes)
+2026-09-28 16:18:47,961 INFO     [auth-service] Job 77652 dequeued
+2026-09-28 16:18:47,961 WARN     [auth-service] Slow query detected (3471ms)
+2026-09-28 16:18:47,961 INFO     [order-worker] User 547 logged in
+2026-09-28 16:18:48,953 INFO     [notifier] Job 15309 dequeued
+2026-09-28 16:18:48,953 INFO     [notifier] Order #92970 created
+2026-09-28 16:18:48,953 DEBUG    [notifier] GC pause 2530ms
+2026-09-28 16:18:48,953 INFO     [auth-service] Webhook delivered to partner-601
+2026-09-28 16:18:48,953 INFO     [auth-service] Health check OK
+2026-09-28 16:18:49,963 INFO     [auth-service] Request completed in 3092ms
+2026-09-28 16:18:49,963 INFO     [inventory] Cache hit for key sess:960
+2026-09-28 16:18:49,963 INFO     [gateway] Health check OK
+2026-09-28 16:18:49,963 DEBUG    [gateway] Serialized payload (2619 bytes)
+2026-09-28 16:18:49,963 INFO     [auth-service] Cache hit for key sess:405
+2026-09-28 16:18:49,963 INFO     [payment-api] Order #28744 created
+2026-09-28 16:18:49,963 INFO     [gateway] User 804 logged in
+2026-09-28 16:18:51,032 INFO     [gateway] Request completed in 2296ms
+2026-09-28 16:18:51,032 WARN     [payment-api] Deprecated endpoint /v1/orders hit
+2026-09-28 16:18:51,032 DEBUG    [inventory] Connection pool size=914
+2026-09-28 16:18:51,032 INFO     [payment-api] Webhook delivered to partner-564
+2026-09-28 16:18:52,037 WARN     [notifier] Slow query detected (153ms)
+2026-09-28 16:18:52,037 INFO     [order-worker] Request completed in 3164ms
+2026-09-28 16:18:52,037 INFO     [notifier] User 392 logged in
+2026-09-28 16:18:52,037 INFO     [inventory] Health check OK
+2026-09-28 16:18:53,069 INFO     [notifier] Health check OK
+2026-09-28 16:18:53,069 WARN     [order-worker] Deprecated endpoint /v1/orders hit
+2026-09-28 16:18:53,069 DEBUG    [notifier] GC pause 1938ms
+2026-09-28 16:18:53,069 INFO     [order-worker] Request completed in 2395ms
+2026-09-28 16:18:53,069 INFO     [payment-api] Health check OK
+2026-09-28 16:18:53,069 INFO     [inventory] Webhook delivered to partner-523
+2026-09-28 16:18:53,069 WARN     [inventory] Deprecated endpoint /v1/orders hit
+2026-09-28 16:18:53,069 INFO     [inventory] Cache hit for key sess:464
+2026-09-28 16:18:54,094 INFO     [notifier] Cache hit for key sess:295
+2026-09-28 16:18:54,094 INFO     [inventory] Request completed in 1659ms
+2026-09-28 16:18:54,094 INFO     [inventory] User 273 logged in
+2026-09-28 16:18:54,094 INFO     [auth-service] Webhook delivered to partner-656
+2026-09-28 16:18:54,094 INFO     [order-worker] Request completed in 3878ms
+2026-09-28 16:18:55,110 INFO     [inventory] Request completed in 3038ms
+2026-09-28 16:18:55,110 DEBUG    [inventory] Serialized payload (1501 bytes)
+2026-09-28 16:18:55,157 INFO     [inventory] Health check OK
+2026-09-28 16:18:55,157 DEBUG    [payment-api] GC pause 2867ms
+2026-09-28 16:18:55,158 INFO     [order-worker] Order #48948 created
+2026-09-28 16:18:56,216 INFO     [order-worker] User 303 logged in
+2026-09-28 16:18:56,216 INFO     [order-worker] Job 85222 dequeued
+2026-09-28 16:18:56,216 DEBUG    [inventory] GC pause 2985ms
+2026-09-28 16:18:56,216 INFO     [payment-api] Health check OK
+2026-09-28 16:18:57,220 INFO     [payment-api] Webhook delivered to partner-222
+2026-09-28 16:18:57,221 DEBUG    [payment-api] GC pause 3749ms
+2026-09-28 16:18:57,221 WARN     [order-worker] Deprecated endpoint /v1/orders hit
+2026-09-28 16:18:57,221 INFO     [inventory] User 990 logged in
+2026-09-28 16:18:57,221 WARN     [inventory] Slow query detected (1792ms)
+2026-09-28 16:18:58,277 INFO     [gateway] User 180 logged in
+2026-09-28 16:18:58,277 WARN     [auth-service] Slow query detected (1710ms)
+2026-09-28 16:18:58,277 INFO     [gateway] Webhook delivered to partner-256
+2026-09-28 16:18:58,278 INFO     [auth-service] Health check OK
+2026-09-28 16:18:58,278 WARN     [payment-api] Deprecated endpoint /v1/orders hit
+2026-09-28 16:18:58,278 INFO     [auth-service] Request completed in 1561ms
+2026-09-28 16:18:59,281 INFO     [order-worker] Cache hit for key sess:302
+2026-09-28 16:18:59,281 WARN     [gateway] Slow query detected (1656ms)
+2026-09-28 16:18:59,281 INFO     [inventory] Job 29608 dequeued
+2026-09-28 16:18:59,281 DEBUG    [payment-api] GC pause 3929ms
+2026-09-28 16:18:59,281 INFO     [auth-service] Request completed in 3323ms
+2026-09-28 16:18:59,281 INFO     [inventory] Health check OK
+2026-09-28 16:18:59,281 INFO     [order-worker] Cache hit for key sess:989
+2026-09-28 16:19:00,286 INFO     [auth-service] Job 59638 dequeued
+2026-09-28 16:19:00,286 DEBUG    [order-worker] GC pause 676ms
+2026-09-28 16:19:00,286 WARN     [inventory] Retrying upstream call (attempt 2/3)
+2026-09-28 16:19:00,286 INFO     [auth-service] Health check OK
+2026-09-28 16:19:00,286 ERROR    [payment-api] Upstream service unreachable: inventory
+2026-09-28 16:19:00,286 ERROR    [auth-service] Upstream service unreachable: inventory
+2026-09-28 16:19:00,286 INFO     [inventory] Order #35702 created
+2026-09-28 16:19:00,286 INFO     [inventory] Health check OK
+2026-09-28 16:19:01,308 INFO     [inventory] Webhook delivered to partner-569
+2026-09-28 16:19:01,309 INFO     [inventory] Webhook delivered to partner-658
+2026-09-28 16:19:01,309 INFO     [auth-service] Job 84902 dequeued
+2026-09-28 16:19:01,309 DEBUG    [order-worker] Serialized payload (982 bytes)
+2026-09-28 16:19:01,309 INFO     [notifier] Job 97371 dequeued
+2026-09-28 16:19:01,309 INFO     [order-worker] Cache hit for key sess:589
+2026-09-28 16:19:01,309 INFO     [inventory] Request completed in 571ms
+2026-09-28 16:19:01,309 INFO     [inventory] Request completed in 3625ms
+2026-09-28 16:19:01,309 DEBUG    [auth-service] Serialized payload (1301 bytes)
+2026-09-28 16:19:02,305 INFO     [notifier] Job 68212 dequeued
+2026-09-28 16:19:02,305 INFO     [notifier] Job 47123 dequeued
+2026-09-28 16:19:02,305 INFO     [order-worker] Health check OK
+2026-09-28 16:19:02,305 INFO     [auth-service] User 746 logged in
+2026-09-28 16:19:02,306 WARN     [gateway] Slow query detected (3459ms)
+2026-09-28 16:19:02,306 INFO     [order-worker] Request completed in 2546ms
+2026-09-28 16:19:02,307 DEBUG    [order-worker] Serialized payload (3212 bytes)
+2026-09-28 16:19:03,333 WARN     [auth-service] Slow query detected (3158ms)
+2026-09-28 16:19:03,333 INFO     [auth-service] Cache hit for key sess:991
+2026-09-28 16:19:03,333 CRITICAL [order-worker] Primary DB unreachable - failover initiated
+2026-09-28 16:19:03,333 INFO     [gateway] Order #50545 created
+2026-09-28 16:19:03,333 INFO     [auth-service] User 744 logged in
+2026-09-28 16:19:04,407 WARN     [payment-api] Rate limit at 85% for client 861
+2026-09-28 16:19:04,407 INFO     [order-worker] User 200 logged in
+2026-09-28 16:19:04,407 DEBUG    [order-worker] GC pause 3141ms
+2026-09-28 16:19:04,407 INFO     [payment-api] User 227 logged in
+2026-09-28 16:19:04,407 INFO     [gateway] Cache hit for key sess:227
+2026-09-28 16:19:04,407 WARN     [inventory] Rate limit at 85% for client 967
+2026-09-28 16:19:04,407 DEBUG    [notifier] GC pause 3700ms
+2026-09-28 16:19:05,419 INFO     [notifier] Job 68863 dequeued
+2026-09-28 16:19:05,419 INFO     [inventory] Job 67505 dequeued
+2026-09-28 16:19:05,419 WARN     [inventory] Slow query detected (1138ms)
+2026-09-28 16:19:05,419 INFO     [inventory] Webhook delivered to partner-756
+2026-09-28 16:19:05,419 INFO     [auth-service] Request completed in 466ms
+2026-09-28 16:19:05,419 INFO     [order-worker] User 206 logged in
+2026-09-28 16:19:06,448 WARN     [inventory] Deprecated endpoint /v1/orders hit
+2026-09-28 16:19:06,448 WARN     [notifier] Retrying upstream call (attempt 2/3)
+2026-09-28 16:19:06,448 INFO     [payment-api] Order #81893 created
+2026-09-28 16:19:06,448 INFO     [notifier] Request completed in 355ms
+2026-09-28 16:19:06,448 INFO     [order-worker] Request completed in 2876ms
+2026-09-28 16:19:06,448 INFO     [auth-service] Cache hit for key sess:895
+2026-09-28 16:19:07,497 INFO     [order-worker] Webhook delivered to partner-317
+2026-09-28 16:19:07,497 INFO     [auth-service] Health check OK
+2026-09-28 16:19:07,497 INFO     [notifier] Health check OK
+2026-09-28 16:19:07,497 INFO     [inventory] Cache hit for key sess:174
+2026-09-28 16:19:07,497 INFO     [gateway] Job 96339 dequeued
+2026-09-28 16:19:07,497 DEBUG    [auth-service] GC pause 1514ms
+2026-09-28 16:19:07,497 ERROR    [auth-service] NullPointerException in OrderHandler
+2026-09-28 16:19:08,489 INFO     [inventory] Webhook delivered to partner-603
+2026-09-28 16:19:08,489 INFO     [auth-service] Order #90227 created
+2026-09-28 16:19:08,489 INFO     [order-worker] Health check OK
+2026-09-28 16:19:08,489 INFO     [order-worker] Request completed in 917ms
+2026-09-28 16:19:09,502 DEBUG    [auth-service] Serialized payload (543 bytes)
+2026-09-28 16:19:09,502 DEBUG    [notifier] Connection pool size=563
+2026-09-28 16:19:09,502 INFO     [notifier] Job 89001 dequeued
+2026-09-28 16:19:09,502 INFO     [payment-api] Order #85449 created
+2026-09-28 16:19:09,502 INFO     [gateway] Order #41613 created
+2026-09-28 16:19:10,496 INFO     [inventory] User 251 logged in
+2026-09-28 16:19:10,496 INFO     [payment-api] Cache hit for key sess:573
+2026-09-28 16:19:10,496 WARN     [notifier] Deprecated endpoint /v1/orders hit
+2026-09-28 16:19:10,496 INFO     [inventory] Health check OK
+2026-09-28 16:19:10,496 DEBUG    [inventory] Serialized payload (1024 bytes)
+2026-09-28 16:19:10,496 INFO     [notifier] Cache hit for key sess:587
+2026-09-28 16:19:10,496 INFO     [gateway] Order #32143 created
+2026-09-28 16:19:10,496 WARN     [gateway] Rate limit at 85% for client 178
+2026-09-28 16:19:10,496 DEBUG    [payment-api] Connection pool size=207
+2026-09-28 16:19:11,511 ERROR    [inventory] Payment gateway returned 502
+2026-09-28 16:19:11,511 DEBUG    [order-worker] GC pause 3316ms
+2026-09-28 16:19:11,511 DEBUG    [inventory] Connection pool size=805
+2026-09-28 16:19:11,511 INFO     [gateway] User 395 logged in
+2026-09-28 16:19:11,511 INFO     [gateway] Health check OK
+2026-09-28 16:19:11,511 INFO     [inventory] Job 59358 dequeued
+2026-09-28 16:19:12,543 INFO     [auth-service] Job 61098 dequeued
+2026-09-28 16:19:12,543 INFO     [inventory] Job 92165 dequeued
+2026-09-28 16:19:12,543 DEBUG    [notifier] GC pause 3397ms
+2026-09-28 16:19:12,543 DEBUG    [order-worker] GC pause 3334ms
+2026-09-28 16:19:13,549 INFO     [inventory] Job 32282 dequeued
+2026-09-28 16:19:13,549 ERROR    [payment-api] Payment gateway returned 502
+2026-09-28 16:19:13,553 INFO     [payment-api] Health check OK
+2026-09-28 16:19:13,554 INFO     [inventory] Job 78485 dequeued
+2026-09-28 16:19:14,649 INFO     [inventory] Webhook delivered to partner-696
+2026-09-28 16:19:14,649 DEBUG    [gateway] Connection pool size=610
+2026-09-28 16:19:14,649 INFO     [gateway] Cache hit for key sess:849
+2026-09-28 16:19:14,649 INFO     [notifier] Request completed in 3353ms
+2026-09-28 16:19:15,687 INFO     [notifier] Order #77998 created
+2026-09-28 16:19:15,687 DEBUG    [auth-service] GC pause 2069ms
+2026-09-28 16:19:15,687 INFO     [inventory] Request completed in 3809ms
+2026-09-28 16:19:15,687 INFO     [order-worker] Health check OK
+2026-09-28 16:19:15,687 WARN     [notifier] Slow query detected (861ms)
+2026-09-28 16:19:16,702 INFO     [notifier] Request completed in 509ms
+2026-09-28 16:19:16,702 INFO     [inventory] User 491 logged in
+2026-09-28 16:19:16,702 DEBUG    [order-worker] GC pause 2181ms
+2026-09-28 16:19:16,702 WARN     [payment-api] Slow query detected (1911ms)
+2026-09-28 16:19:16,702 INFO     [order-worker] Request completed in 142ms
+2026-09-28 16:19:16,702 WARN     [payment-api] Deprecated endpoint /v1/orders hit
+2026-09-28 16:19:16,702 INFO     [order-worker] Order #10279 created
+2026-09-28 16:19:17,703 INFO     [payment-api] Order #17912 created
+2026-09-28 16:19:17,703 DEBUG    [order-worker] Connection pool size=100
+2026-09-28 16:19:17,703 INFO     [order-worker] User 419 logged in
+2026-09-28 16:19:17,703 ERROR    [order-worker] Upstream service unreachable: inventory
+2026-09-28 16:19:17,703 INFO     [payment-api] User 913 logged in
+2026-09-28 16:19:17,703 INFO     [notifier] User 192 logged in
+2026-09-28 16:19:17,703 INFO     [inventory] Order #11523 created
+2026-09-28 16:19:17,703 INFO     [notifier] Cache hit for key sess:849
+2026-09-28 16:19:17,703 DEBUG    [payment-api] GC pause 3296ms
+2026-09-28 16:19:18,839 INFO     [order-worker] User 766 logged in
+2026-09-28 16:19:18,839 INFO     [auth-service] Cache hit for key sess:200
+2026-09-28 16:19:18,839 INFO     [inventory] Webhook delivered to partner-990
+2026-09-28 16:19:18,839 INFO     [gateway] Webhook delivered to partner-394
+2026-09-28 16:19:19,887 INFO     [notifier] Cache hit for key sess:189
+2026-09-28 16:19:19,888 DEBUG    [notifier] Serialized payload (3891 bytes)
+2026-09-28 16:19:19,888 INFO     [gateway] Health check OK
+2026-09-28 16:19:19,888 INFO     [order-worker] Webhook delivered to partner-130
+2026-09-28 16:19:19,888 INFO     [auth-service] User 147 logged in
+2026-09-28 16:19:19,888 INFO     [auth-service] User 280 logged in
+2026-09-28 16:19:20,876 WARN     [notifier] Slow query detected (2963ms)
+2026-09-28 16:19:20,876 INFO     [inventory] Job 54329 dequeued
+2026-09-28 16:19:20,876 INFO     [inventory] Job 22847 dequeued
+2026-09-28 16:19:20,876 INFO     [order-worker] User 767 logged in
+2026-09-28 16:19:20,876 INFO     [payment-api] Cache hit for key sess:270
+2026-09-28 16:19:20,876 INFO     [notifier] Order #28996 created
+2026-09-28 16:19:20,876 INFO     [order-worker] Request completed in 262ms
+2026-09-28 16:19:20,876 INFO     [payment-api] Webhook delivered to partner-601
+2026-09-28 16:19:21,893 DEBUG    [notifier] Serialized payload (2634 bytes)
+2026-09-28 16:19:21,893 WARN     [gateway] Rate limit at 85% for client 644
+2026-09-28 16:19:21,893 WARN     [payment-api] Rate limit at 85% for client 744
+2026-09-28 16:19:21,893 INFO     [order-worker] Request completed in 3709ms
+2026-09-28 16:19:21,893 WARN     [order-worker] Retrying upstream call (attempt 2/3)
+2026-09-28 16:19:21,893 WARN     [inventory] Deprecated endpoint /v1/orders hit
+2026-09-28 16:19:21,893 INFO     [gateway] Cache hit for key sess:297
+2026-09-28 16:19:21,893 WARN     [gateway] Deprecated endpoint /v1/orders hit
+2026-09-28 16:19:22,916 INFO     [notifier] Order #91439 created
+2026-09-28 16:19:22,916 WARN     [auth-service] Retrying upstream call (attempt 2/3)
+2026-09-28 16:19:22,916 WARN     [auth-service] Deprecated endpoint /v1/orders hit
+2026-09-28 16:19:22,916 WARN     [notifier] Retrying upstream call (attempt 2/3)
+2026-09-28 16:19:22,916 DEBUG    [inventory] Serialized payload (2777 bytes)
+2026-09-28 16:19:22,916 DEBUG    [notifier] Connection pool size=732
+2026-09-28 16:19:22,916 INFO     [order-worker] Order #25124 created
+2026-09-28 16:19:22,916 DEBUG    [auth-service] GC pause 1710ms
+2026-09-28 16:19:23,937 ERROR    [inventory] OOMKilled: worker-657 exceeded memory limit
+2026-09-28 16:19:23,937 INFO     [notifier] User 888 logged in
+2026-09-28 16:19:23,937 INFO     [notifier] Health check OK
+2026-09-28 16:19:23,937 INFO     [auth-service] Webhook delivered to partner-895
+2026-09-28 16:19:23,938 INFO     [payment-api] Cache hit for key sess:256
+2026-09-28 16:19:23,938 DEBUG    [gateway] Serialized payload (1162 bytes)
+2026-09-28 16:19:25,136 INFO     [order-worker] Health check OK
+2026-09-28 16:19:25,136 INFO     [payment-api] Request completed in 3957ms
+2026-09-28 16:19:25,136 DEBUG    [order-worker] Connection pool size=901
+2026-09-28 16:19:25,137 INFO     [inventory] Webhook delivered to partner-254
+2026-09-28 16:19:25,137 INFO     [notifier] Order #13403 created
+2026-09-28 16:19:25,137 INFO     [order-worker] User 631 logged in
+2026-09-28 16:19:26,135 INFO     [gateway] User 178 logged in
+2026-09-28 16:19:26,136 INFO     [auth-service] Job 17617 dequeued
+2026-09-28 16:19:26,136 INFO     [inventory] Webhook delivered to partner-555
+2026-09-28 16:19:26,136 INFO     [auth-service] Health check OK
+2026-09-28 16:19:26,136 INFO     [payment-api] Cache hit for key sess:436
+2026-09-28 16:19:26,136 DEBUG    [order-worker] GC pause 3668ms
+2026-09-28 16:19:26,136 INFO     [order-worker] Cache hit for key sess:541
+2026-09-28 16:19:26,136 INFO     [notifier] Webhook delivered to partner-177
+2026-09-28 16:19:27,115 INFO     [notifier] Request completed in 991ms
+2026-09-28 16:19:27,115 INFO     [order-worker] Job 22663 dequeued
+2026-09-28 16:19:27,115 INFO     [order-worker] Health check OK
+2026-09-28 16:19:27,115 DEBUG    [payment-api] Serialized payload (2928 bytes)
+2026-09-28 16:19:27,115 INFO     [inventory] Order #60752 created
+2026-09-28 16:19:27,115 INFO     [notifier] Webhook delivered to partner-205
+2026-09-28 16:19:27,115 INFO     [notifier] Health check OK
+2026-09-28 16:19:27,115 DEBUG    [payment-api] GC pause 1449ms
+2026-09-28 16:19:27,115 INFO     [payment-api] User 414 logged in
+2026-09-28 16:19:28,132 INFO     [gateway] Health check OK
+2026-09-28 16:19:28,133 INFO     [payment-api] Order #10575 created
+2026-09-28 16:19:28,133 ERROR    [order-worker] Failed to publish message to queue: broker unavailable
+2026-09-28 16:19:28,133 INFO     [notifier] Cache hit for key sess:545
+2026-09-28 16:19:28,133 INFO     [inventory] Job 85953 dequeued
+2026-09-28 16:19:28,133 DEBUG    [inventory] GC pause 1575ms
+2026-09-28 16:19:28,133 INFO     [inventory] Cache hit for key sess:582
+2026-09-28 16:19:28,133 WARN     [payment-api] Retrying upstream call (attempt 2/3)
+2026-09-28 16:19:28,133 DEBUG    [payment-api] GC pause 85ms
+2026-09-28 16:19:29,157 DEBUG    [inventory] Serialized payload (1871 bytes)
+2026-09-28 16:19:29,157 DEBUG    [order-worker] GC pause 2926ms
+2026-09-28 16:19:29,157 INFO     [order-worker] Job 16909 dequeued
+2026-09-28 16:19:29,157 DEBUG    [gateway] Connection pool size=134
+2026-09-28 16:19:29,157 INFO     [inventory] Request completed in 1125ms
+2026-09-28 16:19:29,157 WARN     [auth-service] Retrying upstream call (attempt 2/3)
+2026-09-28 16:19:29,157 INFO     [gateway] Request completed in 2138ms
+2026-09-28 16:19:29,157 DEBUG    [inventory] GC pause 3594ms
+2026-09-28 16:19:30,144 INFO     [order-worker] Order #38295 created
+2026-09-28 16:19:30,144 INFO     [inventory] User 268 logged in
+2026-09-28 16:19:30,144 INFO     [order-worker] Order #96867 created
+2026-09-28 16:19:30,144 INFO     [notifier] Request completed in 1990ms
+2026-09-28 16:19:30,144 INFO     [gateway] Health check OK
+2026-09-28 16:19:30,145 DEBUG    [gateway] Connection pool size=196
+2026-09-28 16:19:30,145 INFO     [inventory] User 324 logged in
+2026-09-28 16:19:30,145 INFO     [gateway] Job 15641 dequeued
+2026-09-28 16:19:30,145 DEBUG    [notifier] Serialized payload (3016 bytes)
+2026-09-28 16:19:31,192 INFO     [gateway] Request completed in 1960ms
+2026-09-28 16:19:31,192 WARN     [inventory] Deprecated endpoint /v1/orders hit
+2026-09-28 16:19:31,192 INFO     [inventory] Job 55621 dequeued
+2026-09-28 16:19:31,192 INFO     [payment-api] Job 93726 dequeued
+2026-09-28 16:19:31,192 INFO     [payment-api] Cache hit for key sess:720
+2026-09-28 16:19:31,192 ERROR    [inventory] Failed to publish message to queue: broker unavailable
+2026-09-28 16:19:31,192 INFO     [order-worker] User 824 logged in
+2026-09-28 16:19:31,192 WARN     [inventory] Rate limit at 85% for client 241
+2026-09-28 16:19:32,202 INFO     [auth-service] Request completed in 2747ms
+2026-09-28 16:19:32,205 WARN     [auth-service] Retrying upstream call (attempt 2/3)
+2026-09-28 16:19:32,205 DEBUG    [auth-service] Connection pool size=268
+2026-09-28 16:19:32,205 DEBUG    [inventory] GC pause 2865ms
+2026-09-28 16:19:32,206 INFO     [notifier] User 768 logged in
+2026-09-28 16:19:32,206 WARN     [gateway] Retrying upstream call (attempt 2/3)
+2026-09-28 16:19:32,206 DEBUG    [auth-service] Connection pool size=468
+2026-09-28 16:19:33,214 INFO     [payment-api] Request completed in 730ms
+2026-09-28 16:19:33,214 DEBUG    [notifier] Serialized payload (973 bytes)
+2026-09-28 16:19:33,214 INFO     [notifier] Job 25703 dequeued
+2026-09-28 16:19:33,215 DEBUG    [notifier] Serialized payload (2729 bytes)
+2026-09-28 16:19:33,215 INFO     [order-worker] Job 81671 dequeued
+2026-09-28 16:19:33,215 DEBUG    [order-worker] Serialized payload (3708 bytes)
+2026-09-28 16:19:34,248 INFO     [auth-service] Request completed in 557ms
+2026-09-28 16:19:34,254 DEBUG    [auth-service] Connection pool size=306
+2026-09-28 16:19:34,254 ERROR    [gateway] Failed to publish message to queue: broker unavailable
+2026-09-28 16:19:34,254 DEBUG    [order-worker] Serialized payload (1205 bytes)
+2026-09-28 16:19:35,267 INFO     [notifier] Cache hit for key sess:836
+2026-09-28 16:19:35,267 INFO     [order-worker] Webhook delivered to partner-925
+2026-09-28 16:19:35,271 INFO     [order-worker] Request completed in 3380ms
+2026-09-28 16:19:35,271 INFO     [order-worker] Webhook delivered to partner-583
+2026-09-28 16:19:35,271 INFO     [auth-service] Job 42762 dequeued
+2026-09-28 16:19:35,271 INFO     [order-worker] Cache hit for key sess:158
+2026-09-28 16:19:36,365 INFO     [notifier] Cache hit for key sess:313
+2026-09-28 16:19:36,365 INFO     [notifier] User 200 logged in
+2026-09-28 16:19:36,365 INFO     [order-worker] Order #37055 created
+2026-09-28 16:19:36,371 WARN     [auth-service] Slow query detected (1405ms)
+2026-09-28 16:19:36,371 INFO     [gateway] Request completed in 200ms
+2026-09-28 16:19:36,371 INFO     [gateway] Cache hit for key sess:112
+2026-09-28 16:19:36,371 INFO     [payment-api] Cache hit for key sess:375
+2026-09-28 16:19:37,457 INFO     [auth-service] Order #18435 created
+2026-09-28 16:19:37,466 ERROR    [auth-service] NullPointerException in OrderHandler
+2026-09-28 16:19:37,467 DEBUG    [inventory] GC pause 1114ms
+2026-09-28 16:19:37,467 INFO     [auth-service] Request completed in 1701ms
+2026-09-28 16:19:37,467 INFO     [auth-service] Cache hit for key sess:723
+2026-09-28 16:19:38,499 INFO     [order-worker] Webhook delivered to partner-574
+2026-09-28 16:19:38,499 ERROR    [inventory] Database connection timeout after 1797ms
+2026-09-28 16:19:38,499 INFO     [auth-service] Health check OK
+2026-09-28 16:19:38,499 WARN     [payment-api] Slow query detected (3204ms)
+2026-09-28 16:19:38,499 INFO     [gateway] User 643 logged in
+2026-09-28 16:19:38,499 DEBUG    [auth-service] Connection pool size=517
+2026-09-28 16:19:38,499 ERROR    [notifier] TLS handshake failed with partner-349
+2026-09-28 16:19:38,499 INFO     [notifier] Order #18447 created
+2026-09-28 16:19:38,499 WARN     [auth-service] Rate limit at 85% for client 145
+2026-09-28 16:19:39,512 DEBUG    [notifier] Serialized payload (2184 bytes)
+2026-09-28 16:19:39,512 INFO     [order-worker] Webhook delivered to partner-252
+2026-09-28 16:19:39,512 INFO     [notifier] Job 91616 dequeued
+2026-09-28 16:19:39,512 DEBUG    [inventory] Connection pool size=283
+2026-09-28 16:19:40,490 ERROR    [notifier] Database connection timeout after 2322ms
+2026-09-28 16:19:40,490 INFO     [gateway] Cache hit for key sess:294
+2026-09-28 16:19:40,490 INFO     [gateway] Order #22601 created
+2026-09-28 16:19:40,490 INFO     [inventory] Job 99129 dequeued
+2026-09-28 16:19:40,490 DEBUG    [gateway] Serialized payload (2044 bytes)
+2026-09-28 16:19:41,513 WARN     [notifier] Deprecated endpoint /v1/orders hit
+2026-09-28 16:19:41,514 INFO     [notifier] Order #56754 created
+2026-09-28 16:19:41,514 DEBUG    [order-worker] GC pause 470ms
+2026-09-28 16:19:41,514 DEBUG    [auth-service] Serialized payload (2400 bytes)
+2026-09-28 16:19:41,514 INFO     [notifier] Request completed in 3578ms
+2026-09-28 16:19:42,509 DEBUG    [inventory] GC pause 1861ms
+2026-09-28 16:19:42,509 DEBUG    [order-worker] GC pause 2030ms
+2026-09-28 16:19:42,509 INFO     [notifier] Cache hit for key sess:892
+2026-09-28 16:19:42,509 WARN     [auth-service] Slow query detected (3445ms)
+2026-09-28 16:19:42,509 INFO     [auth-service] Cache hit for key sess:824
+2026-09-28 16:19:42,509 INFO     [order-worker] Webhook delivered to partner-655
+2026-09-28 16:19:42,509 ERROR    [order-worker] TLS handshake failed with partner-406
+2026-09-28 16:19:43,537 INFO     [gateway] Order #77700 created
+2026-09-28 16:19:43,537 INFO     [inventory] Cache hit for key sess:485
+2026-09-28 16:19:43,537 INFO     [order-worker] User 613 logged in
+2026-09-28 16:19:43,537 INFO     [auth-service] Job 40407 dequeued
+2026-09-28 16:19:44,546 INFO     [inventory] Request completed in 12ms
+2026-09-28 16:19:44,546 WARN     [notifier] Slow query detected (3895ms)
+2026-09-28 16:19:44,546 ERROR    [notifier] NullPointerException in OrderHandler
+2026-09-28 16:19:44,546 DEBUG    [order-worker] Serialized payload (221 bytes)
+2026-09-28 16:19:44,546 INFO     [payment-api] Health check OK
+2026-09-28 16:19:45,607 INFO     [inventory] Health check OK
+2026-09-28 16:19:45,607 INFO     [order-worker] User 126 logged in
+2026-09-28 16:19:45,607 WARN     [order-worker] Rate limit at 85% for client 441
+2026-09-28 16:19:45,608 INFO     [payment-api] Cache hit for key sess:779
+2026-09-28 16:19:45,608 INFO     [notifier] Cache hit for key sess:508
+2026-09-28 16:19:45,608 INFO     [auth-service] Job 79923 dequeued
+2026-09-28 16:19:45,608 INFO     [order-worker] Webhook delivered to partner-571
+2026-09-28 16:19:45,608 DEBUG    [notifier] Serialized payload (3305 bytes)
+2026-09-28 16:19:46,607 INFO     [auth-service] Order #61080 created
+2026-09-28 16:19:46,607 INFO     [order-worker] Webhook delivered to partner-470
+2026-09-28 16:19:46,607 DEBUG    [order-worker] GC pause 1229ms
+2026-09-28 16:19:46,607 INFO     [notifier] Job 49500 dequeued
+2026-09-28 16:19:46,607 INFO     [notifier] Webhook delivered to partner-542
+2026-09-28 16:19:46,607 INFO     [payment-api] Order #66558 created
+2026-09-28 16:19:47,605 WARN     [payment-api] Retrying upstream call (attempt 2/3)
+2026-09-28 16:19:47,606 INFO     [auth-service] Request completed in 1952ms
+2026-09-28 16:19:47,606 ERROR    [auth-service] Database connection timeout after 1395ms
+2026-09-28 16:19:47,606 DEBUG    [auth-service] Serialized payload (3048 bytes)
+2026-09-28 16:19:48,629 INFO     [order-worker] Request completed in 259ms
+2026-09-28 16:19:48,629 INFO     [notifier] Order #34061 created
+2026-09-28 16:19:48,629 DEBUG    [payment-api] GC pause 1951ms
+2026-09-28 16:19:48,629 INFO     [payment-api] User 865 logged in
+2026-09-28 16:19:48,629 INFO     [notifier] Webhook delivered to partner-807
+2026-09-28 16:19:48,629 INFO     [gateway] Request completed in 17ms
+2026-09-28 16:19:48,629 INFO     [inventory] Webhook delivered to partner-844

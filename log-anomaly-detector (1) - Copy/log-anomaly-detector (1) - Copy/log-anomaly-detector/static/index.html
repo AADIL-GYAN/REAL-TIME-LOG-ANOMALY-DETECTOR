@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Real-Time Log Anomaly Detector</title>
+<meta name="description" content="AI-Powered real-time log anomaly detection with Z-score analysis, AWS CloudWatch integration, and live alerting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:      #0b0f1a;
+  --bg2:     #111827;
+  --sidebar: #0d1220;
+  --card:    #141b2d;
+  --card2:   #1a2035;
+  --border:  rgba(255,255,255,.07);
+  --text:    #e2e8f0;
+  --muted:   #8892a4;
+  --dim:     #4a5568;
+  --accent:  #3b82f6;
+  --accent2: #22d3ee;
+  --ok:      #10b981;
+  --low:     #f59e0b;
+  --medium:  #f97316;
+  --high:    #ef4444;
+  --critical:#f43f5e;
+  --resolved:#10b981;
+  --purple:  #8b5cf6;
+  --mono:    'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r:       10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+
+/* ── Layout ── */
+.layout{display:grid;grid-template-columns:210px 1fr 260px;height:100vh;overflow:hidden}
+
+/* ── Sidebar ── */
+.sidebar{background:var(--sidebar);border-right:1px solid var(--border);display:flex;flex-direction:column;padding:0;overflow:hidden}
+.sidebar-brand{display:flex;align-items:center;gap:11px;padding:18px 18px 14px;border-bottom:1px solid var(--border)}
+.brand-logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--purple));display:grid;place-items:center;flex-shrink:0;box-shadow:0 4px 20px rgba(59,130,246,.35)}
+.brand-logo svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.brand-title{font-size:12.5px;font-weight:700;line-height:1.3;letter-spacing:-.01em}
+.brand-sub{font-size:10px;color:var(--muted);margin-top:2px}
+nav{flex:1;padding:12px 10px;display:flex;flex-direction:column;gap:2px;overflow-y:auto}
+.nav-item{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:8px;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;transition:.15s;border:none;background:none;width:100%;text-align:left}
+.nav-item:hover{background:rgba(255,255,255,.05);color:var(--text)}
+.nav-item.active{background:rgba(59,130,246,.15);color:#93c5fd;border:1px solid rgba(59,130,246,.2)}
+.nav-item svg{width:17px;height:17px;flex-shrink:0}
+.sidebar-bottom{padding:14px 10px;border-top:1px solid var(--border)}
+
+/* ── Main ── */
+.main{display:flex;flex-direction:column;overflow:hidden;min-width:0}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border);flex-shrink:0;gap:16px}
+.topbar-left{font-size:15px;font-weight:700}
+.topbar-right{display:flex;align-items:center;gap:10px}
+.status-badge{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:500;padding:5px 11px;border-radius:99px;background:rgba(16,185,129,.12);color:#6ee7b7;border:1px solid rgba(16,185,129,.2)}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 8px var(--ok);animation:blink 2s ease-in-out infinite}
+@keyframes blink{50%{opacity:.4}}
+.topbar-date{font-size:12px;color:var(--muted)}
+.scroll-area{flex:1;overflow-y:auto;padding:16px 20px 16px;display:flex;flex-direction:column;gap:14px}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:9px}
+
+/* ── KPI Cards ── */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;position:relative;overflow:hidden}
+.kpi-card::before{content:"";position:absolute;inset:0;opacity:.04;border-radius:var(--r)}
+.kpi-card.blue::before{background:var(--accent)}
+.kpi-card.red::before{background:var(--critical)}
+.kpi-card.yellow::before{background:var(--low)}
+.kpi-card.green::before{background:var(--ok)}
+.kpi-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px}
+.kpi-icon{width:38px;height:38px;border-radius:9px;display:grid;place-items:center;flex-shrink:0}
+.kpi-icon.blue{background:rgba(59,130,246,.18)}
+.kpi-icon.red{background:rgba(244,63,94,.18)}
+.kpi-icon.yellow{background:rgba(245,158,11,.18)}
+.kpi-icon.green{background:rgba(16,185,129,.18)}
+.kpi-icon svg{width:20px;height:20px;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.kpi-icon.blue svg{stroke:#60a5fa}
+.kpi-icon.red svg{stroke:#fb7185}
+.kpi-icon.yellow svg{stroke:#fcd34d}
+.kpi-icon.green svg{stroke:#34d399}
+.kpi-label{font-size:11.5px;color:var(--muted);font-weight:500;text-transform:uppercase;letter-spacing:.07em}
+.kpi-val{font-size:28px;font-weight:800;letter-spacing:-.04em;line-height:1;margin:4px 0 6px;font-variant-numeric:tabular-nums}
+.kpi-val.blue{color:#93c5fd}
+.kpi-val.red{color:#fda4af}
+.kpi-val.yellow{color:#fde68a}
+.kpi-val.green{color:#6ee7b7}
+.kpi-delta{font-size:12px;font-weight:600}
+.kpi-delta.up{color:var(--ok)}
+.kpi-delta.down{color:var(--critical)}
+.kpi-sub{font-size:11px;color:var(--muted);margin-top:2px}
+
+/* ── Middle row ── */
+.mid-row{display:grid;grid-template-columns:1fr minmax(240px,320px);gap:12px}
+
+/* ── Chart card ── */
+.chart-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px}
+.card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:10px}
+.card-title{font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px}
+.legend{display:flex;gap:14px;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--muted)}
+.legend-dot{width:10px;height:3px;border-radius:2px;display:inline-block}
+.legend-dot.dashed{background:repeating-linear-gradient(90deg,var(--c) 0 4px,transparent 4px 8px)}
+.chartbox{position:relative;height:200px}
+canvas{width:100%;height:100%;display:block}
+.learning-overlay{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:rgba(11,15,26,.8);border-radius:8px;backdrop-filter:blur(3px)}
+.learning-overlay.on{display:flex}
+.learn-bar{width:220px;height:6px;background:rgba(255,255,255,.08);border-radius:9px;overflow:hidden}
+.learn-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--purple));transition:width .8s}
+.learn-txt{font-size:11.5px;color:var(--muted)}
+
+/* ── Donut card ── */
+.donut-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;display:flex;flex-direction:column}
+.donut-wrap{position:relative;margin:10px auto 12px;width:130px;height:130px;flex-shrink:0}
+.donut-wrap canvas{width:100%;height:100%}
+.donut-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}
+.donut-num{font-size:22px;font-weight:800;line-height:1}
+.donut-lbl{font-size:10px;color:var(--muted);margin-top:1px}
+.donut-legend{display:flex;flex-direction:column;gap:6px}
+.dl-item{display:flex;align-items:center;justify-content:space-between;font-size:12px}
+.dl-left{display:flex;align-items:center;gap:7px}
+.dl-dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+.dl-label{color:var(--muted)}
+.dl-count{font-weight:600;font-variant-numeric:tabular-nums}
+.dl-pct{color:var(--dim);font-size:11px;margin-left:4px}
+
+/* ── Bottom row ── */
+.bottom-row{display:grid;grid-template-columns:1fr minmax(240px,340px);gap:12px}
+
+/* ── Recent Alerts Table ── */
+.table-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;display:flex;flex-direction:column}
+.card-header-link{font-size:12px;color:var(--accent);font-weight:500;cursor:pointer;text-decoration:none;transition:.15s}
+.card-header-link:hover{color:#93c5fd}
+.alerts-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.alerts-table th{color:var(--muted);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;padding:8px 10px;border-bottom:1px solid var(--border);text-align:left}
+.alerts-table td{padding:9px 10px;border-bottom:1px solid rgba(255,255,255,.03);vertical-align:middle}
+.alerts-table tr:last-child td{border-bottom:none}
+.alerts-table tr:hover td{background:rgba(255,255,255,.025)}
+.sev-badge{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border-radius:5px}
+.sev-CRITICAL{background:rgba(244,63,94,.18);color:#fb7185}
+.sev-HIGH{background:rgba(239,68,68,.18);color:#fca5a5}
+.sev-MEDIUM{background:rgba(249,115,22,.18);color:#fdba74}
+.sev-LOW{background:rgba(245,158,11,.18);color:#fde68a}
+.sev-resolved{background:rgba(16,185,129,.18);color:#6ee7b7}
+.status-pill{display:inline-block;font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:5px}
+.status-Active{background:rgba(59,130,246,.2);color:#93c5fd}
+.status-Resolved{background:rgba(16,185,129,.15);color:#6ee7b7}
+.status-Investigating{background:rgba(245,158,11,.15);color:#fde68a}
+.msg-col{max-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ── Log Categories ── */
+.logcat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+.lc-row{display:flex;flex-direction:column;gap:4px}
+.lc-top{display:flex;justify-content:space-between;font-size:12.5px}
+.lc-label{font-weight:500}
+.lc-stats{color:var(--muted);font-size:12px}
+.lc-bar-track{height:6px;background:rgba(255,255,255,.07);border-radius:9px;overflow:hidden}
+.lc-bar-fill{height:100%;border-radius:9px;transition:width .5s}
+
+/* ── Live Log Stream ── */
+.logstream-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;display:flex;flex-direction:column}
+.log-stream-table{width:100%;border-collapse:collapse;font-size:12px;font-family:var(--mono)}
+.log-stream-table th{color:var(--muted);font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;padding:6px 10px;border-bottom:1px solid var(--border);text-align:left;font-family:'Inter',sans-serif}
+.log-stream-table td{padding:7px 10px;border-bottom:1px solid rgba(255,255,255,.025);vertical-align:middle;white-space:nowrap;overflow:hidden;max-width:0}
+.log-stream-table tr:last-child td{border-bottom:none}
+.log-stream-table tr:hover td{background:rgba(255,255,255,.02)}
+.log-ts{color:var(--dim);font-size:11px}
+.L-INFO{color:#67e8f9}
+.L-DEBUG{color:#6b7280}
+.L-WARN, .L-WARNING{color:#fcd34d}
+.L-ERROR{color:#f87171}
+.L-CRITICAL{color:#f43f5e;font-weight:600}
+.log-src{color:var(--muted);font-size:11px}
+.autoscroll-toggle{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted);cursor:pointer;user-select:none}
+.toggle-track{width:34px;height:18px;border-radius:9px;background:var(--accent);position:relative;cursor:pointer;transition:.2s;flex-shrink:0}
+.toggle-track.off{background:rgba(255,255,255,.12)}
+.toggle-thumb{position:absolute;width:14px;height:14px;border-radius:50%;background:#fff;top:2px;left:18px;transition:.2s;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+.toggle-track.off .toggle-thumb{left:2px}
+
+/* ── Right Panel ── */
+.right-panel{background:var(--sidebar);border-left:1px solid var(--border);display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden}
+.rp-section{padding:16px 16px;border-bottom:1px solid var(--border)}
+.rp-title{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:7px}
+.rp-title svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sim-btns{display:flex;gap:8px;margin-bottom:14px}
+.btn{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:8px 14px;border-radius:8px;border:1px solid var(--border);background:rgba(255,255,255,.05);color:var(--text);cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{background:rgba(255,255,255,.1);transform:translateY(-1px)}
+.btn.primary{background:linear-gradient(135deg,var(--ok),#059669);border:none;color:#fff;box-shadow:0 4px 16px rgba(16,185,129,.3)}
+.btn.danger{background:linear-gradient(135deg,var(--critical),#be123c);border:none;color:#fff;box-shadow:0 4px 16px rgba(244,63,94,.3)}
+.btn.accent{background:linear-gradient(135deg,var(--accent),var(--purple));border:none;color:#fff;box-shadow:0 4px 16px rgba(59,130,246,.3)}
+.btn.full{width:100%;justify-content:center}
+.rp-row{margin-bottom:13px}
+.rp-label{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);margin-bottom:6px}
+.rp-label b{color:var(--text);font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--accent);height:4px;cursor:pointer}
+.rp-select{width:100%;background:rgba(0,0,0,.35);border:1px solid var(--border);border-radius:8px;padding:8px 10px;color:var(--text);font:12px 'Inter',sans-serif;outline:none;cursor:pointer}
+.rp-select:focus{border-color:var(--accent)}
+.rp-field{display:flex;align-items:center;gap:8px}
+.rp-input{flex:1;background:rgba(0,0,0,.35);border:1px solid var(--border);border-radius:8px;padding:7px 10px;color:var(--text);font:12px 'Inter',sans-serif;outline:none}
+.rp-input:focus{border-color:var(--accent)}
+.aws-row{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;margin-bottom:8px}
+.aws-val{font-weight:500}
+.aws-connected{color:var(--ok)}
+.aws-local{color:var(--muted)}
+.aws-link{font-size:11.5px;color:var(--accent);cursor:pointer;display:inline-flex;align-items:center;gap:4px;margin-top:4px;text-decoration:none}
+.aws-link:hover{color:#93c5fd}
+.sns-badge{font-size:11px;display:flex;align-items:center;gap:5px;color:#6ee7b7;margin-top:6px}
+.sns-badge::before{content:"🔔";font-size:12px}
+.learn-status-row{display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:8px}
+.ls-val{font-weight:500}
+.ls-ok{color:var(--ok)}
+.ls-learning{color:var(--low)}
+.alarm-overlay{position:fixed;inset:0;pointer-events:none;z-index:0;transition:.3s}
+.alarm-overlay.active{box-shadow:inset 0 0 140px rgba(244,63,94,.2);animation:alarm-pulse 1.4s ease-in-out infinite}
+@keyframes alarm-pulse{50%{opacity:.3}}
+
+/* ── Toast ── */
+#toasts{position:fixed;right:18px;top:18px;display:flex;flex-direction:column;gap:8px;z-index:100}
+.toast{min-width:280px;max-width:360px;padding:12px 15px;border-radius:12px;background:#151e30;border:1px solid var(--c,var(--border));box-shadow:0 12px 40px rgba(0,0,0,.5),0 0 30px color-mix(in srgb,var(--c,transparent) 25%,transparent);animation:toast-in .3s ease}
+@keyframes toast-in{from{opacity:0;transform:translateX(20px)}}
+.toast strong{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--c,var(--muted));margin-bottom:3px}
+.toast span{font-size:12.5px;color:var(--text)}
+
+/* ── Utility ── */
+.d-flex{display:flex;align-items:center;gap:8px}
+.ml-auto{margin-left:auto}
+.ellipsis{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+</style>
+</head>
+<body>
+<div class="alarm-overlay" id="alarmOverlay"></div>
+
+<div class="layout">
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo">
+        <svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+      </div>
+      <div>
+        <div class="brand-title">Log Anomaly<br>Detector</div>
+        <div class="brand-sub">AI-Powered Security Monitoring</div>
+      </div>
+    </div>
+    <nav>
+      <button class="nav-item active" id="nav-dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+        Dashboard
+      </button>
+      <button class="nav-item" id="nav-logs">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+        Logs
+      </button>
+      <button class="nav-item" id="nav-alerts">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        Alerts
+      </button>
+      <button class="nav-item" id="nav-settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Settings
+      </button>
+      <button class="nav-item" id="nav-aws">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        AWS CloudWatch
+      </button>
+      <button class="nav-item" id="nav-apidocs">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        API Docs
+      </button>
+      <button class="nav-item" id="nav-about">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        About
+      </button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div id="sndToggle" style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted);padding:4px 2px">
+        <span id="sndIcon">🔕</span><span id="sndLabel">Sound off</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ── Main Content ── -->
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-left">Dashboard</div>
+      <div class="topbar-right">
+        <div class="status-badge"><span class="status-dot" id="systemDot"></span><span id="systemStatus">System Online</span></div>
+        <div class="topbar-date" id="topbarDate"></div>
+      </div>
+    </div>
+
+    <div class="scroll-area" id="scrollArea">
+      <!-- KPIs -->
+      <div class="kpis">
+        <div class="kpi-card blue">
+          <div class="kpi-top">
+            <div>
+              <div class="kpi-label">Total Logs (24h)</div>
+              <div class="kpi-val blue" id="kTotalLogs">0</div>
+              <div><span class="kpi-delta up" id="kTotalDelta">↑ 0%</span></div>
+            </div>
+            <div class="kpi-icon blue">
+              <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="kpi-card red">
+          <div class="kpi-top">
+            <div>
+              <div class="kpi-label">Anomalies Detected</div>
+              <div class="kpi-val red" id="kAnomalies">0</div>
+              <div><span class="kpi-delta" id="kAnomalyDelta" style="color:var(--critical)">↑ 0</span></div>
+            </div>
+            <div class="kpi-icon red">
+              <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="kpi-card yellow">
+          <div class="kpi-top">
+            <div>
+              <div class="kpi-label">Active Alerts</div>
+              <div class="kpi-val yellow" id="kActiveAlerts">0</div>
+              <div><span class="kpi-delta" id="kAlertDelta" style="color:var(--low)">↑ 0</span></div>
+            </div>
+            <div class="kpi-icon yellow">
+              <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="kpi-card green">
+          <div class="kpi-top">
+            <div>
+              <div class="kpi-label">System Status</div>
+              <div class="kpi-val green" id="kSysStatus" style="font-size:20px;margin-top:6px">Healthy</div>
+              <div><span class="kpi-sub" id="kUptime">Uptime: —</span></div>
+            </div>
+            <div class="kpi-icon green">
+              <svg viewBox="0 0 24 24"><polyline points="9,11 12,14 22,4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chart + Donut -->
+      <div class="mid-row">
+        <div class="chart-card">
+          <div class="card-header">
+            <div class="card-title">Error Rate Trend</div>
+            <div class="legend">
+              <div class="legend-item"><div class="legend-dot" style="background:#f87171"></div>Error Rate</div>
+              <div class="legend-item"><div class="legend-dot" style="background:#22d3ee;opacity:.6;background:repeating-linear-gradient(90deg,#22d3ee 0 5px,transparent 5px 9px)"></div>Baseline (Normal)</div>
+              <div class="legend-item"><div class="legend-dot" style="background:#f97316"></div>Anomalies</div>
+            </div>
+          </div>
+          <div class="chartbox">
+            <canvas id="chart"></canvas>
+            <div class="learning-overlay" id="learningOverlay">
+              <div style="font-size:14px;font-weight:600">Learning normal behaviour…</div>
+              <div class="learn-bar"><i id="learnBar"></i></div>
+              <div class="learn-txt" id="learnTxt">Building baseline…</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="donut-card">
+          <div class="card-header">
+            <div class="card-title">Alert Severity Distribution</div>
+          </div>
+          <div class="donut-wrap">
+            <canvas id="donut"></canvas>
+            <div class="donut-center">
+              <div class="donut-num" id="donutNum">0</div>
+              <div class="donut-lbl">Total Alerts</div>
+            </div>
+          </div>
+          <div class="donut-legend" id="donutLegend"></div>
+        </div>
+      </div>
+
+      <!-- Recent Alerts + Log Categories -->
+      <div class="bottom-row">
+        <div class="table-card">
+          <div class="card-header">
+            <div class="card-title">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              Recent Alerts
+            </div>
+            <a class="card-header-link" id="viewAllAlerts">View All →</a>
+          </div>
+          <table class="alerts-table" id="recentAlertsTable">
+            <thead>
+              <tr>
+                <th style="width:70px">Time</th>
+                <th style="width:85px">Severity</th>
+                <th>Message</th>
+                <th style="width:90px">Status</th>
+              </tr>
+            </thead>
+            <tbody id="recentAlertsTbody"></tbody>
+          </table>
+        </div>
+
+        <div class="logcat-card">
+          <div class="card-header" style="margin-bottom:4px">
+            <div class="card-title">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+              Log Categories
+            </div>
+          </div>
+          <div id="logCatRows"></div>
+        </div>
+      </div>
+
+      <!-- Live Log Stream -->
+      <div class="logstream-card">
+        <div class="card-header">
+          <div class="card-title">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Live Log Stream
+          </div>
+          <div class="autoscroll-toggle" id="autoScrollToggle">
+            Auto Scroll
+            <div class="toggle-track" id="autoScrollTrack"><div class="toggle-thumb"></div></div>
+          </div>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="log-stream-table" style="min-width:600px">
+            <thead>
+              <tr>
+                <th style="width:140px">Timestamp</th>
+                <th style="width:80px">Level</th>
+                <th>Message</th>
+                <th style="width:110px">Source</th>
+              </tr>
+            </thead>
+            <tbody id="logStreamBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div><!-- /scroll-area -->
+  </main>
+
+  <!-- ── Right Panel ── -->
+  <aside class="right-panel">
+    <!-- Simulation Controls -->
+    <div class="rp-section">
+      <div class="rp-title">
+        <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21 5,3"/></svg>
+        Simulation Controls
+      </div>
+      <div class="sim-btns">
+        <button class="btn primary" id="bSim" style="flex:1">▶ Start Simulation</button>
+        <button class="btn danger" id="bStop">⏹ Stop</button>
+      </div>
+      <div class="rp-row">
+        <div class="rp-label">Log Rate (logs/sec) <b id="vRate">5</b></div>
+        <input type="range" id="rRate" min="1" max="20" step="1" value="5">
+      </div>
+      <div class="rp-row">
+        <div class="rp-label">Error Spike</div>
+        <select class="rp-select" id="sSpike">
+          <option value="normal">Normal</option>
+          <option value="low">Low</option>
+          <option value="high">High</option>
+          <option value="critical">Critical</option>
+        </select>
+      </div>
+      <div class="rp-row">
+        <div class="rp-label">Spike Duration (seconds) <b id="vDur">30</b></div>
+        <input type="range" id="rDur" min="5" max="120" step="5" value="30">
+      </div>
+      <button class="btn danger full" id="bBurst" style="margin-top:4px">⚡ Simulate Error Spike</button>
+    </div>
+
+    <!-- Configuration -->
+    <div class="rp-section">
+      <div class="rp-title">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Configuration
+      </div>
+      <div class="rp-row">
+        <div class="rp-label">Z-Score Threshold <b id="vThr">3.0</b></div>
+        <input type="range" id="rThr" min="1.5" max="8" step="0.5" value="3">
+      </div>
+      <div class="rp-row">
+        <div class="rp-label">Window Size (minutes) <b id="vWin">5</b></div>
+        <input type="range" id="rWin" min="1" max="30" step="1" value="5">
+      </div>
+      <div class="rp-row">
+        <div class="rp-label">Baseline Learning Period <b id="vBase">60</b> minutes</div>
+        <input type="range" id="rBase" min="15" max="300" step="5" value="60">
+      </div>
+      <button class="btn accent full" id="bSaveConfig">Save Settings</button>
+    </div>
+
+    <!-- AWS CloudWatch -->
+    <div class="rp-section">
+      <div class="rp-title">
+        <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+        AWS CloudWatch
+      </div>
+      <div class="aws-row"><span style="color:var(--muted)">Status</span><span class="aws-val aws-local" id="awsStatus">● Local only</span></div>
+      <div class="aws-row"><span style="color:var(--muted)">Region</span><span class="aws-val" id="awsRegion">—</span></div>
+      <a class="aws-link" href="/docs" target="_blank">View Logs <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      <div class="sns-badge" id="snsBadge" style="display:none">SNS Alerts: Enabled</div>
+    </div>
+
+    <!-- Learning Status -->
+    <div class="rp-section">
+      <div class="rp-title">
+        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Learning Status
+      </div>
+      <div class="learn-status-row"><span style="color:var(--muted)">Baseline Learned</span><span class="ls-val ls-learning" id="lsBaseline">⏳ Learning…</span></div>
+      <div class="learn-status-row"><span style="color:var(--muted)">Normal Error Rate</span><span class="ls-val" id="lsErrRate">—</span></div>
+      <a class="aws-link" href="/api/metrics" target="_blank">View Logs <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+
+      <div style="margin-top:14px">
+        <div class="rp-label" style="margin-bottom:6px">Inject custom log line:</div>
+        <div class="rp-field">
+          <input class="rp-input" id="injIn" placeholder="ERROR [checkout] Payment failed…">
+          <button class="btn accent" id="injBtn">Inject</button>
+        </div>
+      </div>
+      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn" id="bRelearn" style="flex:1;font-size:11px">↻ Relearn Baseline</button>
+        <button class="btn" id="bClear" style="flex:1;font-size:11px">Clear Alerts</button>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<div id="toasts"></div>
+
+<script>
+// ─── globals ───
+const $ = id => document.getElementById(id);
+const COLORS = {low:'#f59e0b',medium:'#f97316',high:'#ef4444',critical:'#f43f5e',resolved:'#10b981'};
+const LVCOL  = {INFO:'#67e8f9',DEBUG:'#6b7280',WARN:'#fcd34d',WARNING:'#fcd34d',ERROR:'#f87171',CRITICAL:'#f43f5e'};
+
+let ws, hist=[], alertsList=[], cfg={threshold:3,window_seconds:30,baseline_seconds:60},
+    sound=false, lastMetric=null, alertMarks=[], autoScroll=true, started=Date.now(),
+    totalLogCount=0, levelCounts={INFO:0,DEBUG:0,WARN:0,ERROR:0,CRITICAL:0};
+
+// ─── WebSocket ───
+function connect(){
+  const proto = location.protocol==='https:'?'wss':'ws';
+  ws = new WebSocket(`${proto}://${location.host}/ws`);
+  ws.onopen  = () => { setSystemOnline(true); };
+  ws.onclose = () => { setSystemOnline(false); setTimeout(connect,1500); };
+  ws.onerror = () => ws.close();
+  ws.onmessage = e => handle(JSON.parse(e.data));
+  clearInterval(connect.ping);
+  connect.ping = setInterval(()=> ws.readyState===1 && ws.send('ping'), 15000);
+}
+
+function setSystemOnline(ok){
+  $('systemDot').style.background = ok ? 'var(--ok)' : 'var(--critical)';
+  $('systemDot').style.boxShadow  = ok ? '0 0 8px var(--ok)' : '0 0 8px var(--critical)';
+  $('systemStatus').textContent   = ok ? 'System Online' : 'Reconnecting…';
+}
+
+function handle(m){
+  switch(m.type){
+    case 'snapshot':
+      hist = m.history || []; alertsList = m.alerts || [];
+      applyState(m);
+      if(m.logs) m.logs.forEach(l => addLogRow(l));
+      alertMarks = alertsList.filter(a=>a.severity!=='resolved').map(a=>({ts:a.ts,sev:a.severity}));
+      renderRecentAlerts(); renderDonut(); draw(); break;
+    case 'state':  applyState(m); break;
+    case 'metric': onMetric(m); break;
+    case 'logs':   m.lines.forEach(l=>addLogRow(l)); trimLogRows(); break;
+    case 'alert':  onAlert(m); break;
+    case 'aws':    applyAws(m); break;
+    case 'cleared': alertsList=[]; alertMarks=[]; renderRecentAlerts(); renderDonut(); break;
+  }
+}
+
+// ─── State ───
+function applyState(s){
+  if(s.config){
+    cfg = {...cfg,...s.config};
+    $('rThr').value = cfg.threshold;
+    $('rWin').value = Math.round(cfg.window_seconds/60)||1;
+    $('rBase').value = cfg.baseline_seconds;
+    updateSliderLabels();
+  }
+  if(s.aws) applyAws(s.aws);
+  if(s.simulator){
+    const running = s.simulator.enabled;
+    $('bSim').textContent = running ? '⏸ Pause Simulation' : '▶ Start Simulation';
+    $('bSim').className = running ? 'btn full' : 'btn primary full';
+    $('bBurst').style.display = s.simulator.available ? '' : 'none';
+  }
+  if(s.phase) applyPhase(s.phase);
+  if(s.uptime != null) $('kUptime').textContent = 'Uptime: ' + fmtUptime(s.uptime);
+}
+
+function applyPhase(p){
+  const learning = p==='learning';
+  $('learningOverlay').classList.toggle('on', learning);
+  if(!learning && lastMetric){
+    $('kSysStatus').textContent = lastMetric.in_anomaly ? 'Anomaly!' : 'Healthy';
+    $('kSysStatus').style.color = lastMetric.in_anomaly ? 'var(--critical)' : '';
+  }
+  if(!learning){
+    $('lsBaseline').textContent = '✓ Complete';
+    $('lsBaseline').className = 'ls-val ls-ok';
+  } else {
+    $('lsBaseline').textContent = '⏳ Learning…';
+    $('lsBaseline').className = 'ls-val ls-learning';
+  }
+}
+
+function applyAws(a){
+  $('awsStatus').textContent = a.enabled ? '● Connected' : '● Local only';
+  $('awsStatus').className = 'aws-val ' + (a.enabled ? 'aws-connected' : 'aws-local');
+  $('awsRegion').textContent = a.region || '—';
+  $('snsBadge').style.display = a.sns ? '' : 'none';
+}
+
+// ─── Metric ───
+function onMetric(m){
+  lastMetric = m; hist.push(m); if(hist.length>600) hist.shift();
+  // Use total_lines (absolute cumulative) from detector, not m.total (sliding window size)
+  if(m.total_lines) totalLogCount = m.total_lines;
+
+  // KPI updates
+  $('kTotalLogs').textContent = totalLogCount.toLocaleString();
+  $('kTotalDelta').textContent = '↑ ' + m.lps + ' /s';
+
+  const active = alertsList.filter(a=>a.severity!=='resolved').length;
+  $('kActiveAlerts').textContent = active;
+  $('kAnomalies').textContent = alertsList.filter(a=>a.severity!=='resolved').length;
+  $('kAnomalyDelta').textContent = m.in_anomaly ? '🔴 Anomaly active' : '↑ ' + alertsList.length + ' total';
+
+  $('kSysStatus').textContent = m.in_anomaly ? 'Anomaly!' : (m.phase==='learning' ? 'Learning' : 'Healthy');
+  $('kSysStatus').style.color = m.in_anomaly ? 'var(--critical)' : '';
+
+  $('alarmOverlay').classList.toggle('active', !!m.in_anomaly);
+
+  // Learning
+  const learning = m.phase==='learning';
+  $('learnBar').style.width = (m.progress*100)+'%';
+  $('learnTxt').textContent = m.total < (cfg.min_events||10) ? 'Waiting for log traffic…' : `${Math.round(m.progress*100)}% — building baseline`;
+  $('learningOverlay').classList.toggle('on', learning);
+  applyPhase(m.phase);
+
+  // Learning status panel
+  if(!learning){
+    $('lsErrRate').textContent = (m.mean*100).toFixed(1)+'% (±'+( m.std*100).toFixed(1)+'%)';
+  }
+
+  // Level counts from metric
+  if(m.levels){
+    Object.entries(m.levels).forEach(([k,v])=>{ levelCounts[k]=(levelCounts[k]||0)+v; });
+    renderLogCategories(m.levels);
+  }
+
+  draw();
+}
+
+// ─── Alert ───
+function onAlert(a){
+  alertsList.unshift(a); if(alertsList.length>200) alertsList.pop();
+  if(a.severity!=='resolved') alertMarks.push({ts:a.ts,sev:a.severity});
+  renderRecentAlerts(); renderDonut();
+  toast(a); if(sound && a.severity!=='resolved') beep(a.severity);
+
+  const active = alertsList.filter(x=>x.severity!=='resolved').length;
+  $('kActiveAlerts').textContent = active;
+  $('kAnomalies').textContent = active;
+}
+
+// ─── Recent Alerts Table ───
+function renderRecentAlerts(){
+  const recent = alertsList.slice(0,6);
+  const tbody = $('recentAlertsTbody');
+  if(!recent.length){
+    tbody.innerHTML='<tr><td colspan="4" style="text-align:center;color:var(--dim);padding:20px;font-size:12px">No alerts yet — all systems normal</td></tr>';
+    return;
+  }
+  tbody.innerHTML = recent.map(a=>{
+    const sev = a.severity.toUpperCase();
+    const status = a.severity==='resolved' ? 'Resolved' : 'Active';
+    return `<tr>
+      <td class="log-ts">${fmtTime(a.ts)}</td>
+      <td><span class="sev-badge sev-${sev}">${sev}</span></td>
+      <td class="msg-col ellipsis" style="max-width:200px" title="${esc(a.message)}">${esc(a.message)}</td>
+      <td><span class="status-pill status-${status}">${status}</span></td>
+    </tr>`;
+  }).join('');
+}
+
+// ─── Donut Chart ───
+const donutCv = $('donut'), donutCtx = donutCv.getContext('2d');
+function renderDonut(){
+  const sevOrder = ['critical','high','medium','low'];
+  const counts = {critical:0,high:0,medium:0,low:0};
+  alertsList.forEach(a=>{ if(counts[a.severity]!=null) counts[a.severity]++; });
+  const total = Object.values(counts).reduce((s,v)=>s+v,0);
+  $('donutNum').textContent = total;
+
+  // Draw donut - use fixed size from CSS, fallback to 130 if layout not ready
+  const dpr = window.devicePixelRatio||1;
+  const size = Math.max(donutCv.parentElement.offsetWidth || 130, 100);
+  donutCv.width = size*dpr; donutCv.height = size*dpr;
+  donutCv.style.width = size+'px'; donutCv.style.height = size+'px';
+  donutCtx.setTransform(dpr,0,0,dpr,0,0);
+  donutCtx.clearRect(0,0,size,size);
+  const cx=size/2, cy=size/2, r=size*.4, inner=size*.27;
+  const segColors = {critical:'#f43f5e',high:'#ef4444',medium:'#f97316',low:'#f59e0b'};
+
+  if(!total){
+    donutCtx.beginPath(); donutCtx.arc(cx,cy,r,0,Math.PI*2);
+    donutCtx.arc(cx,cy,inner,0,Math.PI*2,true);
+    donutCtx.fillStyle='rgba(255,255,255,.06)'; donutCtx.fill();
+  } else {
+    let angle = -Math.PI/2;
+    sevOrder.forEach(sev=>{
+      const v = counts[sev]; if(!v) return;
+      const sweep = (v/total)*Math.PI*2;
+      donutCtx.beginPath();
+      donutCtx.arc(cx,cy,r,angle,angle+sweep);
+      donutCtx.arc(cx,cy,inner,angle+sweep,angle,true);
+      donutCtx.fillStyle = segColors[sev]; donutCtx.fill();
+      angle+=sweep;
+    });
+    // gap ring
+    donutCtx.beginPath(); donutCtx.arc(cx,cy,inner+1,0,Math.PI*2);
+    donutCtx.arc(cx,cy,inner-1,0,Math.PI*2,true);
+    donutCtx.fillStyle='#141b2d'; // matches --card background
+    donutCtx.fill();
+  }
+
+  // Legend
+  $('donutLegend').innerHTML = sevOrder.map(sev=>{
+    const n = counts[sev], pct = total ? Math.round(n/total*100) : 0;
+    return `<div class="dl-item">
+      <div class="dl-left"><div class="dl-dot" style="background:${segColors[sev]}"></div><span class="dl-label">${sev.charAt(0).toUpperCase()+sev.slice(1)}</span></div>
+      <span><b class="dl-count">${n}</b><span class="dl-pct">(${pct}%)</span></span>
+    </div>`;
+  }).join('');
+}
+
+// ─── Log Categories ───
+const LC_COLORS = {INFO:'#3b82f6',WARNING:'#f59e0b',ERROR:'#ef4444',CRITICAL:'#8b5cf6',DEBUG:'#6b7280'};
+const LC_ORDER  = ['INFO','WARNING','ERROR','CRITICAL','DEBUG'];
+function renderLogCategories(lvls){
+  const tot = Object.values(lvls).reduce((s,v)=>s+v,0)||1;
+  $('logCatRows').innerHTML = LC_ORDER.map(k=>{
+    const n = lvls[k]||0, pct = (n/tot*100).toFixed(1);
+    return `<div class="lc-row">
+      <div class="lc-top"><span class="lc-label">${k}</span><span class="lc-stats">${n.toLocaleString()} (${pct}%)</span></div>
+      <div class="lc-bar-track"><div class="lc-bar-fill" style="width:${pct}%;background:${LC_COLORS[k]||'#6b7280'}"></div></div>
+    </div>`;
+  }).join('');
+}
+
+// ─── Log Stream ───
+function addLogRow(l){
+  const tbody = $('logStreamBody');
+  const tr = document.createElement('tr');
+  const ts = new Date(l.ts*1000);
+  const tsStr = ts.getFullYear()+'-'+pad(ts.getMonth()+1)+'-'+pad(ts.getDate())+' '+pad(ts.getHours())+':'+pad(ts.getMinutes())+':'+pad(ts.getSeconds());
+  // Normalize WARN/WARNING → WARN; extract source service and message from log line
+  const lvl = (l.level||'INFO').replace('WARNING','WARN');
+  const srcMatch = l.line.match(/\[([a-z0-9_-]+)\]/i);
+  const src = srcMatch ? srcMatch[1] : '—';
+  const msgMatch = l.line.match(/\]\s*(.+)$/);
+  const msg = msgMatch ? msgMatch[1].trim() : l.line;
+  tr.innerHTML = `
+    <td class="log-ts">${tsStr}</td>
+    <td class="L-${lvl}" style="font-weight:${lvl==='CRITICAL'?'700':'400'}">${lvl}</td>
+    <td class="ellipsis" style="max-width:260px" title="${esc(l.line)}">${esc(msg)}</td>
+    <td class="log-src ellipsis">${esc(src)}</td>`;
+  tbody.insertBefore(tr, tbody.firstChild);
+}
+function pad(n){ return String(n).padStart(2,'0'); }
+function trimLogRows(){
+  const tbody = $('logStreamBody');
+  while(tbody.rows.length > 100) tbody.deleteRow(tbody.rows.length-1);
+}
+
+// ─── Chart ───
+const cv=$('chart'), ctx=cv.getContext('2d');
+function draw(){
+  const dpr=window.devicePixelRatio||1, W=cv.clientWidth, H=cv.clientHeight;
+  if(!W||!H) return;
+  if(cv.width!==W*dpr||cv.height!==H*dpr){ cv.width=W*dpr; cv.height=H*dpr; }
+  ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,W,H);
+  const pad2={l:44,r:14,t:10,b:26}, w=W-pad2.l-pad2.r, h=H-pad2.t-pad2.b;
+  const data=hist.slice(-180); if(!data.length) return;
+  const N=Math.max(data.length,60);
+  const maxv=Math.max(.1,...data.map(d=>d.rate),...data.map(d=>d.upper||0))*1.18;
+  const off=N-data.length;
+  const x=i=>pad2.l+((i+off)/(N-1))*w, y=v=>pad2.t+h-(v/maxv)*h;
+
+  ctx.font='10px Inter,sans-serif'; ctx.fillStyle='#4a5568';
+  ctx.strokeStyle='rgba(255,255,255,.04)'; ctx.lineWidth=1;
+  for(let i=0;i<=4;i++){
+    const v=maxv*i/4,yy=y(v);
+    ctx.beginPath(); ctx.moveTo(pad2.l,yy); ctx.lineTo(W-pad2.r,yy); ctx.stroke();
+    ctx.textAlign='right'; ctx.fillText((v*100).toFixed(0)+'%',pad2.l-6,yy+4);
+  }
+  ctx.textAlign='center'; ctx.fillStyle='#4a5568';
+  if(data.length){
+    const tEnd=data[data.length-1].ts;
+    [0,.25,.5,.75,1].forEach(f=>{
+      const slot=Math.round((N-1)*f);
+      ctx.fillText(fmtTime(tEnd-(N-1-slot)),pad2.l+(slot/(N-1))*w-(f===1?14:0)+(f===0?14:0),H-6);
+    });
+  }
+
+  // Baseline band
+  const mon=data.map((d,i)=>({d,i})).filter(o=>o.d.phase==='monitoring'&&o.d.upper!=null);
+  if(mon.length){
+    ctx.beginPath();
+    mon.forEach((o,k)=>k?ctx.lineTo(x(o.i),y(o.d.upper)):ctx.moveTo(x(o.i),y(o.d.upper)));
+    for(let k=mon.length-1;k>=0;k--) ctx.lineTo(x(mon[k].i),y(Math.max(0,mon[k].d.mean-cfg.threshold*mon[k].d.std)));
+    ctx.closePath(); ctx.fillStyle='rgba(34,211,238,.06)'; ctx.fill();
+    line(mon.map(o=>[x(o.i),y(o.d.mean)]),'#22d3ee',1.5);
+    ctx.setLineDash([6,5]); line(mon.map(o=>[x(o.i),y(o.d.upper)]),'#f97316',1.3); ctx.setLineDash([]);
+  }
+
+  // Error rate area
+  const pts=data.map((d,i)=>[x(i),y(d.rate)]);
+  const grad=ctx.createLinearGradient(0,pad2.t,0,pad2.t+h);
+  grad.addColorStop(0,'rgba(248,113,113,.28)'); grad.addColorStop(1,'rgba(248,113,113,0)');
+  ctx.beginPath(); pts.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));
+  ctx.lineTo(pts[pts.length-1][0],pad2.t+h); ctx.lineTo(pts[0][0],pad2.t+h);
+  ctx.closePath(); ctx.fillStyle=grad; ctx.fill();
+  line(pts,'#f87171',2);
+
+  // Anomaly dots
+  data.forEach((d,i)=>{
+    const hit=alertMarks.find(a=>Math.abs(a.ts-d.ts)<.6);
+    if(hit){ ctx.beginPath(); ctx.arc(x(i),y(d.rate),5,0,7); ctx.fillStyle=COLORS[hit.sev];
+      ctx.shadowColor=COLORS[hit.sev]; ctx.shadowBlur=12; ctx.fill(); ctx.shadowBlur=0;
+      ctx.strokeStyle='#0b0f1a'; ctx.lineWidth=1.8; ctx.stroke(); }
+  });
+  const last=pts[pts.length-1];
+  ctx.beginPath(); ctx.arc(last[0],last[1],3.5,0,7); ctx.fillStyle='#fff'; ctx.fill();
+}
+function line(p,c,wd){ ctx.beginPath(); p.forEach((q,i)=>i?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1])); ctx.strokeStyle=c; ctx.lineWidth=wd; ctx.lineJoin='round'; ctx.stroke(); }
+window.addEventListener('resize',()=>{ draw(); renderDonut(); });
+
+// ─── Helpers ───
+function fmtTime(ts){ return new Date(ts*1000).toLocaleTimeString([],{hour12:false}); }
+function esc(s){ return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+function fmtUptime(s){ const h=Math.floor(s/3600),m=Math.floor((s%3600)/60),ss=s%60; return h?`${h}h ${m}m`:`${m}m ${ss}s`; }
+
+// ─── Toast ───
+function toast(a){
+  if(a.severity==='low') return;
+  const t=document.createElement('div'); t.className='toast';
+  t.style.setProperty('--c',COLORS[a.severity]||'var(--border)');
+  t.innerHTML=`<strong>${a.severity==='resolved'?'✓ Resolved':'⚠ '+a.severity.toUpperCase()+' anomaly'}</strong><span>${esc(a.message)}</span>`;
+  $('toasts').appendChild(t);
+  setTimeout(()=>{ t.style.transition='.4s'; t.style.opacity=0; setTimeout(()=>t.remove(),400); },5500);
+}
+
+// ─── Sound ───
+let audioCtx2;
+function beep(sev){
+  try{
+    audioCtx2 = audioCtx2 || new (window.AudioContext||window.webkitAudioContext)();
+    const o=audioCtx2.createOscillator(), g=audioCtx2.createGain();
+    o.connect(g); g.connect(audioCtx2.destination);
+    o.type='sine'; o.frequency.value=sev==='critical'?880:sev==='high'?660:520;
+    g.gain.setValueAtTime(.1,audioCtx2.currentTime);
+    g.gain.exponentialRampToValueAtTime(.001,audioCtx2.currentTime+.5);
+    o.start(); o.stop(audioCtx2.currentTime+.5);
+  }catch(e){}
+}
+$('sndToggle').onclick=()=>{
+  sound=!sound;
+  $('sndIcon').textContent=sound?'🔔':'🔕';
+  $('sndLabel').textContent=sound?'Sound on':'Sound off';
+  if(sound) beep('medium');
+};
+
+// ─── Controls ───
+const post=(u,b)=>fetch(u,{method:'POST',headers:{'Content-Type':'application/json'},body:b?JSON.stringify(b):undefined}).then(r=>r.json());
+
+function updateSliderLabels(){
+  $('vThr').textContent=(+$('rThr').value).toFixed(1);
+  $('vWin').textContent=$('rWin').value;
+  $('vBase').textContent=$('rBase').value;
+  $('vRate').textContent=$('rRate').value;
+  $('vDur').textContent=$('rDur').value;
+}
+['rThr','rWin','rBase','rRate','rDur'].forEach(id=>{ $(id).oninput=updateSliderLabels; });
+
+$('bSaveConfig').onclick = ()=>
+  post('/api/config',{threshold:+$('rThr').value, window_seconds:+$('rWin').value*60, baseline_seconds:+$('rBase').value});
+
+$('bSim').onclick = ()=> post('/api/simulate/toggle');
+$('bStop').onclick = ()=>{ if(ws) ws.close(); setSystemOnline(false); };
+
+const spikeMap = {normal:{seconds:20,intensity:.25},low:{seconds:20,intensity:.3},high:{seconds:30,intensity:.55},critical:{seconds:40,intensity:.8}};
+$('bBurst').onclick = ()=>{
+  const s = spikeMap[$('sSpike').value]||spikeMap.normal;
+  post('/api/simulate/burst',{seconds:+$('rDur').value, intensity:s.intensity});
+};
+
+$('bRelearn').onclick = ()=>{ post('/api/relearn'); alertMarks=[]; };
+$('bClear').onclick   = ()=> post('/api/alerts/clear');
+
+const inject=()=>{ const v=$('injIn').value.trim(); if(!v) return; post('/api/inject',{line:new Date().toISOString().replace('T',' ').slice(0,23)+' '+v}); $('injIn').value=''; };
+$('injBtn').onclick=inject; $('injIn').onkeydown=e=>e.key==='Enter'&&inject();
+
+// Auto-scroll toggle
+$('autoScrollToggle').onclick=()=>{
+  autoScroll=!autoScroll;
+  $('autoScrollTrack').classList.toggle('off',!autoScroll);
+};
+
+// Nav items (visual only) - set generic handler first, then override special ones
+document.querySelectorAll('.nav-item').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+// Override API Docs to open new tab (set after loop so it runs after active toggling)
+$('nav-apidocs').addEventListener('click', ()=>window.open('/docs','_blank'));
+
+// Date/time
+function updateClock(){ $('topbarDate').textContent=new Date().toLocaleString('en-GB',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).replace(',',''); }
+updateClock(); setInterval(updateClock,1000);
+
+// Init
+updateSliderLabels();
+renderDonut();
+renderRecentAlerts();
+renderLogCategories({INFO:0,WARNING:0,ERROR:0,CRITICAL:0,DEBUG:0});
+
+if(location.protocol==='file:'){
+  document.body.insertAdjacentHTML('afterbegin','<div style="position:fixed;inset:0;z-index:999;background:#0b0f1a;display:grid;place-items:center;text-align:center;padding:30px"><div><h2 style="font-size:22px;margin-bottom:12px">Start the server first</h2><p style="color:#8a90a6;line-height:1.8">Run: <code style="background:#1a2035;padding:3px 8px;border-radius:6px">python run.py</code><br>then open <b>http://localhost:8000</b></p></div></div>');
+} else { connect(); }
+</script>
+</body>
+</html>
